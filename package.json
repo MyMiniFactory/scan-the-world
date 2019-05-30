@@ -1,10 +1,13 @@
 {
   "name": "scan-the-world",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "dependencies": {
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-infinite-scroller": "^1.2.4",
     "react-scripts": "3.0.1"
   },
   "scripts": {

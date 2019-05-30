@@ -1,0 +1,15 @@
+
+.scan-the-world {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .tiles {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
