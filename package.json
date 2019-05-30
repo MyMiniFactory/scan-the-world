@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
+  "module": "dist/scan-the-world.js",
+  "files": [
+    "/dist"
+  ],
   "dependencies": {
+    "global": "^4.3.2",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-infinite-scroller": "^1.2.4",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "rollup": "^1.12.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "babel-preset-react": "^6.24.1",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-image-files": "^1.3.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-scss": "^1.0.1"
   }
 }

@@ -1,6 +1,5 @@
 
 import './ObjectTile.scss'
-import ObjectTileData from './ObjectTileData.json'
 
 import React from 'react';
 
@@ -9,7 +8,7 @@ class ObjectTile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            object: props.object ? props.object : ObjectTileData,
+            object: props.object ? props.object : {},
             isLoaded: false
         };
     }
