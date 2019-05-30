@@ -17,8 +17,7 @@ class Objects extends React.Component {
             isLoaded: false,
             currentPage: 0
         };
-        this.getObjects = this.getObjects.bind(this)
-        
+        this.getObjects = this.getObjects.bind(this)        
     }
 
     componentDidMount() {

@@ -1,0 +1,14 @@
+.social-bar {
+    padding: 10px;
+    float: right;
+
+    .link-item {
+        margin: 5px;
+        list-style: none;
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+    }
+}
