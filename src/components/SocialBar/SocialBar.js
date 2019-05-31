@@ -1,30 +1,20 @@
 import './SocialBar.scss'
 
 import React, { Component } from 'react';
-
-const MYMINIFACTORY_URL = "https://www.myminifactory.com";
-const LOGO_URL = "https://www.myminifactory.com/images/logo_mobile.png";
-
-const links = [
-    {
-        name: "Instagram",
-        url: "https://www.instagram.com/scantheworld"
-    },
-    {
-        name: "Twitter",
-        url: "https://twitter.com/Scan_The_World"
-    },
-    {
-        name: "Medium",
-        url: "https://medium.com/scantheworld"
-    }
-]
+import config from '../../config';
 
 class SocialBar extends Component {
     
+    constructor(props) {
+        super(props);
+        this.state = {
+            links: props.links ? props.links : config.social_links,
+        };
+    }
+
     renderLinks() {
-        const renderedLinks = links.map((link, i) => {
-            return (<li className="link-item" ><a key={i} href={link.url} >{link.name}</a></li>)
+        const renderedLinks = this.state.links.map((link, i) => {
+            return (<li key={i} className="link-item" ><a href={link.url} >{link.name}</a></li>)
         })
         return renderedLinks;
     }
@@ -35,7 +25,8 @@ class SocialBar extends Component {
                 <ul className="links" >
                     { this.renderLinks() }
                 </ul>
-            </div>);
+            </div>
+        );
     }
 }
 

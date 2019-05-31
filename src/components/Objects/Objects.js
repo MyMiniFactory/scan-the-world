@@ -1,12 +1,11 @@
 
 import './Objects.scss'
 
+import config from '../../config';
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 
 import ObjectTile from '../ObjectTile/ObjectTile'
-
-const RECENT_OBJECTS_URL = "https://www.myminifactory.com/api/v2/search?q=&cat=112&sort=date&per_page=16&light=1"
 
 class Objects extends React.Component {
 
@@ -15,7 +14,8 @@ class Objects extends React.Component {
         this.state = {
             objects: props.objects ? props.objects : [],
             isLoaded: false,
-            currentPage: 0
+            currentPage: 0,
+            hasMore: true
         };
         this.getObjects = this.getObjects.bind(this)        
     }
@@ -25,7 +25,7 @@ class Objects extends React.Component {
     }
 
     getObjects(page) {
-        fetch(RECENT_OBJECTS_URL + "&page=" + page)
+        fetch(config.recent_objects_url + "&page=" + page)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -34,10 +34,15 @@ class Objects extends React.Component {
                             isLoaded: true,
                             objects: this.state.objects.concat(result.items)
                         });
+                    } else {
+                        this.setState({
+                            hasMore: false,
+                        });
                     }
                 },
                 (error) => {
                     this.setState({
+                        hasMore: false,
                         isLoaded: true,
                         error
                     });
@@ -54,12 +59,16 @@ class Objects extends React.Component {
             />)
         })
 
+        if (this.state.objects.length === 0){
+            return (<p>No objects found</p>);
+        }
+
         return (
             <InfiniteScroll
                 className="tiles"
                 pageStart={0}
                 loadMore={this.getObjects}
-                hasMore={true}
+                hasMore={this.state.hasMore}
                 loader={<div className="loader" key={0}>Loading ...</div>}
                 useWindow={true}
                 threshold={400}

@@ -24,7 +24,7 @@ class TopBar extends Component {
     
     renderLinks() {
         const renderedLinks = links.map((link, i) => {
-            return (<li className="link-item" ><a key={i} href={link.url} >{link.name}</a></li>)
+            return (<li key={i} className="link-item" ><a href={link.url} >{link.name}</a></li>)
         })
         return renderedLinks;
     }

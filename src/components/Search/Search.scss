@@ -1,0 +1,32 @@
+.search-suggestion {
+    height: 50px;
+    
+    .image {
+        height: 50px;
+    }
+
+    a {
+        display: inline-block;
+        color: #222;
+        text-decoration: none;
+        height: 50px;
+    }
+    
+    .text {
+        display: inline-block;
+        padding-left: 10px;
+        position: relative;
+        top: -7px;
+    }
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.react-autosuggest__suggestions-list {
+    margin-top: 10px;
+    padding-left: 0px;
+}
+
+.react-autosuggest__suggestion {
+    list-style: none;
+}
