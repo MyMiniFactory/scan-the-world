@@ -1,0 +1,101 @@
+.scan-the-world {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; }
+  .scan-the-world .intro {
+    font-size: 20px;
+    margin-bottom: 50px; }
+    .scan-the-world .intro h1 {
+      font-weight: 300;
+      text-decoration: underline;
+      text-underline-position: above; }
+      .scan-the-world .intro h1 b {
+        font-weight: 600; }
+      .scan-the-world .intro h1 i {
+        font-weight: 400; }
+  .scan-the-world .tiles {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+
+.objects {
+  border: solid black 1px; }
+
+.top-bar {
+  padding: 10px; }
+  .top-bar .logo {
+    width: 40px;
+    margin: 5px; }
+  .top-bar .links {
+    display: flex;
+    float: right;
+    margin: 0px;
+    margin-right: 10px; }
+  .top-bar .link-item {
+    margin: 5px;
+    list-style: none; }
+    .top-bar .link-item a {
+      color: #222;
+      text-decoration: none; }
+
+.social-bar {
+  padding: 10px;
+  float: right; }
+  .social-bar .link-item {
+    margin: 5px;
+    list-style: none; }
+    .social-bar .link-item a {
+      color: #222;
+      text-decoration: none; }
+
+.search-suggestion {
+  height: 50px;
+  margin: 0px;
+  margin-bottom: 5px; }
+  .search-suggestion .image {
+    height: 50px; }
+  .search-suggestion a {
+    display: inline-block;
+    color: #222;
+    text-decoration: none;
+    height: 50px; }
+  .search-suggestion .text {
+    display: inline-block;
+    padding-left: 10px;
+    position: relative;
+    top: -7px; }
+
+.react-autosuggest__suggestions-list {
+  margin-top: 10px;
+  padding-left: 0px; }
+
+.react-autosuggest__suggestion {
+  list-style: none; }
+
+.object-tile-a {
+  text-decoration: none; }
+
+.object-tile {
+  width: 230px;
+  height: 230px;
+  margin: 10px; }
+
+.object-tile:hover {
+  width: 230px;
+  height: 230px;
+  margin: 10px; }
+  .object-tile:hover .info {
+    text-decoration: none;
+    display: block; }
+
+.info {
+  display: none;
+  color: white;
+  margin: 0px;
+  padding: 10px; }
+  .info p {
+    margin: 0px;
+    text-shadow: 1px 1px 2px black; }

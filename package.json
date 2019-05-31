@@ -15,7 +15,7 @@
     "react-dom": "^16.8.6",
     "react-infinite-scroller": "^1.2.4",
     "react-scripts": "3.0.1",
-    "rollup": "^1.12.4"
+    "rollup": "^1.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
