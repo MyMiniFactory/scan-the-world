@@ -1,6 +1,13 @@
 .social-bar {
+    margin-top: 30px;
     padding: 10px;
     float: right;
+
+    .social {
+        transform: rotate(90deg);
+        margin-left: 33px;
+        margin-bottom: 10px;
+    }
 
     .link-item {
         margin: 5px;
