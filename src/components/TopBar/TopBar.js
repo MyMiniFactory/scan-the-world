@@ -1,35 +1,50 @@
 import './TopBar.scss'
 
 import React, { Component } from 'react';
+import { graphql, StaticQuery } from 'gatsby'
+
 
 const MYMINIFACTORY_URL = "https://www.myminifactory.com";
 const LOGO_URL = "https://www.myminifactory.com/images/logo_mobile.png";
 
-const links = [
-    {
-        name: "About",
-        url: "http://www.myminifactory.com/scantheworld/#"
-    },
-    {
-        name: "Learn",
-        url: "http://www.myminifactory.com/scantheworld/#"
-    },
-    {
-        name: "Contribute",
-        url: "http://www.myminifactory.com/scantheworld/#"
-    }
-]
-
 class TopBar extends Component {
     
     renderLinks() {
-        const renderedLinks = links.map((link, i) => {
-            return (<li key={i} className="link-item" ><a href={link.url} >{link.name}</a></li>)
-        })
-        return renderedLinks;
+        return (
+        <StaticQuery
+            query={graphql`
+                query {
+                    allMarkdownRemark {
+                    totalCount
+                    edges {
+                        node {
+                        id
+                        frontmatter {
+                            title
+                            path
+                        }
+                        excerpt
+                        }
+                    }
+                    }
+                }
+                `}
+            render={data => {
+                let links = [
+                    <li key={0} className="link-item" ><a href={'/'} >Home</a></li>
+                ];
+                data.allMarkdownRemark.edges.map(({ node }, i) => {
+                    return links.push(
+                        <li key={i+1} className="link-item" ><a href={node.frontmatter.path} >{node.frontmatter.title}</a></li>
+                    )
+                })
+                return links;
+            }}
+        />)
     }
-    
+
     render() {
+
         return (
             <div className="top-bar">
                 <a href={MYMINIFACTORY_URL}><img className="logo" src={LOGO_URL} alt="MyMiniFactory Logo" /></a>
@@ -39,5 +54,6 @@ class TopBar extends Component {
             </div>);
     }
 }
+
 
 export default TopBar;

@@ -1,6 +1,13 @@
 
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .scan-the-world {
-  margin: auto;
+  align-self: flex-start;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
