@@ -16,17 +16,27 @@ class Objects extends React.Component {
             objects: props.objects ? props.objects : [],
             isLoaded: false,
             currentPage: 0,
-            hasMore: true
+            hasMore: true,
+            query: props.query ? props.query : ''
         };
         this.getObjects = this.getObjects.bind(this)        
     }
 
     componentDidMount() {
-        this.getObjects();
+    }
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if (this.props.query !== prevProps.query) {
+            this.setState({
+                currentPage: 0,
+                query: this.props.query
+            })
+            this.getObjects(0);
+        }
     }
 
     getObjects(page) {
-        fetch(config.recent_objects_url + "&page=" + page)
+        fetch(config.recent_objects_url + "&page=" + page + "&q=" + this.state.query)
             .then(res => res.json())
             .then(
                 (result) => {

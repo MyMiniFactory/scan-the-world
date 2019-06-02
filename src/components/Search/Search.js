@@ -30,8 +30,8 @@ const renderSuggestion = suggestion => (
 );
 
 class Search extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       value: '',
@@ -40,25 +40,27 @@ class Search extends React.Component {
   }
 
   onChange = (event, { newValue }) => {
+    this.props.onSearch(newValue);
     this.setState({
       value: newValue
     });
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    
-      fetch(config.suggester_url + "/" + value + "?cat=112")
-          .then(res => res.json())
-          .then(
-              (result) => {
-                  this.setState({
-                      suggestions: adaptSuggestions(result)
-                  });
-                },
-                (error) => {
-                  console.log('error')
-              }
-          )
+
+    // Disable until the API filters scan the world objects
+      // fetch(config.suggester_url + "/" + value + "?cat=112")
+      //     .then(res => res.json())
+      //     .then(
+      //         (result) => {
+      //             this.setState({
+      //                 suggestions: adaptSuggestions(result)
+      //             });
+      //           },
+      //           (error) => {
+      //             console.log('error')
+      //         }
+      //     )
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
