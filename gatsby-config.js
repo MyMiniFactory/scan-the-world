@@ -4,6 +4,7 @@ module.exports = {
     description: ``,
     author: `Romain B.`,
   },
+  pathPrefix: "/scan-the-world",
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,

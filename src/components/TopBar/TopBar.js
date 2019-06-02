@@ -1,11 +1,11 @@
 import './TopBar.scss'
 
 import React, { Component } from 'react';
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 
 
 const MYMINIFACTORY_URL = "https://www.myminifactory.com";
-const LOGO_URL = "https://www.myminifactory.com/images/logo_mobile.png";
+const LOGO_URL = "https://www.myminifactory.com/favicon.png";
 
 class TopBar extends Component {
     
@@ -35,7 +35,7 @@ class TopBar extends Component {
                 ];
                 data.allMarkdownRemark.edges.map(({ node }, i) => {
                     return links.push(
-                        <li key={i+1} className="link-item" ><a href={node.frontmatter.path} >{node.frontmatter.title}</a></li>
+                        <li key={i + 1} className="link-item" ><Link to={node.frontmatter.path}>{node.frontmatter.title}</Link></li>
                     )
                 })
                 return links;
