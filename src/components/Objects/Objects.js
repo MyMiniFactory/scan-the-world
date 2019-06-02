@@ -4,6 +4,7 @@ import './Objects.scss'
 import config from '../../config';
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
+import ContentLoader from "react-content-loader"
 
 import ObjectTile from '../ObjectTile/ObjectTile'
 
@@ -50,6 +51,26 @@ class Objects extends React.Component {
             )
     }
 
+    renderSkeleton() {
+        const blocks = Array.from({ length: 16 }, (x, i) => (
+            <ContentLoader
+                key={i}
+                height={230}
+                width={230}
+                speed={2}
+                primaryColor="#f3f3f3"
+                secondaryColor="#ecebeb"
+            >
+                <rect x="0" y="0" rx="5" ry="5" width="230" height="230" />
+            </ContentLoader>
+        ));
+
+        return (
+        <div className="loader" >
+            {blocks}
+        </div>)
+    }
+
     render() {
 
         const tiles = this.state.objects.map((object, i) => {
@@ -59,8 +80,8 @@ class Objects extends React.Component {
             />)
         })
 
-        if (this.state.objects.length === 0){
-            return (<p>No objects found</p>);
+        if (this.state.isLoaded && this.state.objects.length === 0){
+            return (<p>No objects found :(<br/>Try reloading the page</p>);
         }
 
         return (
@@ -69,7 +90,7 @@ class Objects extends React.Component {
                 pageStart={0}
                 loadMore={this.getObjects}
                 hasMore={this.state.hasMore}
-                loader={<div className="loader" key={0}>Loading ...</div>}
+                loader={this.renderSkeleton()}
                 useWindow={true}
                 threshold={400}
             >

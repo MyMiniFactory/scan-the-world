@@ -10726,6 +10726,11 @@ react-autowhatever@^10.1.2:
     react-themeable "^1.1.0"
     section-iterator "^2.0.0"
 
+react-content-loader@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-4.2.1.tgz#0d355134ed7d0987966abd0f784bc59e76976e91"
+  integrity sha512-XA5irUvZpQAEavfUBo7kc4tdvAbWwVKJolz/+2Pkj/XU7pn78AweAUtn+AxEajN0Srg/mraJ8XMKlUsXOFiknw==
+
 react-datetime@^2.16.3:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.3.tgz#7f9ac7d4014a939c11c761d0c22d1fb506cb505e"
@@ -10997,6 +11002,11 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-skeleton-loader@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-skeleton-loader/-/react-skeleton-loader-1.0.4.tgz#7bdfd35591f97bd10361e3a793360ce98fdf76ab"
+  integrity sha512-o52c3hmadpaMbQ4Gl8inCiAxjkfQopDJ6PCHfuuLh6NxRqL5ossJ1/FoeONIvOf/r4GC+VOB5an/jr4Qmj59zg==
 
 react-sortable-hoc@^1.0.0:
   version "1.9.1"

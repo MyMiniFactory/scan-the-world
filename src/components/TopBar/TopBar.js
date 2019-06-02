@@ -31,7 +31,7 @@ class TopBar extends Component {
                 `}
             render={data => {
                 let links = [
-                    <li key={0} className="link-item" ><a href={'/'} >Home</a></li>
+                    <li key={0} className="link-item" ><a href={'/scan-the-world'} >Home</a></li>
                 ];
                 data.allMarkdownRemark.edges.map(({ node }, i) => {
                     return links.push(
