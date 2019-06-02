@@ -29,7 +29,9 @@ class Objects extends React.Component {
         if (this.props.query !== prevProps.query) {
             this.setState({
                 currentPage: 0,
-                query: this.props.query
+                query: this.props.query,
+                objects: [],
+                isLoaded: false
             })
             this.getObjects(0);
         }
