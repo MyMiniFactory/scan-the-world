@@ -17,7 +17,8 @@ class Objects extends React.Component {
             isLoaded: false,
             currentPage: 0,
             hasMore: true,
-            query: props.query ? props.query : ''
+            query: props.query ? props.query : '',
+            sortBy: props.query ? props.query : 'date'
         };
         this.getObjects = this.getObjects.bind(this)        
     }
@@ -30,15 +31,17 @@ class Objects extends React.Component {
             this.setState({
                 currentPage: 0,
                 query: this.props.query,
+                sortBy: this.props.query ? this.props.query : 'date',
                 objects: [],
                 isLoaded: false
+            }, () => {
+                this.getObjects(0);
             })
-            this.getObjects(0);
         }
     }
 
     getObjects(page) {
-        fetch(config.recent_objects_url + "&page=" + page + "&q=" + this.state.query)
+        fetch(config.objects_url + "&page=" + page + "&q=" + this.state.query + '&sort=' + this.state.sortBy)
             .then(res => res.json())
             .then(
                 (result) => {

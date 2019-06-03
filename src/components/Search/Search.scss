@@ -2,10 +2,19 @@
     margin-top: 250px;
 }
 
+.react-autosuggest__input {
+    height: 25px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #dedede;
+    color: #222;
+}
+
 .search-suggestion {
     margin: 0px;
     margin-bottom: 5px;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 50px;
     width: 200px;
     
@@ -25,6 +34,16 @@
         padding-left: 10px;
         position: relative;
         top: -7px;
+        width: 140px;
+        overflow: hidden;
+        font-size: 13px;
+        white-space: nowrap; /* Don't forget this one */
+        text-overflow: ellipsis;
+
+        .designer-name {
+            font-size: 11px;
+            color: rgb(48, 48, 48);
+        }
     }
 }
 

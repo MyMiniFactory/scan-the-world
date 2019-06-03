@@ -2,7 +2,7 @@ const config = {
     access_token: null,
     myminifactory_url: "https://www.myminifactory.com",
     logo_url: "https://www.myminifactory.com/images/logo_mobile.png",
-    recent_objects_url: "https://www.myminifactory.com/api/v2/search?cat=112&sort=date&per_page=16&light=1",
+    objects_url: "https://www.myminifactory.com/api/v2/search?cat=112&per_page=16&light=1",
     suggester_url: "https://www.myminifactory.com/search/search-suggester",
     social_links: [
         {

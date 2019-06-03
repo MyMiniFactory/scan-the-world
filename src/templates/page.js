@@ -1,3 +1,5 @@
+import './page.scss'
+
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"

@@ -5,7 +5,7 @@ import Autosuggest from 'react-autosuggest';
 import config from '../../config';
 
 const adaptSuggestions = value => {
-    return value.map(item =>
+    return value.slice(0, 4).map(item =>
       ({ 
           name: item[1],
           image: item[2],
@@ -21,9 +21,9 @@ const renderSuggestion = suggestion => (
   <div className="search-suggestion" >
     <a href={suggestion.url}>
     <img className="image" alt="suggested object" src={suggestion.image}/>
-    <div className="text" >
+    <div className="text" title={suggestion.name}>
         {suggestion.name}<br/>
-        {suggestion.designer}
+        <span className="designer-name">{suggestion.designer}</span>
     </div>
     </a>
   </div>
@@ -39,28 +39,32 @@ class Search extends React.Component {
     };
   }
 
-  onChange = (event, { newValue }) => {
-    this.props.onSearch(newValue);
-    this.setState({
-      value: newValue
-    });
-  };
+    onChange = (event, { newValue }) => {
+        this.setState({
+            value: newValue
+        });
+    };
 
-  onSuggestionsFetchRequested = ({ value }) => {
+    keyPressed = (event) => {
+        if (event.key === "Enter") {
+            this.props.onSearch(this.state.value)
+        }
+    };
 
-    // Disable until the API filters scan the world objects
-      // fetch(config.suggester_url + "/" + value + "?cat=112")
-      //     .then(res => res.json())
-      //     .then(
-      //         (result) => {
-      //             this.setState({
-      //                 suggestions: adaptSuggestions(result)
-      //             });
-      //           },
-      //           (error) => {
-      //             console.log('error')
-      //         }
-      //     )
+    onSuggestionsFetchRequested = ({ value }) => {
+
+      fetch(config.suggester_url + "/" + value + "?cat=112")
+          .then(res => res.json())
+          .then(
+              (result) => {
+                  this.setState({
+                      suggestions: adaptSuggestions(result)
+                  });
+                },
+                (error) => {
+                  console.log('error')
+              }
+          )
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
@@ -75,9 +79,10 @@ class Search extends React.Component {
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Search for an object',
+      placeholder: 'Search the collection',
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
+      onKeyPress: this.keyPressed
     };
 
     return (
