@@ -67,7 +67,7 @@ class Objects extends React.Component {
     }
 
     renderSkeleton() {
-        const blocks = Array.from({ length: 16 }, (x, i) => (
+        const blocks = Array.from({ length: 4 }, (x, i) => (
             <ContentLoader
                 key={i}
                 height={230}
