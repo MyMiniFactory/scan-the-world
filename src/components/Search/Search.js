@@ -35,8 +35,14 @@ class Search extends React.Component {
 
     this.state = {
       value: '',
+      sortBy: 'date',
       suggestions: []
     };
+    this.onChange = this.onChange.bind(this)
+    this.changeSorting = this.changeSorting.bind(this)
+    this.keyPressed = this.keyPressed.bind(this)
+    this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this)
+    this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this)
   }
 
     onChange = (event, { newValue }) => {
@@ -45,9 +51,19 @@ class Search extends React.Component {
         });
     };
 
+  changeSorting(sortBy) {
+    this.setState({
+      sortBy: sortBy
+    });
+    this.props.onSearch(this.state.value, sortBy)
+  }
+
     keyPressed = (event) => {
         if (event.key === "Enter") {
-            this.props.onSearch(this.state.value)
+          this.setState({
+            sortBy: 'popular' 
+          });
+          this.props.onSearch(this.state.value, 'popular')
         }
     };
 
@@ -86,14 +102,27 @@ class Search extends React.Component {
     };
 
     return (
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
+      <div className="search">
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
+        />
+        <p className="sortby">
+          <span 
+            onClick={() => {this.changeSorting('date')}}
+            class={this.state.sortBy === 'date' ? 'active' : ''}
+            >recent
+          </span> | <span 
+          onClick={() => {this.changeSorting('popular')}}
+          class={this.state.sortBy !== 'date' ? 'active' : ''}
+          >popular
+          </span>
+        </p>
+      </div>
     );
   }
 }

@@ -1,5 +1,13 @@
-.react-autosuggest__container {
+.search {
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: 250px;
+}
+
+.sortby {
+    float: right;
+    min-width: 150px;
+    cursor: pointer;
 }
 
 .react-autosuggest__input {
@@ -54,4 +62,8 @@
 
 .react-autosuggest__suggestion {
     list-style: none;
+}
+
+p .active {
+    font-weight: bold;
 }

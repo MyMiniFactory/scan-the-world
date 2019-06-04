@@ -12,13 +12,16 @@ class ScanTheWorld extends React.Component {
   constructor(props) {
     super(props);
     this.state = { showMenu: true };
-    this.onSearch = this.onSearch.bind(this);
     this.state.query = '';
+    this.state.sortBy = 'date';
+    this.onSearch = this.onSearch.bind(this);
   }
   
-  onSearch(query) {
+  onSearch(query, sortBy) {
+    console.log(sortBy)
     this.setState({
-      query: query
+      query: query,
+      sortBy: sortBy
     })
   }
 
@@ -37,6 +40,7 @@ class ScanTheWorld extends React.Component {
             </div>
             <Objects
               query={this.state.query}
+              sortBy={this.state.sortBy}
             />
           </div>
         </div>

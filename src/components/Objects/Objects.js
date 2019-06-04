@@ -27,11 +27,11 @@ class Objects extends React.Component {
     }
     componentDidUpdate(prevProps) {
         // Typical usage (don't forget to compare props):
-        if (this.props.query !== prevProps.query) {
+        if (this.props.query !== prevProps.query || this.props.sortBy !== prevProps.sortBy) {
             this.setState({
                 currentPage: 0,
                 query: this.props.query,
-                sortBy: this.props.query ? this.props.query : 'date',
+                sortBy: this.props.sortBy ? this.props.sortBy : 'popularity',
                 objects: [],
                 isLoaded: false
             }, () => {
