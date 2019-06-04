@@ -2,8 +2,9 @@ backend:
   name: github
   repo: myminifactory/scan-the-world
 
+site_url: https://myminifacory.com/scan-the-world
 media_folder: static/assets
-public_folder: assets
+public_folder: /scan-the-world/assets
 
 collections:
   - name: page
