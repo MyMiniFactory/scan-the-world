@@ -5,12 +5,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-    const post = data.markdownRemark
+    const page = data.markdownRemark
     return (
-        <Layout>
+        <Layout
+          banner={page.frontmatter.banner_path}
+          >
             <div className='page'>
-                <h1>{post.frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <h1 className="title" >{page.frontmatter.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: page.html }} />
             </div>
         </Layout>
     )
@@ -21,6 +23,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        banner_path
         title
       }
     }

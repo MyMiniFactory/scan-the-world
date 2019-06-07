@@ -81,7 +81,7 @@ class Objects extends React.Component {
         ));
 
         return (
-        <div className="loader" >
+        <div className="loader" key={0} >
             {blocks}
         </div>)
     }

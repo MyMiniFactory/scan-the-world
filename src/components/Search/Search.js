@@ -114,11 +114,11 @@ class Search extends React.Component {
         <p className="sortby">
           <span 
             onClick={() => {this.changeSorting('date')}}
-            class={this.state.sortBy === 'date' ? 'active' : ''}
+            className={this.state.sortBy === 'date' ? 'active' : ''}
             >recent
           </span> | <span 
           onClick={() => {this.changeSorting('popular')}}
-          class={this.state.sortBy !== 'date' ? 'active' : ''}
+          className={this.state.sortBy !== 'date' ? 'active' : ''}
           >popular
           </span>
         </p>
