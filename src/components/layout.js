@@ -12,7 +12,7 @@ const Layout = ({ banner, children }) => {
   let mainStyle = {}
   if(banner){
     mainStyle = {
-      backgroundImage: 'url("' + banner + '")',
+      backgroundImage: 'url("../' + banner + '")',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       backgroundSize: 'auto',
