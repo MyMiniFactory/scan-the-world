@@ -2,7 +2,7 @@ backend:
   name: github
   repo: myminifactory/scan-the-world
 
-site_url: https://www.myminifactory.com/scan-the-world
+site_url: https://myminifacory.com/scan-the-world
 media_folder: static/assets
 public_folder: /scan-the-world/assets
 
@@ -13,6 +13,7 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
+      - { name: banner_path, label: Banner Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
