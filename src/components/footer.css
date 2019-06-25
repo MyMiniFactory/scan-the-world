@@ -1,0 +1,21 @@
+footer {
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer > div {
+  padding: 5px;
+  flex: 1 0 calc(100%/3);
+  color: white;
+  text-align: center;
+  align-self: center;
+}
+
+svg {
+  display: block;
+  max-height: 2.4rem;
+}

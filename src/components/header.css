@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+}
+
+img {
+  display: block;
+  margin: 0 5px 0 0;
+}
+
+svg, img {
+    max-height: 2.4rem;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+header > nav {
+  text-align: right;
+  flex: 1 0 auto;
+}
+
+header > nav > a {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
