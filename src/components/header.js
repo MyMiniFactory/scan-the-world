@@ -12,9 +12,9 @@ const Header = ({data}) => (
         <img src={`stw-black.png`} alt="Scan the World" />
       </Link>
     </div>
-    <nav>
-      {data.allMarkdownRemark.edges.map(({node}) => <Link key={node.id} to={"/" + node.frontmatter.path}>{node.frontmatter.title}</Link>)}
-    </nav>
+      <nav>
+        {data.allMarkdownRemark.edges.map(({node}) => <Link key={node.id} to={"/" + node.frontmatter.path}>{node.frontmatter.title}</Link>)}
+      </nav>
   </header>
 )
 
