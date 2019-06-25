@@ -6,13 +6,10 @@ header {
   width: 100%;
 }
 
-img {
+header img {
   display: block;
   margin: 0 5px 0 0;
-}
-
-svg, img {
-    max-height: 2.4rem;
+  max-height: 2.5rem;
 }
 
 header > div {

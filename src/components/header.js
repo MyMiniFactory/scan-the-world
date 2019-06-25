@@ -1,19 +1,20 @@
 import React from "react"
 import {StaticQuery, graphql, Link} from "gatsby"
-import Logo from "./logo"
 import "./header.css"
 
 const MMY_URL = `https://www.myminifactory.com`
 
 const Header = ({data}) => (
   <header>
-    <a href={MMY_URL}><img src={`logo.png`} alt="Logo"/></a>
-    <Link to={`/`}>
-      <Logo color={`black`}/>
-    </Link>
-    <nav>
-      {data.allMarkdownRemark.edges.map(({node}) => <Link key={node.id} to={"/" + node.frontmatter.path}>{node.frontmatter.title}</Link>)}
-    </nav>
+    <div>
+      <a href={MMY_URL}><img src={`logo.png`} alt="Logo"/></a>
+      <Link to={`/`}>
+        <img src={`stw-black.png`} alt="Scan the World" />
+      </Link>
+    </div>
+      <nav>
+        {data.allMarkdownRemark.edges.map(({node}) => <Link key={node.id} to={"/" + node.frontmatter.path}>{node.frontmatter.title}</Link>)}
+      </nav>
   </header>
 )
 

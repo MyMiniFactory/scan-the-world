@@ -1,11 +1,10 @@
 import React from "react"
-import Logo from "./logo"
 import "./footer.css"
 
 const Footer = () => (
   <footer>
     <div>
-      <Logo color={`white`} />
+      <img src={`stw-white.png`} alt="Scan the World" />
     </div>
     <div>
       copyright, MyMiniFactory, 2019

@@ -15,7 +15,8 @@ footer > div {
   align-self: center;
 }
 
-svg {
+footer img {
   display: block;
   max-height: 2.4rem;
+  margin: 0;
 }
