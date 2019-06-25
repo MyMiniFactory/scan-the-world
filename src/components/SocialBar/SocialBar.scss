@@ -1,7 +1,7 @@
 .social-bar {
-    margin-top: 30px;
-    padding: 10px;
-    float: right;
+    position: fixed;
+    top: 100px;
+    right: 0;
 
     .social {
         transform: rotate(90deg);
