@@ -1,18 +1,18 @@
-import React from "react"
-import "./footer.css"
+import React from 'react'
+import { Link } from 'gatsby'
+import './footer.css'
 
-const Footer = () => (
+export default () => (
   <footer>
-    <div>
+    <Link to='./' className='footer-stw'>
       <img src={`stw-white.png`} alt="Scan the World" />
-    </div>
-    <div>
+    </Link>
+    <p>
       copyright, MyMiniFactory, 2019
-    </div>
-    <div>
-
+    </p>
+    <div className='footer-tools'>
+      <span>dark theme </span>
+      <span>translation </span>
     </div>
   </footer>
 )
-
-export default Footer;

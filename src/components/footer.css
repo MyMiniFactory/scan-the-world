@@ -1,22 +1,26 @@
 footer {
   background: black;
   display: flex;
-  flex-wrap: wrap;
-  position: fixed;
+  flex-flow: row wrap-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
   width: 100%;
+  position: fixed;
   bottom: 0;
 }
 
-footer > div {
-  padding: 5px;
-  flex: 1 0 calc(100%/3);
+footer > p {
   color: white;
-  text-align: center;
-  align-self: center;
+  margin: 0;
 }
 
-footer img {
+.footer-stw > img {
   display: block;
-  max-height: 2.4rem;
+  height: 2.4rem;
   margin: 0;
+}
+
+.footer-tools {
+  color: white;
 }
