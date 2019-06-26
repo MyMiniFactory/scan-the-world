@@ -2,16 +2,17 @@
     text-decoration: none;
 }
 .object-tile {
-    width: 230px;
-    height: 230px;
+    min-width: 230px;
+    min-height: 230px;
     margin: 10px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .object-tile:hover {
     width: 230px;
     height: 230px;
     margin: 10px;
-    
+
     .info{
         text-decoration: none;
         display: block;
@@ -26,7 +27,7 @@
 
     p{
         margin: 0px;
-        text-shadow: 1px 1px 2px black; 
+        text-shadow: 1px 1px 2px black;
     }
 }
 
