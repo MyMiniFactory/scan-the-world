@@ -1,3 +1,5 @@
-.objects {
-    border: solid black 1px;
+.tiles {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 750px;
 }

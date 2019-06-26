@@ -6,7 +6,27 @@ import React from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 import ContentLoader from "react-content-loader"
 
-import ObjectTile from '../ObjectTile/ObjectTile'
+import ObjectTile from '../ObjectTile/ObjectTile';
+
+const skeleton = () => {
+    const blocks = Array.from({ length: 6 }, (x, i) => (
+        <ContentLoader
+          key={i}
+          height={230}
+          width={230}
+          speed={2}
+          primaryColor="#f3f3f3"
+          secondaryColor="#ecebeb"
+        >
+            <rect x="0" y="0" rx="5" ry="5" width="230" height="230" />
+        </ContentLoader>
+    ));
+
+    return (
+    <div className="loader" key={0} >
+        {blocks}
+    </div>)
+}
 
 class Objects extends React.Component {
 
@@ -18,13 +38,11 @@ class Objects extends React.Component {
             currentPage: 0,
             hasMore: true,
             query: props.query ? props.query : '',
-            sortBy: props.query ? props.query : 'date'
+            sortBy: props.sortBy ? props.sortBy : 'date'
         };
-        this.getObjects = this.getObjects.bind(this)        
+        this.getObjects = this.getObjects.bind(this)
     }
 
-    componentDidMount() {
-    }
     componentDidUpdate(prevProps) {
         // Typical usage (don't forget to compare props):
         if (this.props.query !== prevProps.query || this.props.sortBy !== prevProps.sortBy) {
@@ -34,13 +52,13 @@ class Objects extends React.Component {
                 sortBy: this.props.sortBy ? this.props.sortBy : 'popularity',
                 objects: [],
                 isLoaded: false
-            }, () => {
-                this.getObjects(0);
-            })
+            },
+            () => this.getObjects()
+          )
         }
     }
 
-    getObjects(page) {
+    getObjects(page = 0) {
         fetch(config.objects_url + "&page=" + page + "&q=" + this.state.query + '&sort=' + this.state.sortBy)
             .then(res => res.json())
             .then(
@@ -66,34 +84,11 @@ class Objects extends React.Component {
             )
     }
 
-    renderSkeleton() {
-        const blocks = Array.from({ length: 4 }, (x, i) => (
-            <ContentLoader
-                key={i}
-                height={230}
-                width={230}
-                speed={2}
-                primaryColor="#f3f3f3"
-                secondaryColor="#ecebeb"
-            >
-                <rect x="0" y="0" rx="5" ry="5" width="230" height="230" />
-            </ContentLoader>
-        ));
-
-        return (
-        <div className="loader" key={0} >
-            {blocks}
-        </div>)
-    }
-
     render() {
 
-        const tiles = this.state.objects.map((object, i) => {
-            return(<ObjectTile 
-                key={i}
-                object={object}
-            />)
-        })
+        const tiles = this.state.objects.map((object, i) =>
+          <ObjectTile key={i} object={object} />
+        );
 
         if (this.state.isLoaded && this.state.objects.length === 0){
             return (<p>No objects found :(<br/>Try reloading the page</p>);
@@ -105,7 +100,7 @@ class Objects extends React.Component {
                 pageStart={0}
                 loadMore={this.getObjects}
                 hasMore={this.state.hasMore}
-                loader={this.renderSkeleton()}
+                loader={skeleton()}
                 useWindow={true}
                 threshold={400}
             >
