@@ -27,6 +27,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+    	resolve: "gatsby-source-mmf",
+    	options: {
+    	  key: "8e551c42-0fd1-4b8b-bd26-8b5d79e74099",
+    	  cat: "112",
+    	  per_page: "24",
+    	  light: "1",
+        sort: "date",
+    	},
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
