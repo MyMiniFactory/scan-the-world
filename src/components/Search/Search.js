@@ -24,9 +24,9 @@ function renderSuggestion(suggestion) {
     </a>);
 }
 
-const renderInput = inputProps => (
-  <form>
-    <label><FaSearch/></label>
+const renderInput = (inputProps) => (
+  <form onSubmit={inputProps.handleSubmit}>
+    <button type='submit'><FaSearch/></button>
     <input {... inputProps}/>
   </form>);
 
@@ -41,12 +41,12 @@ class Search extends React.Component {
     };
     this.onChange = this.onChange.bind(this)
     this.changeSorting = this.changeSorting.bind(this)
-    this.keyPressed = this.keyPressed.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this)
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this)
   }
 
-  onChange = (event, {newValue}) => {
+  onChange(event, {newValue}) {
     this.setState({value: newValue});
   };
 
@@ -55,12 +55,15 @@ class Search extends React.Component {
     this.props.onSearch(this.state.value, sortBy)
   }
 
-  keyPressed = (event) => {
-    if (event.key === "Enter") {
-      this.setState({sortBy: 'popular'});
-      this.props.onSearch(this.state.value, 'popular')
-    }
-  };
+  handleSubmit(event) {
+    this.setState({sortBy: 'popular'});
+    this.props.onSearch(this.state.value, 'popular');
+    event.preventDefault();
+  }
+
+  onClick() {
+    this.props.onSearch(this.state.value, 'popular')
+  }
 
   onSuggestionsFetchRequested = ({value}) => {
     fetch(`${config.suggester_url}/${value}?cat=112`).then(res => res.json()).then(result => {
@@ -79,7 +82,7 @@ class Search extends React.Component {
       placeholder: 'Search the collection',
       value,
       onChange: this.onChange,
-      onKeyPress: this.keyPressed
+      handleSubmit: this.handleSubmit
     };
 
     return (<div className="search">
@@ -95,7 +98,14 @@ class Search extends React.Component {
           : ''}> popular
         </span>
       </p>
-      <Autosuggest suggestions={suggestions} onSuggestionsFetchRequested={this.onSuggestionsFetchRequested} onSuggestionsClearRequested={this.onSuggestionsClearRequested} getSuggestionValue={getSuggestionValue} renderSuggestion={renderSuggestion} inputProps={inputProps} renderInputComponent={renderInput}/>
+      <Autosuggest
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={inputProps}
+        renderInputComponent={renderInput}/>
     </div>);
   }
 }

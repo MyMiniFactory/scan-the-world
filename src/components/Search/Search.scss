@@ -15,8 +15,15 @@
     border-bottom: 1px solid black;
     margin: 0;
 
-    label > svg {
-      vertical-align: middle;
+    button {
+      border: none;
+      text-decoration: none;
+      background: white;
+      padding: 0;
+
+      svg {
+        vertical-align: middle;
+      }
     }
 
     input {
