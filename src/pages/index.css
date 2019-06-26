@@ -1,0 +1,7 @@
+.intro {
+  margin-bottom: 50px;
+}
+
+.intro > h1 {
+  text-transform: uppercase;
+}
