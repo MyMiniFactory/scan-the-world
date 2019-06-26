@@ -1,0 +1,10 @@
+.container {
+  margin-left: 10%;
+  max-width: 1020px;
+  padding-top: 100px;
+}
+
+.search-section {
+  display: flex;
+  flex-flow: row wrap-reverse;
+}
