@@ -1,0 +1,14 @@
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 960px;
+}
+
+.about-content > img {
+  height: 100px;
+}
