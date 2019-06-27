@@ -11,10 +11,20 @@ collections:
   - name: page
     label: Pages
     folder: contents/pages
-    create: true
+    create: false
     fields:
       - { name: path, label: Path }
-      - { name: banner_path, label: Banner Path }
+      - { name: banner, label: Banner, widget: image }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: team
+    label: Team
+    folder: contents/team
+    create: true
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: role, label: Role, widget: string }
+      - { name: quote, label: Quote, widget: string }
+      - { name: order, label: Order, widget: number }
+      - { name: profile_picture, label: Profile picture, widget: image }
