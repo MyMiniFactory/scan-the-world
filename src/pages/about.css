@@ -1,8 +1,7 @@
 .about-container {
   display: flex;
   flex-flow: row wrap;
-  padding-top: 50px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .about-content {
@@ -11,4 +10,9 @@
 
 .about-content > img {
   height: 100px;
+}
+
+.team h2 {
+  text-align: center;
+  text-transform: uppercase;
 }
