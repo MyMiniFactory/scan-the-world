@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: myminifactory/scan-the-world/tree/jb-branch
+  repo: myminifactory/scan-the-world
+  branch: jb-branch
 
 site_url: https://myminifactory.com/scan-the-world
 media_folder: static/assets
