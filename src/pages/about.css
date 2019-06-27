@@ -1,18 +1,45 @@
+.banner {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 5% 20px 5%;
+}
+
 .about-container {
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 
 .about-content {
-  max-width: 960px;
+  max-width: 1020px;
 }
 
-.about-content > img {
-  height: 100px;
+.about-content img {
+  width: 100%;
+  height: auto;
+}
+
+.about-content h1 {
+  text-transform: uppercase;
+}
+
+.about-content p {
+    text-align: justify;
+}
+
+.team {
 }
 
 .team h2 {
   text-align: center;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1205px) {
+  .banner {
+      margin: 0 0 20px 0;
+  }
 }

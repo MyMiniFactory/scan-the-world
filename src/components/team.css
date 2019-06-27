@@ -1,6 +1,11 @@
 .members {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+  margin-bottom: 5vh;
+}
+
+.member {
+    max-width: 180px;
 }
 
 .member p {
@@ -14,8 +19,15 @@
 
 .member img {
   display: block;
-  margin: 0 auto 5px auto;
+  margin: 0 auto 10px auto;
   max-width: 100px;
   border-radius: 90px;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 1370px) {
+    .members {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
 }
