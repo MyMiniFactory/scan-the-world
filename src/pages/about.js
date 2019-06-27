@@ -9,8 +9,11 @@ import './about.css';
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="About" />
+    <div className="banner" style={{backgroundImage: `url(${data.markdownRemark.frontmatter.banner})`}}/>
     <div className="about-container">
-      <div className="about-content" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
+      <div className="about-content">
+        <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
+      </div>
       <div className="team">
         <h2>the team</h2>
         <Team />
@@ -23,6 +26,9 @@ export const query = graphql `
   query AboutQuery {
     markdownRemark(frontmatter: {path: {eq: "about"}}) {
       html
+      frontmatter {
+        banner
+      }
     }
   }
 `
