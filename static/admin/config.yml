@@ -13,16 +13,17 @@ collections:
     folder: contents/pages
     create: false
     fields:
+      - { name: title, label: Page Title }
       - { name: path, label: Path }
       - { name: banner, label: Banner, widget: image }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: team
     label: Team
     folder: contents/team
     create: true
     fields:
+      - { name: title, label: Member Title, widget: string }
       - { name: name, label: Name, widget: string }
       - { name: role, label: Role, widget: string }
       - { name: quote, label: Quote, widget: string }
