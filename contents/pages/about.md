@@ -3,7 +3,7 @@ title: About
 path: about
 date: 2019-06-01T21:30:48.253Z
 ---
-![beared man](/assets/bearded-man.jpg)
+![beared man](/assets/banner_about.jpg)
 
 # About Scan The World
 
