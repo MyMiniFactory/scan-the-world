@@ -24,11 +24,14 @@ function renderSuggestion(suggestion) {
     </a>);
 }
 
-const renderInput = (inputProps) => (
-  <form onSubmit={inputProps.handleSubmit}>
+const renderInput = (inputProps) => {
+  const {submit, ...inputs} = inputProps;
+  return (
+  <form onSubmit={submit}>
     <button type='submit'><FaSearch/></button>
-    <input {... inputProps}/>
-  </form>);
+    <input {... inputs}/>
+  </form>)
+}
 
 class Search extends React.Component {
   constructor(props) {
@@ -82,7 +85,7 @@ class Search extends React.Component {
       placeholder: 'Search the collection',
       value,
       onChange: this.onChange,
-      handleSubmit: this.handleSubmit
+      submit: this.handleSubmit
     };
 
     return (<div className="search">
