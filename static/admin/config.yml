@@ -16,6 +16,7 @@ collections:
       - { name: title, label: Page Title }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
+      - { name: banner, label: Banner picture, widget: image, required: false }
       - { name: body, label: Body, widget: markdown }
   - name: team
     label: Team
