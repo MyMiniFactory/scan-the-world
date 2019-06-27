@@ -16,7 +16,7 @@ const HomePage = ({ data }) => (
 )
 
 export const query = graphql `
-  query MyQuery {
+  query IndexQuery {
     markdownRemark(frontmatter: {path: {eq: "index"}}) {
       html
     }
