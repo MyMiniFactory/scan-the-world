@@ -2,9 +2,8 @@
 title: About
 path: about
 date: 2019-06-01T21:30:48.253Z
+banner: /assets/banner_about.jpg
 ---
-![beared man](/assets/banner_about.jpg)
-
 # About Scan The World
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum justo tellus. Sed non leo quis dolor auctor tristique. Nam blandit, lacus id faucibus sodales, justo quam rutrum lorem, suscipit malesuada ligula tellus eget libero. Cras gravida ornare turpis, sit amet varius odio condimentum non. Integer et tortor porta, tempor lacus vel, pretium orci. Maecenas ornare ante vestibulum, vestibulum diam at, placerat nunc. Donec vitae tortor vehicula, dictum sem sit amet, rhoncus nibh. Sed rutrum metus condimentum faucibus auctor.
