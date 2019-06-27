@@ -15,7 +15,6 @@ collections:
     fields:
       - { name: title, label: Page Title }
       - { name: path, label: Path }
-      - { name: banner, label: Banner, widget: image }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
   - name: team
