@@ -1,10 +1,9 @@
 ---
 title: About
 path: about
-banner: /scan-the-world/assets/bearded-man.jpg
 date: 2019-06-01T21:30:48.253Z
 ---
-![beared man](/scan-the-world/assets/bearded-man.jpg)
+![beared man](/assets/bearded-man.jpg)
 
 # About Scan The World
 
