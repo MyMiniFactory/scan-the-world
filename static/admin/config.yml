@@ -18,6 +18,14 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: banner, label: Banner picture, widget: image, required: false }
       - { name: body, label: Body, widget: markdown }
+  - name: contribute
+    label: Contribute Resources
+    folder: contents/contribute-resources
+    create: true
+    fields:
+      - { name: title, label: Resource Title, widget: string }
+      - { name: resource_picture, label: Resource picture, widget: image }
+      - { name: resource_link, label: Resource link, widget: string }
   - name: team
     label: Team
     folder: contents/team
