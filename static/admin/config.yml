@@ -29,7 +29,7 @@ collections:
               - { name: alt, label: Alt, widget: string, required: false }
       - label: About Page
         name: about
-        file: contents/page/about.yml
+        file: contents/pages/about.yml
         fields:
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: markdown }
