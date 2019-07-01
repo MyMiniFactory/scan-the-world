@@ -2,23 +2,43 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Container from "../components/container"
-import './index.css';
+import SearchContainer from "../components/searchContainer"
+import Gallery from "react-photo-gallery"
+import './index.css'
 
+const onImageClick = (event, {photo}) => photo.href ? window.location.href = photo.href : null
 
 const HomePage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Container objects={data.allMyMiniFactoryObject.nodes}>
-      <div className="intro" dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
-    </Container>
+    <div className="intro">
+      <h1>{data.file.childDataYaml.title}</h1>
+      <p>{data.file.childDataYaml.intro}</p>
+    </div>
+    <div className="container">
+      <SearchContainer objects={data.allMyMiniFactoryObject.nodes} />
+      <div className="gallery">
+        <Gallery photos={data.file.childDataYaml.trends} direction={`column`} margin={20} onClick={onImageClick}/>
+      </div>
+    </div>
   </Layout>
 )
 
 export const query = graphql `
   query IndexQuery {
-    markdownRemark(frontmatter: {path: {eq: "index"}}) {
-      html
+    file(sourceInstanceName: {eq: "data"}, name: {eq: "home"}) {
+      childDataYaml {
+        intro
+        title
+        trends {
+          height
+          href
+          src
+          title
+          width
+          alt
+        }
+      }
     }
     allMyMiniFactoryObject {
       nodes {

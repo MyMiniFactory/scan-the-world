@@ -9,14 +9,15 @@ import './about.css';
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="About" />
-    <div className="banner" style={{backgroundImage: `url(${data.markdownRemark.frontmatter.banner})`}}/>
+    <div className="banner" style={{backgroundImage: `url(${data.file.childDataYaml.bannerUrl})`}}/>
     <div className="about-container">
       <div className="about-content">
-        <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
+        <h1>{data.file.childDataYaml.title}</h1>
+        <p>{data.file.childDataYaml.intro}</p>
       </div>
       <div className="team">
         <h2>the team</h2>
-        <Team />
+        <Team members={data.file.childDataYaml.team}/>
       </div>
     </div>
   </Layout>
@@ -24,10 +25,17 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql `
   query AboutQuery {
-    markdownRemark(frontmatter: {path: {eq: "about"}}) {
-      html
-      frontmatter {
-        banner
+    file(sourceInstanceName: {eq: "data"}, name: {eq: "about"}) {
+      childDataYaml {
+        intro
+        title
+        bannerUrl
+        team {
+          position
+          quote
+          title
+          src
+        }
       }
     }
   }

@@ -6,6 +6,6 @@ intro: >-
 trends:
   - height: 1
     href: 'https://www.myminifactory.com/upload/object-upload'
-    image: /assets/plus.png
+    src: /assets/plus.png
     title: plus-button
     width: 1

@@ -22,18 +22,18 @@ collections:
             widget: list
             fields:
               - { name: title, label: Title, widget: string }
-              - { name: image, label: Image, widget: image }
+              - { name: src, label: Image, widget: image }
               - { name: width, label: Width, widget: number, min: 1 }
               - { name: height, label: Height, widget: number, min: 1 }
               - { name: href, label: Link, widget: string, required: false }
-              - { name: alt, label: Alt, widget: string, required: false }
+              - { name: alt, label: Alt, widget: string, default: "", required: false }
       - label: About Page
         name: about
         file: src/data/about.yml
         fields:
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
-          - { name: banner, label: Banner, widget: image }
+          - { name: bannerUrl, label: Banner, widget: image }
           - name: team
             label: Team
             widget: list
@@ -41,4 +41,4 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: position, label: Position, widget: string }
               - { name: quote, label: Quote, widget: string }
-              - { name: photo, label: Photo, widget: image }
+              - { name: src, label: Photo, widget: image }

@@ -1,7 +1,22 @@
 .intro {
   margin-bottom: 50px;
+  margin-left: 10%;
 }
 
 .intro > h1 {
   text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+}
+
+.gallery {
+  flex: auto;
+  min-width: 300px;
+}
+
+.react-photo-gallery--gallery img:hover {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
