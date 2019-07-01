@@ -31,12 +31,12 @@ export const query = graphql `
         intro
         title
         trends {
+          alt
           height
           href
           src
           title
           width
-          alt
         }
       }
     }
