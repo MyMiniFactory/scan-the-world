@@ -4,8 +4,9 @@ intro: >-
   scanning technologies, producing an extensive platform of content suitable for
   3D printing.
 trends:
-  - height: 1
+  - alt: plus button
+    height: 1
     href: 'https://www.myminifactory.com/upload/object-upload'
     src: /assets/plus.png
-    title: plus-button
+    title: A really cool plus button
     width: 1
