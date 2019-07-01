@@ -37,3 +37,14 @@ collections:
       - { name: quote, label: Quote, widget: string }
       - { name: order, label: Order, widget: number }
       - { name: profile_picture, label: Profile picture, widget: image }
+  - name: index
+    label: Index Resources
+    folder: contents/index-resources
+    create: true
+    fields:
+      - { name: title, label: Resource Title, widget: string }
+      - { name: width, label: Width, widget: number }
+      - { name: height, label: Height, widget: number }
+      - { name: alt, label: Alt, widget: string, required: false }
+      - { name: href, label: Href, widget: string, required: false }
+      - { name: order, label: Order, widget: number }
