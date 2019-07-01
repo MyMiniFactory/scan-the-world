@@ -1,9 +1,9 @@
 import React from 'react'
 import Objects from './Objects/Objects'
 import Search from './Search/Search'
-import './container.css'
+import './searchContainer.css'
 
-class Container extends React.Component {
+class SearchContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +23,7 @@ class Container extends React.Component {
 
   render() {
     return (
-        <div className="container">
-          {this.props.children}
+        <div className="search-container">
           <section className="search-section">
             <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} />
             <Search onSearch={this.onSearch} />
@@ -34,4 +33,4 @@ class Container extends React.Component {
   }
 }
 
-export default Container;
+export default SearchContainer;
