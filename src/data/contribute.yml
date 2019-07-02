@@ -15,3 +15,11 @@ contributions:
     src: /assets/plus.png
     title: Create a scan
     width: 1
+  - height: 1
+    src: /assets/plus.png
+    title: Upload a file
+    width: 1
+  - height: 1
+    src: /assets/plus.png
+    title: Browse zonderland
+    width: 1
