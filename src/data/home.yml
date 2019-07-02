@@ -10,3 +10,11 @@ trends:
     src: /assets/plus.png
     title: A really cool plus button
     width: 1
+  - height: 1
+    src: /assets/profile-default.jpg
+    title: A nice contributor
+    width: 1
+  - height: 1
+    src: /assets/bearded-man.jpg
+    title: A nice banner
+    width: 2
