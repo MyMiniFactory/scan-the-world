@@ -1,0 +1,56 @@
+$header-height: 30px;
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+}
+
+header > nav {
+    padding-right: 10px;
+}
+
+header > nav > a {
+  color: black;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+header > nav > a:hover {
+  text-decoration: underline;
+}
+
+header.collapse {
+  animation: collapse 0.5s ease forwards;
+}
+
+header.open {
+  animation: open 1s ease forwards;
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  } to {
+    opacity: 0;
+    top: -$header-height;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    top: -$header-height;
+  } to {
+    opacity: 1;
+    top: 0;
+  }
+}
