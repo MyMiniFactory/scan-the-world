@@ -14,7 +14,7 @@ trends:
     src: /assets/profile-default.jpg
     title: A nice contributor
     width: 1
-  - height: 1
+  - height: 2
     src: /assets/bearded-man.jpg
     title: A nice banner
-    width: 6
+    width: 4
