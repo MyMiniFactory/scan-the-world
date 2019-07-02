@@ -42,3 +42,20 @@ collections:
               - { name: position, label: Position, widget: string }
               - { name: quote, label: Quote, widget: string }
               - { name: src, label: Photo, widget: image }
+      - label: Contribute Page
+        name: contribute
+        file: src/data/contribute.yml
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: bannerUrl, label: Banner, widget: image }
+          - name: contributions
+            label: Contributions
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: src, label: Image, widget: image }
+              - { name: width, label: Width, widget: number, min: 1 }
+              - { name: height, label: Height, widget: number, min: 1 }
+              - { name: href, label: Link, widget: string, required: false }
+              - { name: alt, label: Alt, widget: string, default: "", required: false }
