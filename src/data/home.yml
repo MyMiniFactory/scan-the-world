@@ -4,6 +4,10 @@ intro: >-
   scanning technologies, producing an extensive platform of content suitable for
   3D printing.
 trends:
+  - height: 2
+    src: /assets/bearded-man.jpg
+    title: A nice banner
+    width: 4
   - alt: plus button
     height: 1
     href: 'https://www.myminifactory.com/upload/object-upload'
@@ -14,7 +18,3 @@ trends:
     src: /assets/profile-default.jpg
     title: A nice contributor
     width: 1
-  - height: 2
-    src: /assets/bearded-man.jpg
-    title: A nice banner
-    width: 4
