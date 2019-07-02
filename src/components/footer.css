@@ -15,12 +15,11 @@ footer > p {
   margin: 0;
 }
 
-.footer-stw > img {
+footer img {
   display: block;
-  height: 2.4rem;
-  margin: 0;
 }
 
 .footer-tools {
   color: white;
+  padding-right: 10px;
 }
