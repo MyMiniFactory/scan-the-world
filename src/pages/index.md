@@ -9,5 +9,6 @@ trends:
   - height: 1
     src: /assets/bearded-man.jpg
     title: Banner
-    width: 1
+    width: 2
 ---
+
