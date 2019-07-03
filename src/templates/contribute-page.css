@@ -1,0 +1,28 @@
+.contribute-container {
+  margin: 0 auto 5% auto;
+  max-width: 1000px;
+}
+
+.contribute-content h1 {
+  text-transform: uppercase;
+}
+
+.contribute-content h2 {
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+}
+
+.contribute-content h2 > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contribute-content p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1205px) {
+  .banner {
+      margin: 0 0 20px 0;
+  }
+}

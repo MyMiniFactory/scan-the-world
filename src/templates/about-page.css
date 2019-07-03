@@ -5,6 +5,13 @@
   margin: 0 5% 20px 5%;
 }
 
+.return {
+    position: absolute;
+    height: 64px;
+    width: auto;
+    color: #25282a;
+}
+
 .about-container {
   max-width: 90%;
   margin: 0 auto;
@@ -23,9 +30,6 @@
 
 .about-content p {
     text-align: justify;
-}
-
-.team {
 }
 
 .team h2 {

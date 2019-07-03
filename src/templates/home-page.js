@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SearchContainer from "../components/searchContainer"
 import Gallery from "react-photo-gallery"
-import './index.css'
+import './home-page.css'
 
 const onImageClick = (event, {photo}) => photo.href ? window.location.href = photo.href : null
 
@@ -26,20 +26,7 @@ const HomePage = ({ data }) => (
 
 export const query = graphql `
   query IndexQuery {
-    file(sourceInstanceName: {eq: "data"}, name: {eq: "home"}) {
-      childDataYaml {
-        intro
-        title
-        trends {
-          alt
-          height
-          href
-          src
-          title
-          width
-        }
-      }
-    }
+    
     allMyMiniFactoryObject {
       nodes {
         images {

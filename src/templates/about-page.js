@@ -1,14 +1,19 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Team from "../components/team"
-import './about.css';
+import { FaChevronLeft } from 'react-icons/fa'
+import './about-page.css';
+
 
 
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="About" />
+    <Link to={'/'}>
+      <FaChevronLeft className='return'/>
+    </Link>
     <div className="banner" style={{backgroundImage: `url(${data.file.childDataYaml.bannerUrl})`}}/>
     <div className="about-container">
       <div className="about-content">
@@ -25,19 +30,7 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql `
   query AboutQuery {
-    file(sourceInstanceName: {eq: "data"}, name: {eq: "about"}) {
-      childDataYaml {
-        intro
-        title
-        bannerUrl
-        team {
-          position
-          quote
-          title
-          src
-        }
-      }
-    }
+
   }
 `
 

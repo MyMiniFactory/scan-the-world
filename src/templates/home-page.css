@@ -1,6 +1,7 @@
 .intro {
-  margin-bottom: 50px;
+  max-width: 1212px;
   margin-left: 10%;
+  margin-right: 10%;
 }
 
 .intro > h1 {
