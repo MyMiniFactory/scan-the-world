@@ -1,4 +1,4 @@
-import CMS from 'netlify-cms'
-import HomePreview from './homePreview'
+import CMS from 'netlify-cms-app'
+import HomePreview from './preview-templates/homePreview'
 
-CMS.registerPreviewTemplate("home", HomePreview)
+CMS.registerPreviewTemplate('home', HomePreview)
