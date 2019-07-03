@@ -6,31 +6,27 @@ module.exports = {
   },
   pathPrefix: "/scan-the-world",
   plugins: [
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-yaml`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/contents/pages/`,
+        path: `${__dirname}/contents/pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
