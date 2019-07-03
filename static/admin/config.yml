@@ -13,8 +13,9 @@ collections:
     files:
       - label: Home Page
         name: home
-        file: src/data/home.yml
+        file: src/pages/index.md
         fields:
+          - { name: templateKey, label: Template Key, widget: hidden, default: home-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - name: trends
@@ -29,8 +30,9 @@ collections:
               - { name: alt, label: Alt, widget: string, default: "", required: false }
       - label: About Page
         name: about
-        file: src/data/about.yml
+        file: src/pages/about/index.md
         fields:
+          - { name: templateKey, label: Template Key, widget: hidden, default: about-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - { name: bannerUrl, label: Banner, widget: image }
@@ -44,8 +46,9 @@ collections:
               - { name: src, label: Photo, widget: image }
       - label: Contribute Page
         name: contribute
-        file: src/data/contribute.yml
+        file: src/pages/contribute/index.md
         fields:
+          - { name: templateKey, label: Template Key, widget: hidden, default: contribute-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - { name: bannerUrl, label: Banner, widget: image }
@@ -59,3 +62,10 @@ collections:
               - { name: height, label: Height, widget: number, min: 1 }
               - { name: href, label: Link, widget: string, required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
+      - label: Learn Page
+        name: learn
+        file: src/pages/learn/index.md
+        fields:
+          - { name: templateKey, label: Template Key, widget: hidden, default: learn-page }
+          - { name: title, label Title, widget: string }
+          - { name: bannerUrl, label: Banner, widget: image }
