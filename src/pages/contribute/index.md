@@ -1,4 +1,5 @@
 ---
+templateKey: contribute-page
 title: Contribute
 intro: |-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida
@@ -10,4 +11,3 @@ intro: |-
   ultrices convallis. Aenean viverra tristique tempor.
 bannerUrl: /assets/bearded-man.jpg
 ---
-

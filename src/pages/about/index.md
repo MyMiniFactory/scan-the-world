@@ -1,4 +1,5 @@
 ---
+templateKey: about-page
 title: About Scan the World
 intro: |-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum
@@ -24,4 +25,3 @@ team:
     src: /assets/profile-default.jpg
     title: John
 ---
-
