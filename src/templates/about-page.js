@@ -8,29 +8,45 @@ import './about-page.css';
 
 
 
-const AboutPage = ({ data }) => (
-  <Layout>
-    <SEO title="About" />
-    <Link to={'/'}>
-      <FaChevronLeft className='return'/>
-    </Link>
-    <div className="banner" style={{backgroundImage: `url(${data.file.childDataYaml.bannerUrl})`}}/>
-    <div className="about-container">
-      <div className="about-content">
-        <h1>{data.file.childDataYaml.title}</h1>
-        <p>{data.file.childDataYaml.intro}</p>
+const AboutPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+
+  return (
+    <Layout>
+      <SEO title="About" />
+      <Link to={'/'}>
+        <FaChevronLeft className='return'/>
+      </Link>
+      <div className="banner" style={{backgroundImage: `url(${frontmatter.bannerUrl})`}}/>
+      <div className="about-container">
+        <div className="about-content">
+          <h1>{frontmatter.title}</h1>
+          <p>{frontmatter.intro}</p>
+        </div>
+        <div className="team">
+          <h2>the team</h2>
+          <Team members={frontmatter.team}/>
+        </div>
       </div>
-      <div className="team">
-        <h2>the team</h2>
-        <Team members={data.file.childDataYaml.team}/>
-      </div>
-    </div>
-  </Layout>
-    )
+    </Layout>
+  )
+}
 
 export const query = graphql `
   query AboutQuery {
-
+    markdownRemark(frontmatter: {templateKey: {eq: "about-page"}}) {
+      frontmatter {
+        bannerUrl
+        intro
+        title
+        team {
+          position
+          quote
+          src
+          title
+        }
+      }
+    }
   }
 `
 
