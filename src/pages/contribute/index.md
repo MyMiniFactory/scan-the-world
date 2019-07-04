@@ -11,10 +11,4 @@ intro: |-
   ultrices convallis. Aenean viverra tristique tempor.
 bannerUrl: /assets/bearded-man.jpg
 contributions:
-  - height: 1
-    href: 'https://www.myminifactory.com/upload/object-upload'
-    src: /assets/plus.png
-    title: Add a new scan
-    width: 1
 ---
-

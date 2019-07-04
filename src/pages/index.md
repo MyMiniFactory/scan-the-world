@@ -6,9 +6,4 @@ intro: |2-
     scanning technologies, producing an extensive platform of content suitable for
     3D printing.
 trends:
-  - height: 1
-    src: /assets/bearded-man.jpg
-    title: Banner
-    width: 2
 ---
-
