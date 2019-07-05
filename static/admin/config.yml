@@ -26,8 +26,11 @@ collections:
               - { name: src, label: Image, widget: image }
               - { name: href, label: Link, widget: string, required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
-              - { name: float, label: Float, widget: select, options: ["left, right"] }
-              - { name: width, label: "Width (px)", widget: number, min: 1, required: false }
+              - name: float
+                label: Float
+                widget: select
+                options: ["left, right"]
+              - { name: width, label: "Width (px)", widget: number, min: 0, required: false }
               - { name: marginTop, label: "Margin top (px)", widget: number, min: 0, required: false }
       - label: About Page
         name: about
