@@ -2,11 +2,8 @@ import React from "react"
 import { Link, graphql} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Gallery from "react-photo-gallery"
 import { FaChevronLeft } from "react-icons/fa"
 import "./contribute-page.css"
-
-const onImageClick = (event, {photo}) => photo.href ? window.location.href = photo.href : null
 
 const ContributePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -21,7 +18,15 @@ const ContributePage = ({ data }) => {
         <div className="contribute-content">
           <h1>{frontmatter.title}</h1>
           <p>{frontmatter.intro}</p>
-          <Gallery photos={frontmatter.contributions} margin={20} onClick={onImageClick} />
+        </div>
+        <div className="contributions">
+          { frontmatter.contributions.map((ctb, index) => {
+            return (
+              <a href={ctb.href} key={index}>
+                <img title={ctb.title} src={ctb.src} alt={ctb.alt}/>
+              </a>
+            )
+          })}
         </div>
       </div>
     </Layout>
@@ -36,11 +41,10 @@ export const query = graphql `
           intro
           title
           contributions {
-            height
+            alt
             href
             src
             title
-            width
           }
         }
       }

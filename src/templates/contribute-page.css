@@ -21,6 +21,20 @@
     text-align: justify;
 }
 
+.contributions {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contributions > a {
+  height: 300px;
+}
+
+.contributions > a > img {
+  height: 100%;
+  width: auto;
+}
+
 @media only screen and (max-width: 1205px) {
   .banner {
       margin: 0 0 20px 0;

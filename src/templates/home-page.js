@@ -3,10 +3,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SearchContainer from "../components/searchContainer"
-import Gallery from "react-photo-gallery"
 import './home-page.css'
 
-const onImageClick = (event, {photo}) => photo.href ? window.location.href = photo.href : null
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -20,8 +18,18 @@ const HomePage = ({ data }) => {
       </div>
       <div className="container">
         <SearchContainer objects={data.allMyMiniFactoryObject.nodes} />
-        <div className="gallery">
-          <Gallery photos={frontmatter.trends} direction={`column`} margin={20} onClick={onImageClick}/>
+        <div className="masonry">
+          {
+            frontmatter.trends.map((trend, index) => {
+              const { width, marginTop, float } = trend
+              const style = { width, marginTop, float }
+              return (
+                <a href={trend.href} key={index}>
+                  <img src={trend.src} alt={trend.alt} style={style}/>
+                </a>
+              )
+            })
+          }
         </div>
       </div>
     </Layout>
@@ -36,7 +44,10 @@ export const query = graphql `
         intro
         title
         trends {
-          height
+          alt
+          float
+          href
+          marginTop
           src
           title
           width

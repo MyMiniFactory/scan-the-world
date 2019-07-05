@@ -10,14 +10,31 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
   flex-flow: row;
 }
 
-.gallery {
+.masonry {
   flex: auto;
+  column-count: 1;
+  column-gap: 5em;
   min-width: 300px;
+  max-width: 460px;
+  margin-right: 5em;
+  margin-left: 5em;
 }
 
-.react-photo-gallery--gallery img:hover {
+.masonry > a {
+  width: 100%;
+}
+
+.masonry > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5em;
+}
+
+.masonry > a > img:hover {
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }

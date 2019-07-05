@@ -11,7 +11,8 @@ intro: |-
   ultrices convallis. Aenean viverra tristique tempor.
 bannerUrl: /assets/bearded-man.jpg
 contributions:
-  - src: /assets/plus.png
+  - alt: ""
+    href: "#"
+    src: /assets/plus.png
     title: Plus button
 ---
-
