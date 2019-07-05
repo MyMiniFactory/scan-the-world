@@ -8,9 +8,9 @@ intro: |2-
 trends:
   - alt: plus button
     float: left
+    href: '#'
     marginTop: ''
     src: /assets/plus.png
     title: Plus button
     width: ''
 ---
-
