@@ -1,4 +1,5 @@
 ---
+templateKey: uses-page
 uses:
   - intro: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
@@ -27,4 +28,3 @@ uses:
     src: /assets/plus.png
     title: Accessibility
 ---
-
