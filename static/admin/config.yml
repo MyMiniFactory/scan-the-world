@@ -50,6 +50,7 @@ collections:
         file: src/pages/about/uses/index.md
         fields:
           - { name: templateKey, label: Template Key, widget: hidden, default: uses-page }
+          - { name: bannerUrl, label: Banner, widget: image }
           - name: uses
             label: Uses
             widget: list
