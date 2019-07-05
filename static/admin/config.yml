@@ -45,19 +45,6 @@ collections:
               - { name: position, label: Position, widget: string }
               - { name: quote, label: Quote, widget: string }
               - { name: src, label: Photo, widget: image }
-      - label: Uses Page
-        name: uses
-        file: src/pages/about/uses/index.md
-        fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: uses-page }
-          - { name: bannerUrl, label: Banner, widget: image }
-          - name: uses
-            label: Uses
-            widget: list
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: src, label: Image, widget: image }
-              - { name: intro, label: Intro, widget: text }
       - label: Contribute Page
         name: contribute
         file: src/pages/contribute/index.md
@@ -74,10 +61,27 @@ collections:
               - { name: src, label: Image, widget: image }
               - { name: href, label: Link, widget: string, default: "#", required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
-      - label: Learn Page
-        name: learn
-        file: src/pages/learn/index.md
+      - label: Uses Page
+        name: uses
+        file: src/pages/learn/uses/index.md
         fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: learn-page }
-          - { name: title, label Title, widget: string }
+          - { name: templateKey, label: Template Key, widget: hidden, default: uses-page }
           - { name: bannerUrl, label: Banner, widget: image }
+          - name: uses
+          label: Uses
+          widget: list
+          fields:
+            - { name: title, label: Title, widget: string }
+            - { name: src, label: Image, widget: image }
+            - { name: intro, label: Intro, widget: text }
+
+  - name: stories
+    label: Stories
+    folder: src/pages/learn/stories
+    create: true
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
+    fields:
+      - { name: templateKey, label: Template Key, widget: hidden, default: storie-page }
+      - { name: title, label: Title, widget: string }
+      - { name: intro, label: Intro, widget: text }
+      - { name: body, label: Body, widget: markdown }
