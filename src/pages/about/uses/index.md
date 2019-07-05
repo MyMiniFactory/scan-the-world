@@ -1,4 +1,5 @@
 ---
+bannerUrl: /assets/banner_learn.jpg
 uses:
   - intro: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
