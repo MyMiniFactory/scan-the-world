@@ -6,4 +6,11 @@ intro: |2-
     scanning technologies, producing an extensive platform of content suitable for
     3D printing.
 trends:
+  - alt: plus button
+    float: left
+    marginTop: ''
+    src: /assets/plus.png
+    title: Plus button
+    width: ''
 ---
+
