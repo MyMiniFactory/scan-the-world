@@ -77,7 +77,7 @@ collections:
 
   - name: stories
     label: Stories
-    folder: src/pages/learn/stories
+    folder: src/pages/community/stories
     create: true
     slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
     fields:
