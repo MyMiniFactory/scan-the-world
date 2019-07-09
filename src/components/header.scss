@@ -5,7 +5,7 @@ header {
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,8 +13,12 @@ header {
   z-index: 1;
 }
 
+header > img {
+  margin-left: 10px;
+}
+
 header > nav {
-    padding-right: 10px;
+  margin-right: 20px;
 }
 
 header > nav > a {
