@@ -1,0 +1,32 @@
+.object-tile {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  margin: 10px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.object-tile > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.object-tile > p {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  visibility: hidden;
+  color: white;
+  margin: 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.object-tile:hover p {
+  visibility: visible;
+}
+
+.loader svg {
+      width: 230px;
+      margin: 10px;
+}

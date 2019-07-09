@@ -1,18 +1,15 @@
-import './ObjectTile.scss'
+import './ObjectTile.css'
 
 import React from 'react';
 
 function ObjectTile({ object }) {
   return (
-      <a className="object-tile-a" href={object.url} >
-        <div className="object-tile" style={{
-          backgroundImage: `url(${object.images[0].thumbnail.url})`,
-        }}>
-          <div className="info">
-            <p>{object.name}</p>
-          </div>
-        </div>
+    <div className="object-tile">
+      <a href={object.url} >
+        <img src={object.images[0].thumbnail.url} alt={object.name}/>
       </a>
+      <p>{object.name}</p>
+    </div>
   );
 }
 
