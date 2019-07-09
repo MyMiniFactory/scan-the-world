@@ -84,6 +84,5 @@ collections:
       - { name: templateKey, label: Template Key, widget: hidden, default: story-page }
       - { name: title, label: Title, widget: string }
       - { name: date, label: Publish date, widget: "datetime"}
-      - { name: intro, label: Intro, widget: text }
       - { name: src, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
