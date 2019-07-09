@@ -12,6 +12,6 @@ trends:
     marginTop: ''
     src: /assets/plus.png
     title: Plus button
-    width: 100
+    width: 300
 ---
 
