@@ -10,6 +10,7 @@ public_folder: /assets
 collections:
   - name: pages
     label: Pages
+    delete: false
     files:
       - label: Home Page
         name: home
