@@ -1,5 +1,4 @@
-
-import './Objects.scss'
+import './Objects.css'
 
 import config from '../../config';
 import React from 'react';
@@ -9,7 +8,7 @@ import ContentLoader from "react-content-loader"
 import ObjectTile from '../ObjectTile/ObjectTile';
 
 const skeleton = () => {
-    const blocks = Array.from({ length: 6 }, (x, i) => (
+    const blocks = Array.from({ length: 12 }, (x, i) => (
         <ContentLoader
           key={i}
           height={230}
@@ -18,7 +17,7 @@ const skeleton = () => {
           primaryColor="#f3f3f3"
           secondaryColor="#ecebeb"
         >
-            <rect x="0" y="0" rx="5" ry="5" width="230" height="230" />
+          <rect x="0" y="0" rx="5" ry="5" width="230" height="230" />
         </ContentLoader>
     ));
 
@@ -26,6 +25,19 @@ const skeleton = () => {
     <div className="loader" key={0} >
         {blocks}
     </div>)
+}
+
+const plusButton = {
+  url: "https://www.myminifactory.com",
+  name: "Contribute now",
+  images: [
+    {
+      thumbnail:
+      {
+        url:"/assets/plus.png"
+      }
+    }
+  ]
 }
 
 class Objects extends React.Component {
@@ -86,13 +98,18 @@ class Objects extends React.Component {
 
     render() {
 
-        const tiles = this.state.objects.map((object, i) =>
-          <ObjectTile key={i} object={object} />
-        );
-
         if (this.state.isLoaded && this.state.objects.length === 0){
-            return (<p>No objects found :(<br/>Try reloading the page</p>);
+          return (<p>No objects found :(<br/>Try reloading the page</p>);
         }
+
+        const tiles = this.state.objects.flatMap((object, i) => {
+          if (i === 1) {
+            return [<ObjectTile key={0} object={plusButton} />, <ObjectTile key={i+1} object={object} />]
+          }
+          return (
+            <ObjectTile key={i+1} object={object} />
+          )
+        })
 
         return (
             <InfiniteScroll
