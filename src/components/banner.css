@@ -1,0 +1,19 @@
+.banner {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 5% 20px 5%;
+}
+
+.return {
+    position: absolute;
+    height: 64px;
+    width: auto;
+    color: #25282a;
+}
+
+@media only screen and (max-width: 1205px) {
+  .banner {
+      margin: 0 0 20px 0;
+  }
+}
