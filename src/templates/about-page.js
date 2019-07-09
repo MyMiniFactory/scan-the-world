@@ -1,9 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Banner from "../components/banner"
 import SEO from "../components/seo"
 import Team from "../components/team"
-import { FaChevronLeft } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import './about-page.css';
 
 
@@ -14,14 +15,16 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <Link to={'/'}>
-        <FaChevronLeft className='return'/>
-      </Link>
-      <div className="banner" style={{backgroundImage: `url(${frontmatter.bannerUrl})`}}/>
+      <Banner url={'/'} bannerUrl={frontmatter.bannerUrl}/>
       <div className="about-container">
         <div className="about-content">
           <h1>{frontmatter.title}</h1>
           <p>{frontmatter.intro}</p>
+          <div>
+            <Link to={'/about/uses'}>
+              Learn more about us <FaArrowRight />
+            </Link>
+          </div>
         </div>
         <div className="team">
           <h2>the team</h2>

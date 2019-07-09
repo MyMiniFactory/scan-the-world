@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, graphql} from "gatsby"
+import { graphql} from "gatsby"
 import Layout from "../components/layout"
+import Banner from "../components/banner"
 import SEO from "../components/seo"
-import { FaChevronLeft } from "react-icons/fa"
 import "./contribute-page.css"
 
 const ContributePage = ({ data }) => {
@@ -10,10 +10,7 @@ const ContributePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Contribute" />
-      <Link to={'/'}>
-        <FaChevronLeft className='return'/>
-      </Link>
-      <div className="banner" style={{backgroundImage: `url(${frontmatter.bannerUrl})`}}/>
+      <Banner url={'/'} bannerUrl={frontmatter.bannerUrl}/>
       <div className="contribute-container">
         <div className="contribute-content">
           <h1>{frontmatter.title}</h1>

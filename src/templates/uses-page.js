@@ -1,20 +1,15 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
-import { FaChevronLeft } from 'react-icons/fa'
+import { graphql } from "gatsby"
 import Layout from '../components/layout'
-import LearnBar from '../components/learnBar'
+import Banner from '../components/banner'
 import './uses-page.css'
 
 const UsesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-      <Link to={'/'}>
-        <FaChevronLeft className='return'/>
-      </Link>
-      <div className="banner" style={{backgroundImage: `url(${frontmatter.bannerUrl})`}}/>
+      <Banner url={'/about'} bannerUrl={frontmatter.bannerUrl}/>
       <div className="uses-container">
-        <LearnBar />
         {frontmatter.uses.map((use, index) => {
           return (
             <div className="use-item" key={index}>
