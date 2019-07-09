@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Scan The World`,
     description: ``,
-    author: `Romain B.`,
+    author: `Jean-Baptiste Paux`,
   },
   pathPrefix: "/scan-the-world",
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
     	options: {
     	  key: "8e551c42-0fd1-4b8b-bd26-8b5d79e74099",
     	  cat: "112",
-    	  per_page: "24",
+    	  per_page: "23",
     	  light: "1",
         sort: "date",
     	},
