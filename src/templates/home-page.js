@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import SearchContainer from "../components/searchContainer"
 import './home-page.css'
 import logo from '../images/stw_logo.svg'
-import images from '../test/image-set'
 
 
 const HomePage = ({ data }) => {
@@ -29,25 +28,16 @@ const HomePage = ({ data }) => {
         </SearchContainer>
         <div className="masonry">
           {
-            // frontmatter.trends.map((trend, index) => {
-            //   const { width, marginTop, float } = trend
-            //   return (
-            //    <div key={index} style={{marginTop}}>
-            //       <a href={trend.href}>
-            //       <img src={trend.src} alt={trend.alt} style={{width, float}}/>
-            //     </a>
-            //     <p className='desc'>{trend.title}</p>
-            //   </div>
-            //   )
-            // })
-            images.map((pic, index) => {
-              const { width, marginTop, float } = pic
+            frontmatter.trends.map((trend, index) => {
+              const { width, marginTop, float } = trend
+              const margin = marginTop ? {marginTop: `${marginTop}px`} : null
+              const style = width ? {width: `${width}px`, float} : {float}
               return (
-                <div key={index} style={{marginTop}}>
-                  <a href={pic.href}>
-                    <img src={pic.src} alt={'trend'} style={{width, float}}/>
+                <div key={index} style={margin}>
+                  <a href={trend.href}>
+                    <img src={trend.src} alt={trend.alt} style={style}/>
                   </a>
-                  <p className='desc'>{pic.title}</p>
+                  <p className='desc'>{trend.title}</p>
                 </div>
               )
             })
