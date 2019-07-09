@@ -15,7 +15,7 @@ collections:
         name: home
         file: src/pages/index.md
         fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: home-page }
+          - { name: templateKey, widget: hidden, default: home-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - name: trends
@@ -33,7 +33,7 @@ collections:
         name: about
         file: src/pages/about/index.md
         fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: about-page }
+          - { name: templateKey, widget: hidden, default: about-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - { name: bannerUrl, label: Banner, widget: image }
@@ -49,7 +49,7 @@ collections:
         name: contribute
         file: src/pages/contribute/index.md
         fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: contribute-page }
+          - { name: templateKey, widget: hidden, default: contribute-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
           - { name: bannerUrl, label: Banner, widget: image }
@@ -65,7 +65,7 @@ collections:
         name: uses
         file: src/pages/learn/uses/index.md
         fields:
-          - { name: templateKey, label: Template Key, widget: hidden, default: uses-page }
+          - { name: templateKey, widget: hidden, default: uses-page }
           - { name: bannerUrl, label: Banner, widget: image }
           - name: uses
             label: Uses
@@ -81,8 +81,15 @@ collections:
     create: true
     slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
     fields:
-      - { name: templateKey, label: Template Key, widget: hidden, default: story-page }
+      - { name: templateKey, widget: hidden, default: story-page }
       - { name: title, label: Title, widget: string }
       - { name: date, label: Publish date, widget: "datetime"}
       - { name: src, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
+
+  - name: tutorials
+    label: Tutorials
+    folder: src/pages/learn/tutorials
+    create: true
+    fields:
+      - { name: templateKey, label: Template}
