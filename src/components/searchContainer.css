@@ -1,10 +1,12 @@
 .search-container {
-  margin-left: 10%;
-  max-width: 1020px;
-  display: inline-block;
+  display: flex;
+  max-width: 1201px;
 }
 
-.search-section {
-  display: flex;
-  flex-flow: row wrap-reverse;
+.search-wrap {
+  align-self: flex-start;
+  position: sticky;
+  max-width: 250px;
+  top: 10px;
+  margin-left: 30px;
 }

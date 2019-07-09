@@ -1,25 +1,11 @@
 footer {
-  background: black;
-  display: flex;
-  flex-flow: row wrap-reverse;
-  align-items: center;
-  justify-content: space-between;
   padding: 5px;
   width: 100%;
   position: fixed;
   bottom: 0;
+  text-align: right;
 }
 
-footer > p {
-  color: white;
-  margin: 0;
-}
-
-footer img {
-  display: block;
-}
-
-.footer-tools {
-  color: white;
-  padding-right: 10px;
+footer > a {
+  margin-right: 20px;
 }

@@ -7,14 +7,14 @@ import Header from './header';
 import Footer from './footer';
 
 
-const Layout = ({ banner, children }) => (
+const Layout = ({ children }) => (
   // shortcut to React.Fragment
   <>
     <Header />
-    <SocialBar />
     <main>
       {children}
     </main>
+    <SocialBar />
     <Footer />
   </>
 )
