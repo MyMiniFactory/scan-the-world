@@ -9,8 +9,12 @@ class Header extends React.Component {
     super(props);
     this.state = {
       status: null,
-      scroll: window.scrollY,
     };
+    if (typeof window !== `undefined`) {
+      this.state.scroll = window.scrollY
+    } else {
+      this.state.scroll = 0
+    }
     this.handleScroll = this.handleScroll.bind(this);
   }
 
@@ -23,7 +27,10 @@ class Header extends React.Component {
   }
 
   handleScroll(event) {
-    const scroll = window.scrollY;
+    let scroll = 0
+    if (typeof window !== `undefined`) {
+      scroll = window.scrollY
+    }
     if (scroll) {
       scroll > this.state.scroll ? this.setState({status: `collapse`}) : this.setState({status: `open`});
       this.setState({scroll: scroll});

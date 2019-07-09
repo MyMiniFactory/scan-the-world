@@ -9,13 +9,13 @@ trends:
   - alt: plus button
     float: left
     href: '#'
-    marginTop: ''
+    marginTop: 0
     src: /assets/plus.png
     title: Plus button
     width: 300
   - float: left
     href: '#'
-    marginTop: 200
+    marginTop: 0
     src: /assets/bearded-man.jpg
     title: A cool bear man banner
 ---

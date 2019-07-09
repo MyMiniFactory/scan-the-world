@@ -102,7 +102,7 @@ class Objects extends React.Component {
           return (<p>No objects found :(<br/>Try reloading the page</p>);
         }
 
-        const tiles = this.state.objects.flatMap((object, i) => {
+        const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
             return [<ObjectTile key={0} object={plusButton} />, <ObjectTile key={i+1} object={object} />]
           }
