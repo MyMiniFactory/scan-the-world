@@ -10,7 +10,7 @@ const StoryPage = ({ data }) => {
     <Layout>
       <div className="story-container">
         <div dangerouslySetInnerHTML={{__html: html}} />
-        <Link to={'/'}>
+        <Link to={'/community/stories'}>
           <FaArrowLeft /> back to stories.
         </Link>
       </div>
@@ -19,8 +19,8 @@ const StoryPage = ({ data }) => {
 }
 
 export const query = graphql `
-  query storyQuery {
-    markdownRemark(frontmatter: {templateKey: {eq: "story-page"}}) {
+  query ($id: String!) {
+    markdownRemark(id: {eq: $id}) {
       html
     }
   }
