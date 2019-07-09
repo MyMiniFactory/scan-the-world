@@ -34,7 +34,7 @@ const plusButton = {
     {
       thumbnail:
       {
-        url:"/assets/plus.png"
+        url:"/scan-the-world/assets/plus.png"
       }
     }
   ]
