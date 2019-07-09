@@ -1,0 +1,22 @@
+.stories {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.story-item {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  width: 380px;
+  padding: 5px;
+  margin: 0 10px 10px 0;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.story-header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.story-preview > img {
+  display: block;
+}
