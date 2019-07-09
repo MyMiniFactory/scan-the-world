@@ -1,0 +1,20 @@
+.tutorials-container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.tutorials {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.tutorial-item {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.tutorial-item > p {
+  text-align: center;
+}
