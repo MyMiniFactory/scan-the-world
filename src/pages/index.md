@@ -13,5 +13,10 @@ trends:
     src: /assets/plus.png
     title: Plus button
     width: 300
+  - float: left
+    href: '#'
+    marginTop: 200
+    src: /assets/bearded-man.jpg
+    title: A cool bear man banner
 ---
 
