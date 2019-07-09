@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./header.scss"
-import logo from "./stw_logo.svg"
+import logo from "../images/stw_logo.svg"
 
 class Header extends React.Component {
 
@@ -33,17 +33,13 @@ class Header extends React.Component {
   render() {
     return (
       <header className={this.state.status}>
-        <div>
-          <span>
-            <img src={logo} alt="Scan the world" height='30'/>
-          </span>
-        </div>
+        <img src={logo} alt="Scan the world" height='30'/>
         <nav>
           <Link to='/about'>About</Link>
           <Link to='/contribute'>Contribute</Link>
           <Link to='/learn' >Learn</Link>
-          <Link to='/community'>Community</Link>
-          <Link to='/museums'>Museums</Link>
+          <Link to='/community/stories'>Community</Link>
+          <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
         </nav>
       </header>
   )
