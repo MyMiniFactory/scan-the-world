@@ -19,6 +19,7 @@ collections:
           - { name: templateKey, widget: hidden, default: home-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
+          - { name: bannerUrl, label: Contribute, widget: image }
           - name: trends
             label: Trends
             widget: list
