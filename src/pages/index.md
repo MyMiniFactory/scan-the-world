@@ -10,14 +10,13 @@ trends:
     float: left
     href: '#'
     marginTop: 0
-    src: /scan-the-world/assets/plus.png
+    src: /assets/plus.png
     title: Plus button
     width: 300
   - float: left
     href: '#'
     marginTop: 0
-    src: /scan-the-world/assets/bearded-man.jpg
+    src: /assets/bearded-man.jpg
     title: A cool bear man banner
     width: 0
 ---
-
