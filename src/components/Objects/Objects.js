@@ -27,17 +27,19 @@ const skeleton = () => {
     </div>)
 }
 
-const plusButton = {
-  url: "https://www.myminifactory.com",
-  name: "Contribute now",
-  images: [
-    {
-      thumbnail:
+function plusButton(url) {
+  return {
+    url: "https://www.myminifactory.com",
+    name: "Contribute now",
+    images: [
       {
-        url:"/scan-the-world/assets/plus.png"
+        thumbnail:
+        {
+          url:url
+        }
       }
-    }
-  ]
+    ]
+  }
 }
 
 class Objects extends React.Component {
@@ -104,7 +106,7 @@ class Objects extends React.Component {
 
         const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
-            return [<ObjectTile key={0} object={plusButton} />, <ObjectTile key={i+1} object={object} />]
+            return [<ObjectTile key={0} object={plusButton(this.props.url)} />, <ObjectTile key={i+1} object={object} />]
           }
           return (
             <ObjectTile key={i+1} object={object} />

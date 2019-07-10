@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
         <p>{frontmatter.intro}</p>
       </div>
       <div className="container">
-        <SearchContainer objects={data.allMyMiniFactoryObject.nodes}>
+        <SearchContainer objects={data.allMyMiniFactoryObject.nodes} url={frontmatter.bannerUrl}>
           <img src={logo} alt="Scan the world" height='30' style={{marginBottom:`20px`}}/>
           <nav className="nav-link">
             <Link to='/about'>About</Link>
