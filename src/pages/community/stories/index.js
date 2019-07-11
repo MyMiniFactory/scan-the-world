@@ -7,7 +7,7 @@ import './stories.css'
 
 export default ({ data }) => (
     <Layout>
-      <Banner url={'/'} bannerUrl={'/assets/banner_learn.jpg'}/>
+      <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='stories-container'>
         <h1>Latest Stories</h1>
         <StoryRoll edges={data.allMarkdownRemark.edges} />
@@ -24,11 +24,28 @@ export const query = graphql `
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            src
+            storyImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
           }
           excerpt
           fields {
             slug
+          }
+        }
+      }
+    }
+    banner: markdownRemark(frontmatter: {templateKey: {eq: "uses-page"}}) {
+      frontmatter {
+        bannerImage {
+          childImageSharp {
+            original {
+              src
+            }
           }
         }
       }

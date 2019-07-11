@@ -7,14 +7,22 @@ module.exports = {
   pathPrefix: "/scan-the-world",
   plugins: [
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: "gatsby-source-mmf",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        key: "8e551c42-0fd1-4b8b-bd26-8b5d79e74099",
+        cat: "112",
+        per_page: "23",
+        light: "1",
+        sort: "date",
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,17 +37,41 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-    	resolve: "gatsby-source-mmf",
-    	options: {
-    	  key: "8e551c42-0fd1-4b8b-bd26-8b5d79e74099",
-    	  cat: "112",
-    	  per_page: "23",
-    	  light: "1",
-        sort: "date",
-    	},
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'assets',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 2048,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

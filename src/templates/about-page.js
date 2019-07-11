@@ -15,7 +15,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <Banner url={'/'} bannerUrl={frontmatter.bannerUrl}/>
+      <Banner url={'/'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
       <div className="about-container">
         <div className="about-content">
           <h1>{frontmatter.title}</h1>
@@ -39,13 +39,25 @@ export const query = graphql `
   query AboutQuery {
     markdownRemark(frontmatter: {templateKey: {eq: "about-page"}}) {
       frontmatter {
-        bannerUrl
+        bannerImage {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
         intro
         title
         team {
           position
           quote
-          src
+          memberImage {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
           title
         }
       }

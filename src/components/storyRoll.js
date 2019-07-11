@@ -9,7 +9,7 @@ export default ({ edges: stories }) => (
         <article key={story.id} className="story-item">
           <div className="story-header">
             <div className="story-preview">
-              <img src={story.frontmatter.src} alt={story.frontmatter.title} height='100px'/>
+              <img src={story.frontmatter.storyImage.childImageSharp.original.src} alt={story.frontmatter.title} height='100px'/>
             </div>
             <div>
               <Link to={story.fields.slug}>{story.frontmatter.title}</Link>

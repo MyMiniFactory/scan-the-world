@@ -8,14 +8,14 @@ export default ({ data }) => {
   const { edges: tutorials } = data.allMarkdownRemark
   return (
     <Layout>
-      <Banner url={'/'} bannerUrl={'/assets/banner_learn.jpg'}/>
+      <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='tutorials-container'>
         <h1>Tutorials</h1>
         <div className="tutorials">
           {tutorials &&
             tutorials.map(({ node: tutorial }) => (
               <Link to={tutorial.fields.slug}>
-                <div key={tutorial.id} className="tutorial-item" style={{backgroundImage:`url(${tutorial.frontmatter.src})`}}>
+                <div key={tutorial.id} className="tutorial-item" style={{backgroundImage:`url(${tutorial.frontmatter.tutorialImage.childImageSharp.original.src})`}}>
                   <p>{tutorial.frontmatter.title}</p>
                 </div>
               </Link>
@@ -34,10 +34,27 @@ export const query = graphql `
           id
           frontmatter {
             title
-            src
+            tutorialImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
           }
           fields {
             slug
+          }
+        }
+      }
+    }
+    banner: markdownRemark(frontmatter: {templateKey: {eq: "uses-page"}}) {
+      frontmatter {
+        bannerImage {
+          childImageSharp {
+            original {
+              src
+            }
           }
         }
       }

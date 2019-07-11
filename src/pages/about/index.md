@@ -11,7 +11,7 @@ intro: >-
   backgrounds by empowering you to engage, behold, scan or own a copy of 3d
   printable artifacts that hold significance for you. The collective effort is
   as much about renowned historical artifacts as it is about household antiques
-  with deep culturally significant roots. 
+  with deep culturally significant roots.
 
 
   Your contributions work to bridge the gap between technology and the arts. The
@@ -26,12 +26,11 @@ intro: >-
   and give you a chance to share and strengthen your understanding of yourself.
   You are the result of the generations that came before you. This network in
   its truest form is a shared, open access, museum of the future, built by and
-  for you. 
-bannerUrl: /assets/banner_about.jpg
+  for you.
+bannerImage: /static/assets/banner_about.jpg
 team:
   - position: CEO
     quote: Look I walk on the water
-    src: /assets/profile-default.jpg
+    memberImage: /static/assets/profile-default.jpg
     title: John
 ---
-

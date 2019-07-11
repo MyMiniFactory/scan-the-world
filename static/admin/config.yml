@@ -5,7 +5,6 @@ backend:
 
 site_url: https://myminifactory.com/scan-the-world
 media_folder: static/assets
-public_folder: /assets
 
 collections:
   - name: pages
@@ -19,13 +18,13 @@ collections:
           - { name: templateKey, widget: hidden, default: home-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
-          - { name: bannerUrl, label: Contribute, widget: image }
+          - { name: featuredImage, label: Contribute, widget: image }
           - name: trends
             label: Trends
             widget: list
             fields:
               - { name: title, label: Title, widget: string }
-              - { name: src, label: Image, widget: image }
+              - { name: trendImage, label: Image, widget: image }
               - { name: href, label: Link, widget: string, required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
               - { name: float, label: Float, widget: select, options: [left, right] }
@@ -38,7 +37,7 @@ collections:
           - { name: templateKey, widget: hidden, default: about-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
-          - { name: bannerUrl, label: Banner, widget: image }
+          - { name: bannerImage, label: Banner, widget: image }
           - name: team
             label: Team
             widget: list
@@ -46,7 +45,7 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: position, label: Position, widget: string }
               - { name: quote, label: Quote, widget: string }
-              - { name: src, label: Photo, widget: image }
+              - { name: memberImage, label: Photo, widget: image }
       - label: Contribute Page
         name: contribute
         file: src/pages/contribute/index.md
@@ -54,13 +53,13 @@ collections:
           - { name: templateKey, widget: hidden, default: contribute-page }
           - { name: title, label: Title, widget: string }
           - { name: intro, label: Intro, widget: text }
-          - { name: bannerUrl, label: Banner, widget: image }
+          - { name: bannerImage, label: Banner, widget: image }
           - name: contributions
             label: Contributions
             widget: list
             fields:
               - { name: title, label: Title, widget: string }
-              - { name: src, label: Image, widget: image }
+              - { name: contributionImage, label: Image, widget: image }
               - { name: href, label: Link, widget: string, default: "#", required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
       - label: Uses Page
@@ -68,13 +67,13 @@ collections:
         file: src/pages/about/uses/index.md
         fields:
           - { name: templateKey, widget: hidden, default: uses-page }
-          - { name: bannerUrl, label: Banner, widget: image }
+          - { name: bannerImage, label: Banner, widget: image }
           - name: uses
             label: Uses
             widget: list
             fields:
               - { name: title, label: Title, widget: string }
-              - { name: src, label: Image, widget: image }
+              - { name: useImage, label: Image, widget: image }
               - { name: intro, label: Intro, widget: text }
 
   - name: stories
@@ -86,7 +85,7 @@ collections:
       - { name: templateKey, widget: hidden, default: story-page }
       - { name: title, label: Title, widget: string }
       - { name: date, label: Publish date, widget: "datetime"}
-      - { name: src, label: Image, widget: image }
+      - { name: storyImage, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
 
   - name: tutorials
@@ -96,5 +95,5 @@ collections:
     fields:
       - { name: templateKey, widget: hidden, default: tutorial-page }
       - { name: title, label: Title, widget: string }
-      - { name: src, label: Image, widget: image }
+      - { name: tutorialImage, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }

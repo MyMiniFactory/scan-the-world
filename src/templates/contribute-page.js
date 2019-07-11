@@ -10,7 +10,7 @@ const ContributePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Contribute" />
-      <Banner url={'/'} bannerUrl={frontmatter.bannerUrl}/>
+      <Banner url={'/'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
       <div className="contribute-container">
         <div className="contribute-content">
           <h1>{frontmatter.title}</h1>
@@ -20,7 +20,7 @@ const ContributePage = ({ data }) => {
           { frontmatter.contributions.map((ctb, index) => {
             return (
               <a href={ctb.href} key={index}>
-                <img title={ctb.title} src={ctb.src} alt={ctb.alt}/>
+                <img title={ctb.title} src={ctb.contributionImage.childImageSharp.original.src} alt={ctb.alt}/>
               </a>
             )
           })}
@@ -34,13 +34,25 @@ export const query = graphql `
   query ContributeQuery {
     markdownRemark(frontmatter: {templateKey: {eq: "contribute-page"}}) {
         frontmatter {
-          bannerUrl
+          bannerImage {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
           intro
           title
           contributions {
             alt
             href
-            src
+            contributionImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
             title
           }
         }
