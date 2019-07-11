@@ -27,10 +27,10 @@ intro: >-
   You are the result of the generations that came before you. This network in
   its truest form is a shared, open access, museum of the future, built by and
   for you.
-bannerImage: /static/assets/banner_about.jpg
+bannerImage: /assets/banner_about.jpg
 team:
   - position: CEO
     quote: Look I walk on the water
-    memberImage: /static/assets/profile-default.jpg
+    memberImage: /assets/profile-default.jpg
     title: John
 ---

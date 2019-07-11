@@ -9,10 +9,10 @@ intro: |-
   maximus ligula. Fusce tincidunt nunc eget dui semper, commodo vestibulum dolor
   ornare. Pellentesque viverra a purus eget aliquet. Ut sagittis metus et
   ultrices convallis. Aenean viverra tristique tempor.
-bannerImage: /static/assets/bearded-man.jpg
+bannerImage: /assets/bearded-man.jpg
 contributions:
   - alt: ""
     href: "#"
-    contributionImage: /static/assets/plus.png
+    contributionImage: /assets/plus.png
     title: Plus button
 ---

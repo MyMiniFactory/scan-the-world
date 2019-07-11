@@ -5,6 +5,7 @@ backend:
 
 site_url: https://myminifactory.com/scan-the-world
 media_folder: static/assets
+public_folder: assets
 
 collections:
   - name: pages
