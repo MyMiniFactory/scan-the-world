@@ -5,11 +5,13 @@ import Layout from "../components/layout"
 import './story-page.css'
 
 const StoryPage = ({ data }) => {
-  const { html } = data.markdownRemark
+  const { html, frontmatter } = data.markdownRemark
   return (
     <Layout>
       <div className="story-container">
-        <div dangerouslySetInnerHTML={{__html: html}} />
+        <h2>{frontmatter.title}</h2>
+        <p>{frontmatter.date}</p>
+        <div className="story-content" dangerouslySetInnerHTML={{__html: html}} />
         <Link to={'/community/stories'}>
           <FaArrowLeft /> back to stories.
         </Link>
@@ -21,6 +23,10 @@ const StoryPage = ({ data }) => {
 export const query = graphql `
   query ($id: String!) {
     markdownRemark(id: {eq: $id}) {
+      frontmatter {
+        title
+        date(formatString: "DD MMMM, YYYY")
+      }
       html
     }
   }
