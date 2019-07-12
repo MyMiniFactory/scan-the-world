@@ -63,6 +63,18 @@ collections:
               - { name: contributionImage, label: Image, widget: image }
               - { name: href, label: Link, widget: string, default: "#", required: false }
               - { name: alt, label: Alt, widget: string, default: "", required: false }
+      - label: Learn Page
+        name: learn
+        file: src/pages/learn/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: learn-page}
+          - { name: bannerImage, label: Banner, widget: image }
+      - label: Stories Page
+        name: storiesPage
+        file: src/pages/community/story/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: stories-page}
+          - { name: bannerImage, label: Banner, widget: image }
       - label: Uses Page
         name: uses
         file: src/pages/about/uses/index.md
