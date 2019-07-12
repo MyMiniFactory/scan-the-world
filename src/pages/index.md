@@ -7,7 +7,8 @@ intro: |2-
     3D printing.
 featuredImage: /assets/plus_icon_-black-.png
 trends:
-  - float: left
+  - alt: Scan the world
+    float: left
     marginTop: 150
     title: ' Scan the World'
     trendImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
