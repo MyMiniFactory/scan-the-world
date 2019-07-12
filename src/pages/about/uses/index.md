@@ -1,6 +1,6 @@
 ---
 templateKey: uses-page
-bannerImage: /assets/banner_learn.jpg
+bannerImage: /assets/about-banner.jpg
 uses:
   - intro: >-
       Cultural heritage is important for historical research and education as
@@ -13,8 +13,8 @@ uses:
       very different experiences and values within their own culture, this
       network provides a safe space for culture to be shared and discovered, no
       matter where in the world it comes from.
-    useImage: /assets/profile-default.jpg
     title: Cultural heritage
+    useImage: /assets/profile-default.jpg
   - intro: >-
       What does a museum’s collection, a public sculpture or even a building
       mean to those who are partially sighted or blind? The traditionally
@@ -33,8 +33,8 @@ uses:
       are many objects that have been scanned and printed that can be viewed in
       its 3D platform or in its physical form, creating stimulated interaction
       and understanding of the craft involved.
-    useImage: /assets/plus.png
     title: Accessibility
+    useImage: /assets/plus.png
   - intro: >-
       Many educational institutions are starting to think about how 3D
       technology can be useful for their students and there is added pressure to
@@ -48,8 +48,8 @@ uses:
       understand what the artist is trying to portray and how they have achieved
       this by being able to move and touch it to study the transitions of space,
       angles and light.
-    useImage: /assets/cleanup.png
     title: Education
+    useImage: /assets/cleanup.png
   - intro: >-
       Damage or complete demolition of cultural sites can result in many
       consequences that would be detrimental for the community and the wider
@@ -67,6 +67,7 @@ uses:
       has been completely destroyed, an entire copy can be made using the 3D
       data that has been collected from the original. As a result, potential
       risk of damage and destruction are mitigated.
-    useImage: /assets/img_9877.jpg
     title: Preservation
+    useImage: /assets/img_9877.jpg
 ---
+
