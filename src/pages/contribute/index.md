@@ -1,18 +1,14 @@
 ---
 templateKey: contribute-page
 title: Contribute
-intro: |-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida
-  egestas cursus. Sed quis iaculis diam. In vel metus id metus eleifend
-  sagittis. Donec nisl augue, elementum vitae vehicula quis, lobortis in augue.
-  Pellentesque dignissim ut erat quis dictum. Integer sed feugiat risus, a
-  maximus ligula. Fusce tincidunt nunc eget dui semper, commodo vestibulum dolor
-  ornare. Pellentesque viverra a purus eget aliquet. Ut sagittis metus et
-  ultrices convallis. Aenean viverra tristique tempor.
+intro: >
+  Whether you already have a finished 3D model, or would like to upload scan
+  photos (coming soon), this is the place to share your creations. 
 bannerImage: /assets/bearded-man.jpg
 contributions:
-  - alt: ""
-    href: "#"
-    contributionImage: /assets/plus.png
-    title: Plus button
+  - alt: ''
+    contributionImage: /assets/plus_icon_-black-.png
+    href: 'https://www.myminifactory.com/upload/object-upload'
+    title: Upload 3D scan
 ---
+
