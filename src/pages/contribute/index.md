@@ -4,7 +4,7 @@ title: Contribute
 intro: >
   Whether you already have a finished 3D model, or would like to upload scan
   photos (coming soon), this is the place to share your creations. 
-bannerImage: /assets/bearded-man.jpg
+bannerImage: /assets/contribute-banner.jpg
 contributions:
   - alt: ''
     contributionImage: /assets/plus_icon_-black-.png
