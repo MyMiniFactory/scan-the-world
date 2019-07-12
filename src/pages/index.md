@@ -11,13 +11,13 @@ trends:
     float: left
     href: '#'
     marginTop: 0
-    trendImage: /assets/plus.png
     title: Plus button
+    trendImage: /assets/plus.png
     width: 300
   - float: left
-    href: '#'
-    marginTop: 0
-    trendImage: /assets/bearded-man.jpg
-    title: A cool bear man banner
-    width: 0
+    marginTop: 150
+    title: ' Scan the World'
+    trendImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
+    width: 300
 ---
+
