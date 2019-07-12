@@ -86,8 +86,6 @@ Dark objects also pose a challenge. An object made in a material such as brass o
 
 ![](/assets/blackvswhiteobjects.jpg "The bust on the left will scan very well, but the glossy, black surfaces of the right hand sculpture will be problematic")
 
-
-
 ## **Getting the most out of your scan**
 
 Some software functions best when you **remove the background** detail of your images, leaving only the object itself for the software to process and interpret. Removing the background can be a time-consuming process but can be **worth it** to reduce potential headaches.
