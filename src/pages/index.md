@@ -7,13 +7,6 @@ intro: |2-
     3D printing.
 featuredImage: /assets/plus_icon_-black-.png
 trends:
-  - alt: plus button
-    float: left
-    href: '#'
-    marginTop: 0
-    title: Plus button
-    trendImage: /assets/plus.png
-    width: 300
   - float: left
     marginTop: 150
     title: ' Scan the World'
