@@ -29,8 +29,6 @@ Getting 360° of an object is not always possible. Try to capture as much as you
 
 Remember to get some **information** about your object or sculpture too! If there is a **small sign** giving information about the object, grab an image so we know more about it, such as who made it, when it was made, or any other information already available. If you’ve shot outside, then also note down **where** you found it - this could be the latitude and longitude, or the area in which the object is kept. We aim to preserve the history of the object, not just the object itself, so grabbing as much info as you can about the thing you’re photoscanning helps us and the community. 
 
-
-
 ## Lighting & Exposure
 
 Making sure your images are **correctly exposed** is very important for photoscanning. Exposure is how bright or dark your image is; if it’s too bright or too dark, the photogrammetry software won’t be able to recreate your object
@@ -53,8 +51,6 @@ Try to **keep consistent light levels.** If the lighting changes outside, be sur
 
 You often may find yourself scanning indoors. In this case, light can often be more controlled, but that is not always possible. Try to set up temporary light sources, such as a soft flash, or a portable diffused light. Avoid harsh shadows where you can, as these shadows will be recreated in the final recreation and may produce unexpected results. Some shadows are ok though.
 
-
-
 ## Focusing
 
 Photogrammetry software loves **sharp, in-focu**s images to work with.\
@@ -66,8 +62,6 @@ If shooting on a smartphone be sure to not enable the fake depth-of-field effect
 
 If shooting on a DSLR, try to use a small aperture (large f-stop, f 8 and above) to ensure as much of the sculpture is in focus as possible. This is more of a concern when shooting smaller objects, as depth-of-field becomes more pronounced.
 
-
-
 ## Noise
 
 Noise can heavily mess up processing during photogrammetry. Noise is most commonly caused by having the **ISO** too high on your camera (for example, when shooting in low light), but other visual noise such as dirt on the camera lens can create issues too.
@@ -78,8 +72,6 @@ Whilst you may not see it in the image at normal viewing scale, the software cer
 
 Try to shoot somewhere where there is as much light as possible available, and to not set your ISO too high so the images do not become noisy.
 
-
-
 ## Challenging Objects
 
 Photoscanning works **best with objects which are solid and matte**. Glossy objects often cause issues, because the highlights created can produce abnormal results in photogrammetry software. There are methods to reduce this glare, such as using a polariser to reduce the highlights. If you’re familiar with lighting and cameras, using a linear polariser on your lens and linearly polarising your light sources in the opposing direction to your camera’s polarizer (90°) can completely remove reflective qualities of an object.
@@ -88,11 +80,11 @@ Photoscanning works **best with objects which are solid and matte**. Glossy obje
 
 Transparent objects must first be coated in something in order for photogrammetry software to understand what it is looking at. You can do this with white **matte coating spray**, or alternatively masking tape if that is all that is available, but that of course cannot be done in a museum or with an object that is not your own. This technique can also be used to capture shiny objects.
 
-The base of this sculpture may scan, but the crystal ball is likely to cause issues 
+![](/assets/transobjs.jpg "The base of this sculpture may scan, but the crystal ball is likely to cause issues ")
 
 Dark objects also pose a challenge. An object made in a material such as brass or black marble will be more difficult to scan than a white object. Photogrammetry software cannot so easily interpret dark areas of an image, and it will require more work to get the correct outcome from a dark object. For example, the object on the left will be far easier to scan than the object on the right.
 
-The bust on the left will scan very well, but the glossy, black surfaces of the right hand sculpture will be problematic
+![](/assets/blackvswhiteobjects.jpg "The bust on the left will scan very well, but the glossy, black surfaces of the right hand sculpture will be problematic")
 
 
 
@@ -100,9 +92,9 @@ The bust on the left will scan very well, but the glossy, black surfaces of the 
 
 Some software functions best when you **remove the background** detail of your images, leaving only the object itself for the software to process and interpret. Removing the background can be a time-consuming process but can be **worth it** to reduce potential headaches.
 
+![](/assets/bgremoval.jpg)
+
 Most DSLRs, and some high-end smartphones, can shoot in **RAW**. These images contain far more data about the light the camera captured, allowing you to reduce highlights and brighten shadows, or reduce noise in a more accurate way, without editing the image permanently. Photogrammetry software cannot usually work with RAW images, so if you are using them, you will need to process them in appropriate software first such as Adobe Lightroom or Photoshop. We advise shooting directly with **JPEG** images if you wish to save time or are not comfortable with using RAW.
-
-
 
 ## Software
 
