@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../../components/layout'
-import Banner from '../../components/banner'
-import './tutorials.css'
+import Layout from '../components/layout'
+import Banner from '../components/banner'
+import './learn-page.css'
 
 export default ({ data }) => {
   const { edges: tutorials } = data.allMarkdownRemark
@@ -10,7 +10,7 @@ export default ({ data }) => {
     <Layout>
       <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='tutorials-container'>
-        <h1>Tutorials</h1>
+        <h1>Learn</h1>
         <div className="tutorials">
           {tutorials &&
             tutorials.map(({ node: tutorial }) => (
@@ -48,7 +48,7 @@ export const query = graphql `
         }
       }
     }
-    banner: markdownRemark(frontmatter: {templateKey: {eq: "uses-page"}}) {
+    banner: markdownRemark(frontmatter: {templateKey: {eq: "learn-page"}}) {
       frontmatter {
         bannerImage {
           childImageSharp {

@@ -18,3 +18,7 @@
 .tutorial-item > p {
   text-align: center;
 }
+
+.tutorials-container > h1{
+  text-transform: uppercase;
+}
