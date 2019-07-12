@@ -12,7 +12,7 @@ export default ({ edges: stories }) => (
               <img src={story.frontmatter.storyImage.childImageSharp.original.src} alt={story.frontmatter.title} height='100px'/>
             </div>
             <div>
-              <Link to={story.fields.slug}>{story.frontmatter.title}</Link>
+              <Link to={story.fields.slug}><h4>{story.frontmatter.title}</h4></Link>
               <p>{story.frontmatter.date}</p>
             </div>
           </div>

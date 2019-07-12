@@ -11,7 +11,7 @@
 }
 
 .about-content h1 {
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .about-content p {
@@ -20,5 +20,5 @@
 
 .team h2 {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }

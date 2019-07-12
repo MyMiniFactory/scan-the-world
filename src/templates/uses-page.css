@@ -13,7 +13,7 @@
 }
 
 .use-item > img {
-  height: 250px;
+  max-height: 250px;
   margin-right: 5%;
-  width: auto;
+  max-width: 250px;
 }

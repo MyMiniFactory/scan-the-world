@@ -19,7 +19,7 @@ const ContributePage = ({ data }) => {
         <div className="contributions">
           { frontmatter.contributions.map((ctb, index) => {
             return (
-              <a href={ctb.href} key={index}>
+              <a href={ctb.href} key={index} target='_blank' rel="noopener noreferrer">
                 <img title={ctb.title} src={ctb.contributionImage.childImageSharp.original.src} alt={ctb.alt}/>
               </a>
             )

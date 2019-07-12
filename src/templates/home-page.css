@@ -1,18 +1,18 @@
 .intro {
-  max-width: 800px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 160px;
+  max-width: 750px;
 }
 
 .intro > h1 {
   text-transform: uppercase;
 }
 
-.container {
+.home-container {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row;
+  margin: 0 150px 0 150px;
 }
 
 .nav-link {
@@ -34,7 +34,7 @@
 
 .masonry > div {
   position: relative;
-  overflow: auto;
+  /* overflow: auto; */
   margin-bottom: 5em;
 }
 
@@ -61,7 +61,7 @@
   opacity: 1;
 }
 
-.masonry > div:hover .desc {
+.masonry > div:hover p {
   visibility: visible;
   opacity: 1;
 }

@@ -1,6 +1,6 @@
 .contribute-container {
-  margin: 0 auto 5% auto;
-  max-width: 1000px;
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 .contribute-content h1 {
@@ -24,6 +24,7 @@
 .contributions {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .contributions > a {

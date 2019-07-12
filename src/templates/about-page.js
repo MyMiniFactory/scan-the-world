@@ -19,7 +19,10 @@ const AboutPage = ({ data }) => {
       <div className="about-container">
         <div className="about-content">
           <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.intro}</p>
+          {
+            frontmatter.intro.split(/\n/).map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>))
+          }
           <div>
             <Link to={'/about/uses'}>
               Learn more about us <FaArrowRight />
