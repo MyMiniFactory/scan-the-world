@@ -13,5 +13,10 @@ trends:
     title: ' Scan the World'
     trendImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
     width: 300
+  - float: left
+    marginTop: 100
+    title: The Digital Cast Courts
+    trendImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
+    width: 450
 ---
 
