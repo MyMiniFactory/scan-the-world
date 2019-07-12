@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../../../components/layout'
-import StoryRoll from '../../../components/storyRoll'
-import Banner from '../../../components/banner'
-import './stories.css'
+import Layout from '../components/layout'
+import StoryRoll from '../components/storyRoll'
+import Banner from '../components/banner'
+import './stories-page.css'
 
 export default ({ data }) => (
     <Layout>
@@ -39,7 +39,7 @@ export const query = graphql `
         }
       }
     }
-    banner: markdownRemark(frontmatter: {templateKey: {eq: "uses-page"}}) {
+    banner: markdownRemark(frontmatter: {templateKey: {eq: "stories-page"}}) {
       frontmatter {
         bannerImage {
           childImageSharp {

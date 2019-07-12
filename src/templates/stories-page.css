@@ -2,3 +2,7 @@
   max-width: 1260px;
   margin: 0 auto;
 }
+
+.stories-container > h1{
+  text-transform: uppercase;
+}
