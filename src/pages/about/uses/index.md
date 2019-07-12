@@ -14,7 +14,7 @@ uses:
       network provides a safe space for culture to be shared and discovered, no
       matter where in the world it comes from.
     title: Cultural heritage
-    useImage: /assets/profile-default.jpg
+    useImage: /assets/bustofayoungwoman.jpg
   - intro: >-
       What does a museum’s collection, a public sculpture or even a building
       mean to those who are partially sighted or blind? The traditionally
@@ -34,7 +34,7 @@ uses:
       its 3D platform or in its physical form, creating stimulated interaction
       and understanding of the craft involved.
     title: Accessibility
-    useImage: /assets/plus.png
+    useImage: /assets/1_zojifaqopciotcxrxmc-dq.jpg
   - intro: >-
       Many educational institutions are starting to think about how 3D
       technology can be useful for their students and there is added pressure to
