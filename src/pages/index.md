@@ -8,7 +8,7 @@ intro: |2-
 featuredImage: /assets/plus_icon_-white-.png
 trends:
   - alt: Scan the world
-    float: left
+    float: right
     href: ' '
     marginTop: 150
     title: Scan the World
