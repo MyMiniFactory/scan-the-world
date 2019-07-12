@@ -29,8 +29,13 @@ intro: >-
   for you.
 bannerImage: /assets/banner_about.jpg
 team:
-  - position: CEO
-    quote: Look I walk on the water
-    memberImage: /assets/profile-default.jpg
-    title: John
+  - memberImage: /assets/bustofayoungwoman.jpg
+    position: Founder and Project Manager
+    quote: What a treat!
+    title: Jon
+  - memberImage: /assets/excuse-me.jpg
+    position: Community Manager
+    quote: Look at this precious boy..
+    title: Vickie
 ---
+
