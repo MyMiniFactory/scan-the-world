@@ -10,5 +10,7 @@ contributions:
     contributionImage: /assets/plus_icon_-black-.png
     href: 'https://www.myminifactory.com/upload/object-upload'
     title: Upload 3D scan
+  - contributionImage: /assets/camera-front-on-png-transparent.png
+    title: Upload photos (coming soon!)
 ---
 
