@@ -19,11 +19,11 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    // window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll(event) {
@@ -40,7 +40,9 @@ class Header extends React.Component {
   render() {
     return (
       <header className={this.state.status}>
-        <img src={logo} alt="Scan the world" height='30'/>
+        <Link to='/'>
+          <img src={logo} alt="Scan the world" height='30'/>
+        </Link>
         <nav>
           <Link to='/about'>About</Link>
           <Link to='/contribute'>Contribute</Link>

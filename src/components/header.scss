@@ -3,58 +3,59 @@ $header-height: 30px;
 header {
   display: flex;
   flex-flow: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  // padding: 10px;
+  position: absolute;
+  top: 35px;
+  right: 150px;
+  left: 150px;
   background: white;
-  z-index: 1;
+  // z-index: 1;
 }
 
-header > img {
-  margin-left: 10px;
-}
-
-header > nav {
-  margin-right: 20px;
-}
+// header > img {
+//   margin-left: 10px;
+// }
+//
+// header > nav {
+//   margin-right: 20px;
+// }
 
 header > nav > a {
   color: black;
   text-decoration: none;
-  margin-right: 5px;
+  margin-left: 10px;
 }
 
 header > nav > a:hover {
   text-decoration: underline;
 }
 
-header.collapse {
-  animation: collapse 0.5s ease forwards;
-}
-
-header.open {
-  animation: open 1s ease forwards;
-}
-
-@keyframes collapse {
-  from {
-    opacity: 1;
-    top: 0;
-  } to {
-    opacity: 0;
-    top: -$header-height;
-  }
-}
-
-@keyframes open {
-  from {
-    opacity: 0;
-    top: -$header-height;
-  } to {
-    opacity: 1;
-    top: 0;
-  }
-}
+// header.collapse {
+//   animation: collapse 0.5s ease forwards;
+// }
+//
+// header.open {
+//   animation: open 1s ease forwards;
+// }
+//
+// @keyframes collapse {
+//   from {
+//     opacity: 1;
+//     top: 0;
+//   } to {
+//     opacity: 0;
+//     top: -$header-height;
+//   }
+// }
+//
+// @keyframes open {
+//   from {
+//     opacity: 0;
+//     top: -$header-height;
+//   } to {
+//     opacity: 1;
+//     top: 0;
+//   }
+// }
