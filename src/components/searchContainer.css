@@ -1,5 +1,6 @@
 .search-container {
   display: flex;
+  justify-content: flex-start;
   max-width: 1201px;
 }
 
@@ -8,5 +9,5 @@
   position: sticky;
   max-width: 250px;
   top: 10px;
-  margin-left: 30px;
+  margin: 10px 30px 0 30px;
 }
