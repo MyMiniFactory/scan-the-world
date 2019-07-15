@@ -62,7 +62,8 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: contributionImage, label: Image, widget: image }
               - { name: href, label: Link, widget: string, default: "#", required: false }
-              - { name: alt, label: Alt, widget: string, default: "", required: false }
+              - { name: alt, label: Alt, widget: string, default: ' ', required: false }
+              - { name: intro, label: Intro, widget: string }
       - label: Learn Page
         name: learn
         file: src/pages/learn/index.md
