@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: the initiative
+title: who we are
 intro: >-
   Scan the World is an ambitious initiative that gives you the possibility to
   enjoy 3D printable representations of cultural artifacts in a remarkably
