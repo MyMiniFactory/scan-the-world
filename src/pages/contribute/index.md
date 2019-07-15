@@ -14,7 +14,7 @@ contributions:
       it. If you have any questions about the uploading process, let us know at
       stw@myminifactory.com
   - contributionImage: /assets/add_images_icon_soon.jpg
-    title: Upload photos (coming soon!)
+    title: Upload photos
     intro: >-
       Photos are the first pieces of information we need to put together a 3D
       scan. You will soon be able to upload and process these yourself, but in
