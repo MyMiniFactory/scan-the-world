@@ -8,7 +8,7 @@ intro: >-
   printing. In making culture accessible, communities are encouraged to share
   their scans,  stories, and creations with the goal to bring global heritage to
   the masses.
-featuredImage: /assets/plus_icon_-white-.png
+featuredImage: /assets/plus-button.jpg
 trends:
   - alt: Scan the world
     float: right
