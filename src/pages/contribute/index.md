@@ -1,9 +1,8 @@
 ---
 templateKey: contribute-page
-title: Contribute
-intro: >
-  Whether you already have a finished 3D model, or would like to upload scan
-  photos (coming soon), this is the place to share your creations. 
+title: contribute
+intro: |+
+
 bannerImage: /assets/contribute-banner.jpg
 contributions:
   - alt: ''
