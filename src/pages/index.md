@@ -1,10 +1,13 @@
 ---
 templateKey: home-page
 title: Scan the world
-intro: |2-
-    Scan The World is a movement archive objects of cultural significance using 3D
-    scanning technologies, producing an extensive platform of content suitable for
-    3D printing.
+intro: >-
+  Scan the World is an ambitious community-built initiative whose mission is to
+  share objects of cultural significance using democratised 3D scanning
+  technologies, producing an extensive ecosystem of content suitable for 3D
+  printing. In making culture accessible, communities are encouraged to share
+  their scans,  stories, and creations with the goal to bring global heritage to
+  the masses.
 featuredImage: /assets/plus_icon_-white-.png
 trends:
   - alt: Scan the world
