@@ -1,7 +1,7 @@
 ---
 templateKey: contribute-page
 title: contribute
-intro: |+
+intro: >-
 
 bannerImage: /assets/contribute-banner.jpg
 contributions:
@@ -20,4 +20,3 @@ contributions:
       scan. You will soon be able to upload and process these yourself, but in
       the meanwhile, please send your scan photos to stw@myminifactory.com
 ---
-
