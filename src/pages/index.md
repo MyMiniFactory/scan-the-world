@@ -16,17 +16,16 @@ trends:
     marginTop: 100
     title: Scan the World
     trendImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
-    width: 300
+    width: 60
   - float: left
     marginTop: 100
     title: The Digital Cast Courts
     trendImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
-    width: 450
+    width: 80
   - float: left
     href: ''
     marginTop: 100
     title: The Lewis Chessman
     trendImage: /assets/intro.jpg
-    width: 450
+    width: 100
 ---
-

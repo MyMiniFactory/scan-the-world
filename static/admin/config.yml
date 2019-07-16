@@ -29,7 +29,7 @@ collections:
               - { name: href, label: Link, widget: string, default: ' ', required: false }
               - { name: alt, label: Alt, widget: string, default: ' ', required: false }
               - { name: float, label: Float, widget: select, options: [left, right] }
-              - { name: width, label: "Width (px)", widget: number, valueType: int, default: 0, min: 0}
+              - { name: width, label: "Width (%)", widget: number, valueType: int, default: 0, min: 0}
               - { name: marginTop, label: "Margin top (px)", widget: number, valueType: int, default: 0, min: 0}
       - label: About Page
         name: about
