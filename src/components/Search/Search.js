@@ -5,11 +5,11 @@ import Autosuggest from 'react-autosuggest';
 import {FaSearch} from 'react-icons/fa';
 import config from '../../config';
 
-const adaptSuggestions = value => {
-  return value.slice(0, 4).map(item => ({name: item[1], image: item[2], designer: item[3], url: item[4]}));
-};
+const adaptSuggestions = ({items}) => {
+  return items.slice(0, 4).map(item => ({name: item[1], image: item[2], designer: item[3], url: item[4]}));
+}
 
-const getSuggestionValue = suggestion => suggestion.name;
+const getSuggestionValue = suggestion => suggestion.name
 
 function renderSuggestion(suggestion) {
   return (
