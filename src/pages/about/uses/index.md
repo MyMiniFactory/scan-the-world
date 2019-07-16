@@ -2,7 +2,7 @@
 templateKey: uses-page
 bannerImage: /assets/about-banner.jpg
 uses:
-  - intro:
+  - intro: '**Let** give a try to _editing_ the uses page'
     title: Cultural heritage
     useImage: /assets/bustofayoungwoman.jpg
   - intro: >-
@@ -60,3 +60,4 @@ uses:
     title: Preservation
     useImage: /assets/img_9877.jpg
 ---
+
