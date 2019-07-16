@@ -34,7 +34,7 @@ uses:
       its 3D platform or in its physical form, creating stimulated interaction
       and understanding of the craft involved.
     title: Accessibility
-    useImage: /assets/1_zojifaqopciotcxrxmc-dq.jpg
+    useImage: /assets/accessibility-use.jpg
   - intro: >-
       Many educational institutions are starting to think about how 3D
       technology can be useful for their students and there is added pressure to
