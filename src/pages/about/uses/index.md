@@ -25,17 +25,20 @@ uses:
       impossible for people who have visual impairments. Scan the World creates
       accurate representations of these objects with intricate detail through
       cost effective production which, in turn, provides someone with the
-      incredible experience of touching and engaging with the artefacts.
+      incredible experience of touching and engaging with the artefacts. 
+
       Similarly, for someone living in Australia wanting to explore the museum’s
       collection, the virtual archive not only allows people to ‘visit’ a
-      collection wherever they are, but also to print it. The content scanned
-      from numerous institutions can bring international collections together in
-      one place for someone to explore at the comfort of their own home. Often,
-      if they exist, museums will not have 3D data of their artefacts available
-      to access or download for the public. With Scan the World, however, there
-      are many objects that have been scanned and printed that can be viewed in
-      its 3D platform or in its physical form, creating stimulated interaction
-      and understanding of the craft involved.
+      collection wherever they are, but also to print it. 
+
+
+      The content scanned from numerous institutions can bring international
+      collections together in one place for someone to explore at the comfort of
+      their own home. Often, if they exist, museums will not have 3D data of
+      their artefacts available to access or download for the public. With Scan
+      the World, however, there are many objects that have been scanned and
+      printed that can be viewed in its 3D platform or in its physical form,
+      creating stimulated interaction and understanding of the craft involved.
     title: Accessibility
     useImage: /assets/accessibility-use.jpg
   - intro: >-
@@ -45,12 +48,14 @@ uses:
       platform for people to learn about the technology, from generating a
       digital representation of a scene or object (photography and
       photogrammetry software), to the manipulation of it  (zBrush/modelling
-      software) and the output of 3D printing. Additionally, it teaches people
-      about artefacts in ways which are interesting and interactive. Having
-      access to its physical form and 3D virtual model makes it easier to
-      understand what the artist is trying to portray and how they have achieved
-      this by being able to move and touch it to study the transitions of space,
-      angles and light.
+      software) and the output of 3D printing. 
+
+
+      Additionally, it teaches people about artefacts in ways which are
+      interesting and interactive. Having access to its physical form and 3D
+      virtual model makes it easier to understand what the artist is trying to
+      portray and how they have achieved this by being able to move and touch it
+      to study the transitions of space, angles and light.
     title: Education
     useImage: /assets/education-use.jpg
   - intro: >-
@@ -61,7 +66,9 @@ uses:
       have formed from them. It is also likely that the loss could impact the
       economic benefits that the heritage site or monument can produce for the
       community it is in. This threat has become increasingly apparent in recent
-      times with environmental changes and human conflicts across the globe.
+      times with environmental changes and human conflicts across the globe. 
+
+
       Scan the World’s intention is to simply preserve endangered cultural
       heritage by digitally producing facsimiles of these objects which in turn
       create valuable records of culture and history. 3D technology can be used
