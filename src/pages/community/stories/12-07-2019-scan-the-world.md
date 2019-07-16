@@ -1,7 +1,7 @@
 ---
 templateKey: story-page
 title: Scan the World
-date: 2019-07-12T08:46:36.408Z
+date: 2019-07-04T08:46:36.408Z
 storyImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
 ---
 Since its inception in 2014, Scan the World has built the largest platform of free to download, 3D printable cultural artefacts. Hosting over 15,500 objects in its collection and through collaborating with over 50 cultural institutions, we serve as the authority on open 3D heritage. The expansive archive shares works from across the globe, all scanned from museums, public spaces and private collections alike.
