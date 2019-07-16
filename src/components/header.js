@@ -2,46 +2,60 @@ import React from "react"
 import { Link } from "gatsby"
 import "./header.scss"
 import logo from "../images/stw_logo.svg"
+import logo_static from "../images/stw_logo_static.gif"
+import logo_in from "../images/stw_logo_in.gif"
+import logo_out from "../images/stw_logo_out.gif"
 
 class Header extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      status: null,
-    };
-    if (typeof window !== `undefined`) {
-      this.state.scroll = window.scrollY
-    } else {
-      this.state.scroll = 0
+      isHome: props.isHome,
+      isHovering: false,
+      src: logo_static,
     }
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleHover = this.handleHover.bind(this)
   }
 
-  componentDidMount() {
-    // window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    // window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll(event) {
-    let scroll = 0
-    if (typeof window !== `undefined`) {
-      scroll = window.scrollY
+  handleHover() {
+    if (!this.state.isHovering) {
+      this.setState({
+        isHovering: true,
+        src: logo_in,
+      })
     }
-    if (scroll) {
-      scroll > this.state.scroll ? this.setState({status: `collapse`}) : this.setState({status: `open`});
-      this.setState({scroll: scroll});
+    else {
+      setTimeout(() => {
+        this.setState({
+          isHovering: false,
+          src: logo_out,
+        })}, 1000)
     }
   }
 
   render() {
+    const isHome = this.state.isHome;
+    if (isHome) {
+      return (
+        <>
+          <img src={logo} alt="stw" style={{marginBottom:`20px`, height:`30px`}} />
+          <nav className="nav-link">
+            <Link to='/about'>About</Link>
+            <Link to='/community/stories'>Community</Link>
+            <Link to='/learn' >Learn</Link>
+            <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
+            <Link to='/contribute'>Contribute</Link>
+          </nav>
+        </>
+      )
+    }
     return (
-      <header className={this.state.status}>
+      <header className="stw-header">
         <Link to='/'>
-          <img src={logo} alt="Scan the world" height='30'/>
+          <img className="stw-logo"
+            onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
+            src={this.state.src} alt="Scan the world"/>
         </Link>
         <nav>
           <Link to='/about'>About</Link>
@@ -51,7 +65,7 @@ class Header extends React.Component {
           <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
         </nav>
       </header>
-  )
+    )
   }
 }
 
