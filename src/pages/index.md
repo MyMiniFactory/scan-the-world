@@ -8,7 +8,7 @@ intro: >-
   printing. In making culture accessible, communities are encouraged to share
   their scans,  stories, and creations with the goal to bring global heritage to
   the masses.
-featuredImage: /assets/plus-button.jpg
+featuredImage: /assets/add_3d_icon.jpg
 trends:
   - alt: Scan the world
     float: right
@@ -21,11 +21,20 @@ trends:
     marginTop: 100
     title: The Digital Cast Courts
     trendImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
+<<<<<<< HEAD
     width: 80
   - float: left
+=======
+    width: 450
+  - float: right
+>>>>>>> 247b45a2cc8acc65791754e182e48adb16052588
     href: ''
     marginTop: 100
     title: The Lewis Chessman
     trendImage: /assets/intro.jpg
+<<<<<<< HEAD
     width: 100
+=======
+    width: 300
+>>>>>>> 247b45a2cc8acc65791754e182e48adb16052588
 ---
