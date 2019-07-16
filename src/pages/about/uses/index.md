@@ -7,12 +7,15 @@ uses:
       well as establishing a sense of identity amongst communities. Through
       documenting the past, cultural heritage comes in both physical and
       intangible forms which include objects, monuments, beliefs, rituals and
-      traditions. Scan the World collects stories from people and museums alike,
-      to share various views on the importance and impact of culture, helping
-      diversify our personal approach to art. As different individuals will have
-      very different experiences and values within their own culture, this
-      network provides a safe space for culture to be shared and discovered, no
-      matter where in the world it comes from. 
+      traditions. 
+
+
+      Scan the World collects stories from people and museums alike, to share
+      various views on the importance and impact of culture, helping diversify
+      our personal approach to art. As different individuals will have very
+      different experiences and values within their own culture, this network
+      provides a safe space for culture to be shared and discovered, no matter
+      where in the world it comes from. 
     title: Cultural heritage
     useImage: /assets/cultural-heritage-use.jpg
   - intro: >-
