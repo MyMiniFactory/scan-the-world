@@ -22,10 +22,11 @@ trends:
     title: The Digital Cast Courts
     trendImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
     width: 80
-  - float: left
+  - float: right
     href: ''
     marginTop: 100
     title: The Lewis Chessman
     trendImage: /assets/intro.jpg
     width: 100
 ---
+
