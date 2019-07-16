@@ -1,4 +1,4 @@
-html {
+#___gatsby {
   font-family: 'atamiregular', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -35,10 +35,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-    padding-top: 10vh;
 }
 
 article,
@@ -78,6 +74,7 @@ template {
 }
 
 a {
+  font-family: 'atamiregular', sans-serif;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
