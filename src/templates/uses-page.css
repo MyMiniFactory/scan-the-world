@@ -1,5 +1,5 @@
 .uses-container {
-  max-width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-flow: column;
@@ -10,10 +10,14 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+  margin-bottom: 70px;
+}
+
+.use-item > div > p {
+    margin-bottom: 5px;
 }
 
 .use-item > img {
-  max-height: 250px;
-  margin-right: 5%;
-  max-width: 250px;
+  max-height: 300px;
+  max-width: 300px;
 }

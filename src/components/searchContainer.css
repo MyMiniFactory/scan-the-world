@@ -1,13 +1,30 @@
 .search-container {
   display: flex;
+  flex-flow: row;
+  max-width: 1030px;
   justify-content: flex-start;
-  max-width: 1201px;
 }
 
 .search-wrap {
   align-self: flex-start;
+  display: flex;
+  flex-flow: column;
   position: sticky;
   max-width: 250px;
-  top: 10px;
-  margin: 10px 30px 0 30px;
+  top: 80px;
+  margin: 10px 30px 0;
+}
+
+.search-wrap > img {
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-container {
+    flex-flow: column;
+  }
+
+  .search-wrap {
+    position: inherit;
+  }
 }

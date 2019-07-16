@@ -43,3 +43,14 @@
       width: 230px;
       margin: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .object-tile {
+    width: 40%;
+    height: auto;
+  }
+
+  .loader svg {
+    width: 40%;
+  }
+}

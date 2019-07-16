@@ -1,24 +1,21 @@
 .intro {
-  margin-left: 160px;
-  max-width: 750px;
+  margin: 110px auto 40px 278px;
+  padding: 0 10px 0 10px;
 }
 
-.intro > h1 {
-  text-transform: uppercase;
-}
 
 .home-container {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-flow: row;
-  margin: 0 150px 0 150px;
+  /* margin: 0 150px 0 150px; */
 }
 
 .nav-link {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 30px;
 }
 
 .nav-link > a {
@@ -29,6 +26,7 @@
 }
 
 .masonry {
+  margin: 110px 0 0 30px;
   max-width: 460px;
 }
 
@@ -64,4 +62,15 @@
 .masonry > div:hover p {
   visibility: visible;
   opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .masonry {
+    display: none;
+  }
+
+  .intro {
+    margin: 110px auto 40px 0;
+    padding: 0 10px 0 10px;
+  }
 }

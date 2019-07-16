@@ -3,41 +3,29 @@
   margin: 0 auto;
 }
 
-.contribute-content h1 {
-  text-transform: uppercase;
-}
-
-.contribute-content h2 {
-    text-transform: uppercase;
-    border-bottom: 2px solid black;
-}
-
-.contribute-content h2 > a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .contribute-content p {
-    text-align: justify;
+  width: 940px;
+  margin: 0 auto 40px auto;
+  text-align: center;
 }
 
 .contributions {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.contributions > a {
-  height: 300px;
+.contribution-item {
+  width: 450px;
+  margin: 0 40px 80px 40px;
 }
 
-.contributions > a > img {
-  height: 100%;
-  width: auto;
+.contribution-item > a > img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1205px) {
-  .banner {
-      margin: 0 0 20px 0;
-  }
+.contribution-item > h2 {
+  text-transform: lowercase;
+  text-align: center;
 }

@@ -1,4 +1,9 @@
 .tutorial-container {
   max-width: 900px;
   margin: 50px auto;
+  padding: 15px;
+}
+
+.tutorial-container p {
+  margin-bottom: 20px;
 }
