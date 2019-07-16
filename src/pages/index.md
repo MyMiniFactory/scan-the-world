@@ -27,6 +27,6 @@ trends:
     marginTop: 100
     title: The Lewis Chessman
     trendImage: /assets/intro.jpg
-    width: 100
+    width: 70
 ---
 
