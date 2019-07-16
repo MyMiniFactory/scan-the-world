@@ -1,9 +1,9 @@
 ---
 templateKey: tutorial-page
-title: Photogrammetry - Scan with your smartphone!
+title: Photogrammetry
 intro: >-
   The first step of the process and a skill to show off: learn how to make 3D
-  models out of photos
+  models out of any photos! 
 tutorialImage: /assets/photogrammetry-tutorial.jpg
 ---
 **Photogrammetry** is the method we use to archive and recreate 3D objects, sculptures, and monuments, and we have compiled a tutorial below to help you get involved. You’ll need a camera, either a **smartphone** or a **DSLR**, and some software if you want to get recreating sculptures and objects at home. 
