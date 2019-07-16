@@ -26,11 +26,10 @@ class Header extends React.Component {
       })
     }
     else {
-      setTimeout(() => {
-        this.setState({
-          isHovering: false,
-          src: logo_out,
-        })}, 1000)
+      this.setState({
+        isHovering: false,
+        src: logo_out,
+      })
     }
   }
 
