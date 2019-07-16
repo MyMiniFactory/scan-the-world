@@ -15,14 +15,10 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <Banner url={'/'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
+      <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
       <div className="about-container">
         <div className="about-content">
-          <h1>{frontmatter.title}</h1>
-          {
-            frontmatter.intro.split(/\n/).map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>))
-          }
+          <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
           <div>
             <Link to={'/about/uses'}>
               Learn more about us <FaArrowRight />
@@ -49,7 +45,6 @@ export const query = graphql `
             }
           }
         }
-        intro
         title
         team {
           position
@@ -64,6 +59,7 @@ export const query = graphql `
           title
         }
       }
+      html
     }
   }
 `

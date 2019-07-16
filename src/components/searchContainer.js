@@ -1,6 +1,7 @@
 import React from 'react'
 import Objects from './Objects/Objects'
 import Search from './Search/Search'
+import Header from './header'
 import './searchContainer.css'
 
 class SearchContainer extends React.Component {
@@ -24,11 +25,11 @@ class SearchContainer extends React.Component {
   render() {
     return (
       <div className="search-container">
-        <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} url={this.props.url}/>
         <div className="search-wrap">
-          { this.props.children }
+          <Header isHome={true} />
           <Search onSearch={this.onSearch} />
         </div>
+        <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} url={this.props.url}/>
       </div>
     );
   }

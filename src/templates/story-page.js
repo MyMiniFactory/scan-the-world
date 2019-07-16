@@ -11,6 +11,9 @@ const StoryPage = ({ data }) => {
       <div className="story-container">
         <h2>{frontmatter.title}</h2>
         <p>{frontmatter.date}</p>
+        <Link to={'/community/stories'}>
+          <p><FaArrowLeft /> back to stories.</p>
+        </Link>
         <div className="story-content" dangerouslySetInnerHTML={{__html: html}} />
         <Link to={'/community/stories'}>
           <FaArrowLeft /> back to stories.

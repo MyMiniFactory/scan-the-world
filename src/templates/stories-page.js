@@ -9,7 +9,7 @@ export default ({ data }) => (
     <Layout>
       <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='stories-container'>
-        <h1>Latest Stories</h1>
+        <h1 style={{fontFamily:`atamiregular, sans-serif!important`}}>Latest Stories</h1>
         <StoryRoll edges={data.allMarkdownRemark.edges} />
       </section>
     </Layout>
@@ -17,7 +17,7 @@ export default ({ data }) => (
 
 export const query = graphql `
   query storiesQuery {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "story-page"}}}, sort: {fields: frontmatter___date, order: ASC}) {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "story-page"}}}, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           id

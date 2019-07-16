@@ -11,13 +11,28 @@ const UsesPage = ({ data }) => {
       <Banner url={'/about'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
       <div className="uses-container">
         {frontmatter.uses.map((use, index) => {
+          if (index % 2 === 0) {
+            return (
+              <div className="use-item" key={index}>
+                <img src={use.useImage.childImageSharp.original.src} alt={use.title}/>
+                <div style={{paddingLeft:`30px`}}>
+                  <h2>{use.title}</h2>
+                  {use.intro.split('\n').map((pg) => (
+                    <p>{pg}</p>
+                  ))}
+                </div>
+              </div>
+            )
+          }
           return (
             <div className="use-item" key={index}>
-              <img src={use.useImage.childImageSharp.original.src} alt={use.title}/>
-              <div>
+              <div style={{paddingRight:`30px`}}>
                 <h2>{use.title}</h2>
-                <p>{use.intro}</p>
+                {use.intro.split('\n').map((pg) => (
+                  <p>{pg}</p>
+                ))}
               </div>
+              <img src={use.useImage.childImageSharp.original.src} alt={use.title}/>
             </div>
           )
         })}

@@ -9,6 +9,9 @@ const StoryPage = ({ data }) => {
   return (
     <Layout>
       <div className="tutorial-container">
+        <Link to={'/learn'}>
+          <p><FaArrowLeft /> back to tutorials.</p>
+        </Link>
         <div dangerouslySetInnerHTML={{__html: html}} />
         <Link to={'/learn'}>
           <FaArrowLeft /> back to tutorials.

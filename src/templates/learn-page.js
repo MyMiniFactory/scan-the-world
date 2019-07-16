@@ -10,15 +10,17 @@ export default ({ data }) => {
     <Layout>
       <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='tutorials-container'>
-        <h1>Learn</h1>
+        <h1>tutorials</h1>
         <div className="tutorials">
           {tutorials &&
             tutorials.map(({ node: tutorial }) => (
-              <Link to={tutorial.fields.slug}>
-                <div key={tutorial.id} className="tutorial-item" style={{backgroundImage:`url(${tutorial.frontmatter.tutorialImage.childImageSharp.original.src})`}}>
-                  <p>{tutorial.frontmatter.title}</p>
-                </div>
-              </Link>
+              <div key={tutorial.id} className="tutorial-item">
+                <Link to={tutorial.fields.slug}>
+                  <img src={tutorial.frontmatter.tutorialImage.childImageSharp.original.src} alt=""/>
+                </Link>
+                <h2>{tutorial.frontmatter.title}</h2>
+                <p>{tutorial.frontmatter.intro}</p>
+              </div>
             ))}
         </div>
       </section>
@@ -33,6 +35,7 @@ export const query = graphql `
         node {
           id
           frontmatter {
+            intro
             title
             tutorialImage {
               childImageSharp {

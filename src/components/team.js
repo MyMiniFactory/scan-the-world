@@ -7,7 +7,7 @@ function Member(props) {
       <img src={props.profilePicture} alt="profile"/>
       <p>{props.name}</p>
       <p>{props.role}</p>
-      <blockquote>{props.quote}</blockquote>
+      <p className="stw-quote" style={{marginTop: `15px`}}>{props.quote}</p>
     </div>
   )
 }

@@ -7,21 +7,18 @@ export default ({ edges: stories }) => (
     {stories &&
       stories.map(({ node: story }) => (
         <article key={story.id} className="story-item">
-          <div className="story-header">
-            <div className="story-preview">
-              <img src={story.frontmatter.storyImage.childImageSharp.original.src} alt={story.frontmatter.title} height='100px'/>
-            </div>
-            <div>
-              <Link to={story.fields.slug}><h4>{story.frontmatter.title}</h4></Link>
-              <p>{story.frontmatter.date}</p>
-            </div>
+          <div className="story-header" style={{backgroundImage:`url(${story.frontmatter.storyImage.childImageSharp.original.src})`}}>
+            <Link to={story.fields.slug}><h1>{story.frontmatter.title}</h1></Link>
           </div>
           <p>
             {story.excerpt}
           </p>
-          <Link to={story.fields.slug} style={{display:`block`, textAlign:`right`}}>
-            Keep Reading →
-          </Link>
+          <div className="story-footer">
+            <p>{story.frontmatter.date}</p>
+            <Link to={story.fields.slug}>
+              Keep Reading →
+            </Link>
+          </div>
         </article>
       ))}
   </div>

@@ -13,15 +13,18 @@ const ContributePage = ({ data }) => {
       <Banner url={'/'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
       <div className="contribute-container">
         <div className="contribute-content">
-          <h1>{frontmatter.title}</h1>
           <p>{frontmatter.intro}</p>
         </div>
         <div className="contributions">
           { frontmatter.contributions.map((ctb, index) => {
             return (
-              <a href={ctb.href} key={index} target='_blank' rel="noopener noreferrer">
-                <img title={ctb.title} src={ctb.contributionImage.childImageSharp.original.src} alt={ctb.alt}/>
-              </a>
+              <div className="contribution-item">
+                <a href={ctb.href} key={index} target='_blank' rel="noopener noreferrer">
+                  <img src={ctb.contributionImage.childImageSharp.original.src} alt={ctb.alt}/>
+                </a>
+                <h2>{ctb.title}</h2>
+                <p>{ctb.intro}</p>
+              </div>
             )
           })}
         </div>
@@ -42,7 +45,6 @@ export const query = graphql `
             }
           }
           intro
-          title
           contributions {
             alt
             href
@@ -53,6 +55,7 @@ export const query = graphql `
                 }
               }
             }
+            intro
             title
           }
         }
