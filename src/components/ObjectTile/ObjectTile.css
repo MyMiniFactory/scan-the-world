@@ -25,6 +25,20 @@
   visibility: visible;
 }
 
+.object-designer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 50px;
+}
+
+.object-designer > img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  border-radius: 90px;
+}
+
 .loader svg {
       width: 230px;
       margin: 10px;
