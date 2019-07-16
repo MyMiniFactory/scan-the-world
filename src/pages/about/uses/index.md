@@ -14,7 +14,7 @@ uses:
       network provides a safe space for culture to be shared and discovered, no
       matter where in the world it comes from. 
     title: Cultural heritage
-    useImage: /assets/bustofayoungwoman.jpg
+    useImage: /assets/cultural-heritage-use.jpg
   - intro: >-
       What does a museum’s collection, a public sculpture or even a building
       mean to those who are partially sighted or blind? The traditionally
@@ -49,7 +49,7 @@ uses:
       this by being able to move and touch it to study the transitions of space,
       angles and light.
     title: Education
-    useImage: /assets/cleanup.png
+    useImage: /assets/education-use.jpg
   - intro: >-
       Damage or complete demolition of cultural sites can result in many
       consequences that would be detrimental for the community and the wider
@@ -68,6 +68,6 @@ uses:
       data that has been collected from the original. As a result, potential
       risk of damage and destruction are mitigated.
     title: Preservation
-    useImage: /assets/img_9877.jpg
+    useImage: /assets/preservation-use.jpg
 ---
 
