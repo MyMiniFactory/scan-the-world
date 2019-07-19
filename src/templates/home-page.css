@@ -1,6 +1,7 @@
 .intro {
   margin: 110px auto 40px 278px;
   padding: 0 10px 0 10px;
+  min-width: 300px;
 }
 
 
@@ -64,13 +65,14 @@
   opacity: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1300px) {
   .masonry {
     display: none;
   }
 
   .intro {
-    margin: 110px auto 40px 0;
+    margin: 0px auto 40px 0;
     padding: 0 10px 0 10px;
+    min-width: none;
   }
 }

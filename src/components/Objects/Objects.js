@@ -8,7 +8,7 @@ import ContentLoader from "react-content-loader"
 import ObjectTile from '../ObjectTile/ObjectTile';
 
 const skeleton = () => {
-    const blocks = Array.from({ length: 12 }, (x, i) => (
+    const blocks = Array.from({ length: 2 }, (x, i) => (
         <ContentLoader
           key={i}
           height={230}
