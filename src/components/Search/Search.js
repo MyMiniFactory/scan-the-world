@@ -12,25 +12,31 @@ const adaptSuggestions = ({items}) => {
 const getSuggestionValue = suggestion => suggestion.name
 
 function renderSuggestion(suggestion) {
-  return (
-    <a className="url-suggestion" href={suggestion.url}>
-      <div className="search-suggestion">
-        <img alt="suggested object" src={suggestion.image}/>
-        <div className="text" title={suggestion.name}>
-          <p>{suggestion.name}</p>
-          <p className="author">{suggestion.designer}</p>
-        </div>
+  return (<a className="url-suggestion" href={suggestion.url}>
+    <div className="search-suggestion">
+      <img alt="suggested object" src={suggestion.image}/>
+      <div className="text" title={suggestion.name}>
+        <p>{suggestion.name}</p>
+        <p className="author">{suggestion.designer}</p>
       </div>
-    </a>);
+    </div>
+  </a>);
 }
 
 const renderInput = (inputProps) => {
-  const {submit, ...inputs} = inputProps;
+  const {
+    submit,
+    clear,
+    ...inputs
+  } = inputProps;
   return (
-  <form onSubmit={submit}>
-    <button type='submit'><FaSearch/></button>
-    <input {... inputs}/>
-  </form>)
+    <form onSubmit={submit}>
+      <button type='submit'><FaSearch/></button>
+      <input {...inputs}/>
+      {inputs.value.length > 0 &&
+        <button onClick={clear}>X</button>
+      }
+    </form>)
 }
 
 class Search extends React.Component {
@@ -45,27 +51,28 @@ class Search extends React.Component {
     this.onChange = this.onChange.bind(this)
     this.changeSorting = this.changeSorting.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.clearValue = this.clearValue.bind(this)
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this)
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this)
   }
 
   onChange(event, {newValue}) {
-    this.setState({value: newValue});
-  };
+    this.setState({value: newValue})
+  }
 
   changeSorting(sortBy) {
-    this.setState({sortBy: sortBy});
+    this.setState({sortBy: sortBy})
     this.props.onSearch(this.state.value, sortBy)
   }
 
   handleSubmit(event) {
-    this.setState({sortBy: 'popular'});
-    this.props.onSearch(this.state.value, 'popular');
-    event.preventDefault();
+    this.setState({sortBy: 'popularity'})
+    this.props.onSearch(this.state.value, 'popularity')
+    event.preventDefault()
   }
 
-  onClick() {
-    this.props.onSearch(this.state.value, 'popular')
+  clearValue() {
+    this.setState({value: ''})
   }
 
   onSuggestionsFetchRequested = ({value}) => {
@@ -79,36 +86,31 @@ class Search extends React.Component {
 
   render() {
     const {value, suggestions} = this.state;
-
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
       placeholder: 'Search the collection',
       value,
+      clear: this.clearValue,
       onChange: this.onChange,
       submit: this.handleSubmit
-    };
+    }
 
     return (<div className="search">
       <p className="sortby">
         <span onClick={() => this.changeSorting('date')} className={this.state.sortBy === 'date'
           ? 'active'
           : ''}>recent
-        </span> |
+        </span>
+        <span style={{margin:`0 5px 0 5px`}}>|</span>
         <span onClick={() => {
-          this.changeSorting('popular')
+          this.changeSorting('popularity')
         }} className={this.state.sortBy !== 'date'
           ? 'active'
-          : ''}> popular
+          : ''}>
+          popular
         </span>
       </p>
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-        renderInputComponent={renderInput}/>
+      <Autosuggest suggestions={suggestions} onSuggestionsFetchRequested={this.onSuggestionsFetchRequested} onSuggestionsClearRequested={this.onSuggestionsClearRequested} getSuggestionValue={getSuggestionValue} renderSuggestion={renderSuggestion} inputProps={inputProps} renderInputComponent={renderInput}/>
     </div>);
   }
 }
