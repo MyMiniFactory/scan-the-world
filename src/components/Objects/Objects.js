@@ -29,7 +29,7 @@ const skeleton = () => {
 
 function plusButton(url) {
   return {
-    url: "https://www.myminifactory.com",
+    url: "https://www.myminifactory.com/upload/object?type=scantheworld",
     name: "Contribute now",
     images: [
       {

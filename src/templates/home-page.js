@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import SearchContainer from "../components/searchContainer"
-import './home-page.css'
+import './home-page.scss'
 import SocialBar from '../components/SocialBar/SocialBar';
 import scan_the_world from '../images/scan_the_world.svg'
 

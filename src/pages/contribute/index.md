@@ -7,7 +7,7 @@ bannerImage: /assets/contribute-banner.jpg
 contributions:
   - alt: ''
     contributionImage: /assets/add_3d_icon.jpg
-    href: 'https://www.myminifactory.com/upload/object-upload'
+    href: 'https://www.myminifactory.com/upload/object?type=scantheworld'
     title: Upload 3D scan
     intro: >-
       If you have a 3D model you would like to share, follow this link to upload
