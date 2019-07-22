@@ -25,9 +25,12 @@
 
 .story-header > a {
   text-decoration: none;
-  color: white;
   text-align: center;
   margin: 0;
+}
+
+.story-header h1 {
+  color: white;
 }
 
 .story-footer {

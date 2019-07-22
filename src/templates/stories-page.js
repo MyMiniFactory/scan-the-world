@@ -9,7 +9,7 @@ export default ({ data }) => (
     <Layout>
       <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
       <section className='stories-container'>
-        <h1 style={{fontFamily:`atamiregular, sans-serif!important`}}>Latest Stories</h1>
+        <h1>Latest Stories</h1>
         <StoryRoll edges={data.allMarkdownRemark.edges} />
       </section>
     </Layout>

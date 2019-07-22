@@ -4,6 +4,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+#___gatsby h1, h2 {
+  font-family: 'atamiregular', sans-serif!important;
+  text-transform: lowercase!important;
+}
+
 @font-face {
     font-family: 'atamibold';
     src: url('../fonts/atami-bold.woff2') format('woff2'),

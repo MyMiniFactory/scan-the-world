@@ -10,7 +10,7 @@
   display: flex;
   flex-flow: column;
   position: sticky;
-  max-width: 250px;
+  min-width: 200px;
   top: 80px;
   margin: 10px 30px 0;
 }
