@@ -47,12 +47,12 @@ class Objects extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            objects: props.objects ? props.objects : [],
-            isLoaded: false,
-            currentPage: 0,
+            objects: props.objects,
+            isLoaded: true,
+            currentPage: 1,
             hasMore: true,
-            query: props.query ? props.query : '',
-            sortBy: props.sortBy ? props.sortBy : 'date'
+            query: props.query,
+            sortBy: props.sortBy
         };
         this.getObjects = this.getObjects.bind(this)
     }
@@ -62,40 +62,40 @@ class Objects extends React.Component {
         if (this.props.query !== prevProps.query || this.props.sortBy !== prevProps.sortBy) {
             this.setState({
                 currentPage: 0,
-                query: this.props.query,
-                sortBy: this.props.sortBy ? this.props.sortBy : 'popularity',
                 objects: [],
+                query: this.props.query,
+                sortBy: this.props.sortBy,
                 isLoaded: false
-            },
-            () => this.getObjects()
-          )
+            })
         }
     }
 
-    getObjects(page = 0) {
-        fetch(config.objects_url + "&page=" + page + "&q=" + this.state.query + '&sort=' + this.state.sortBy)
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    if (result.items){
-                        this.setState({
-                            isLoaded: true,
-                            objects: this.state.objects.concat(result.items)
-                        });
-                    } else {
-                        this.setState({
-                            hasMore: false,
-                        });
-                    }
-                },
-                (error) => {
-                    this.setState({
-                        hasMore: false,
+    getObjects() {
+      const fetchedPage = this.state.currentPage + 1
+      fetch(`${config.objects_url}&page=${fetchedPage}&q=${this.state.query}&sort=${this.state.sortBy}`)
+          .then(res => res.json())
+          .then(
+              (result) => {
+                  if (result.items){
+                      this.setState({
                         isLoaded: true,
-                        error
-                    });
-                }
-            )
+                        objects: this.state.objects.concat(result.items),
+                        currentPage: fetchedPage,
+                      })
+                  } else {
+                      this.setState({
+                          hasMore: false,
+                      })
+                  }
+              },
+              (error) => {
+                  this.setState({
+                      hasMore: false,
+                      isLoaded: true,
+                      error,
+                  });
+              }
+          )
     }
 
     render() {
