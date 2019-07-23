@@ -9,24 +9,6 @@ intro: >-
   their scans,  stories, and creations with the goal to bring global heritage to
   the masses.
 featuredImage: /assets/plus-button-1-.jpg
-trends:
-  - alt: Scan the world
-    float: right
-    href: ' '
-    marginTop: 100
-    title: Scan the World
-    trendImage: /assets/1_ckjgadj4th-krio8oqne7g.jpg
-    width: 60
-  - float: left
-    marginTop: 100
-    title: The Digital Cast Courts
-    trendImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
-    width: 80
-  - float: right
-    href: ''
-    marginTop: 100
-    title: The Lewis Chessman
-    trendImage: /assets/intro.jpg
-    width: 70
+trends: []
 ---
 
