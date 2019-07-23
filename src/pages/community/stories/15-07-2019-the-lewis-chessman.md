@@ -3,6 +3,7 @@ templateKey: story-page
 title: The Lewis Chessman
 date: 2019-07-15T15:00:00.000Z
 storyImage: /assets/intro.jpg
+featured: true
 ---
 In the light of recent events in the art world, we will be looking at an object that almost escaped us. Auction houses like Sotheby’s and Christie’s usually make their lots available to the public eye for a few days before they get sold. They often take public cultural artefacts and put them in private hands, but these public viewings before auctions allow us to disrupt that tendency , as we can use our phones and cameras to scan the objects. Through photogrammetry, a method of making 3D objects out of photographs, we can then use the captured data to recreate these artefacts and make them accessible for free. The lengths we have to go through to do this lead us to question why we should not be allowed to access cultural objects easily, but at the moment we can relish in the fact that we have democratised technologies which allow us to share what is rightfully everyone’s. 
 
