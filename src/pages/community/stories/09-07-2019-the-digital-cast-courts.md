@@ -3,6 +3,7 @@ templateKey: story-page
 title: The Digital Cast Courts
 date: 2019-07-09T10:16:56.035Z
 storyImage: /assets/1_mgqx-m1_bc-5eykz1ipwha.jpg
+featured: true
 ---
 On the 1st December 2018, The Victoria and Albert Museum’s prestigious Cast Courts were reopened to the public. A new central corridor, ‘The Interpretation Gallery’, explores the art of copying and its techniques past, present and future, with two 3D printed objects from Scan the World’s own collection of copies placed on permanent display.
 
@@ -12,7 +13,7 @@ There are very few places in the world that can compare to The Cast Courts. Home
 
 Scan the World’s Digital Cast Courts can be interpreted as the 21st Century’s response to the galleries. The project echoes Henry Cole’s drive for accessibility as well as the convention’s core ideologies of open knowledge, bringing together a global community of enthusiasts, art lovers and academics alike. The democratised, crowd-sourced archive is built to be contributed to and accessed by anyone around the world, all in the wider context of a meaningful contribution to education, accessibility and increased cultural identity in an ever-growing digital landscape.
 
-“The knowledge of (…) monuments is necessary to the progress of art, and the reproductions of them would be of a high value to all museums for public instruction.” 
+“The knowledge of (…) monuments is necessary to the progress of art, and the reproductions of them would be of a high value to all museums for public instruction.”
 
 — Convention for promoting universally reproductions of works of art for the benefit of museums of all countries, 1867.
 
