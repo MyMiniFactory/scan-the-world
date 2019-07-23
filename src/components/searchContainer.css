@@ -9,14 +9,27 @@
   align-self: flex-start;
   display: flex;
   flex-flow: column;
-  position: sticky;
-  min-width: 200px;
-  top: 80px;
+  position: fixed;
+  width: 200px;
   margin: 10px 30px 0;
 }
 
 .search-wrap > img {
   align-self: flex-start;
+}
+
+.nav-link {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 30px;
+}
+
+.nav-link > a {
+  min-width: 100px;
+  font-family: 'atamiregular', sans-serif!important;
+  flex: auto;
+  color: black;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -25,6 +38,17 @@
   }
 
   .search-wrap {
+    width: inherit;
     position: inherit;
+  }
+
+  .nav-link {
+      margin-bottom: 0;
+  }
+
+  .nav-link > a {
+    min-width: inherit;
+    margin-right: 20px;
+    text-align: center;
   }
 }

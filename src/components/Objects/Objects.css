@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   /* min-width: 500px; */
+  margin-left: 260px;
 }
 
 @media only screen and (min-width: 1030px) {
@@ -12,6 +13,7 @@
 
 @media only screen and (max-width: 600px) {
   .tiles {
+    margin-left: 0;
     min-width: inherit;
     justify-content: center;
   }

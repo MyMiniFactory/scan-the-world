@@ -1,7 +1,6 @@
 .intro {
   margin: 20px auto 40px 260px;
   padding: 0 10px 0 10px;
-  min-width: 300px;
 }
 
 
@@ -11,20 +10,6 @@
   justify-content: center;
   flex-flow: row;
   /* margin: 0 150px 0 150px; */
-}
-
-.nav-link {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 30px;
-}
-
-.nav-link > a {
-  min-width: 100px;
-  font-family: 'atamiregular', sans-serif!important;
-  flex: auto;
-  color: black;
-  text-decoration: none;
 }
 
 .masonry {
