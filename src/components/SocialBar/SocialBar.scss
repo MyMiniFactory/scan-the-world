@@ -14,8 +14,12 @@
         list-style: none;
 
         a {
-            color: #222;
-            text-decoration: none;
+          color: #222;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #222;
         }
     }
 }
