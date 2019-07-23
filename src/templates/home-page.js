@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import SearchContainer from "../components/searchContainer"
 import './home-page.scss'
@@ -9,6 +9,7 @@ import scan_the_world from '../images/scan_the_world.svg'
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const { edges:storyEdges } = data.stories
   return (
     <>
       <main style={{marginTop:`40px`}}>
@@ -34,6 +35,20 @@ const HomePage = ({ data }) => {
                       <img src={trend.trendImage.childImageSharp.original.src} alt={trend.alt}/>
                     </a>
                     <p>{trend.title}</p>
+                  </div>
+                )
+              })
+            }
+            {
+              storyEdges.map((story, index) => {
+                const { frontmatter, fields } = story.node
+                const float = index%2 === 0 ? {float: `left`} : {float: `right`}
+                return (
+                  <div key={story.id} style={{width: `70%`, marginTop: `50px`, ...float}}>
+                    <Link to={fields.slug}>
+                      <img src={frontmatter.storyImage.childImageSharp.original.src} alt={frontmatter.title} />
+                    </Link>
+                    <p>{frontmatter.title}</p>
                   </div>
                 )
               })
@@ -73,6 +88,26 @@ export const query = graphql `
           }
           title
           width
+        }
+      }
+    }
+    stories: allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}}}, sort: {fields: frontmatter___date, order: DESC}) {
+      edges {
+        node {
+          frontmatter {
+            storyImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
+            title
+          }
+          fields {
+            slug
+          }
+          id
         }
       }
     }
