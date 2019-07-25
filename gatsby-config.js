@@ -13,7 +13,7 @@ module.exports = {
         cat: "112",
         per_page: "23",
         light: "1",
-        sort: "date",
+        sort: "popularity",
       },
     },
     {
