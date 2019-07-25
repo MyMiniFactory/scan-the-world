@@ -45,7 +45,7 @@ class Search extends React.Component {
 
     this.state = {
       value: '',
-      sortBy: 'date',
+      sortBy: 'popularity',
       suggestions: []
     };
     this.onChange = this.onChange.bind(this)
@@ -73,6 +73,7 @@ class Search extends React.Component {
 
   clearValue() {
     this.setState({value: ''})
+    this.props.onSearch(this.state.value, 'popularity')
   }
 
   onSuggestionsFetchRequested = ({value}) => {
