@@ -10,7 +10,7 @@ class SearchContainer extends React.Component {
     this.state = {
       objects: props.objects,
       query: ``,
-      sortBy: `date`,
+      sortBy: `popularity`,
     };
     this.onSearch = this.onSearch.bind(this);
   }
@@ -27,7 +27,7 @@ class SearchContainer extends React.Component {
       <div className="search-container">
         <div className="search-wrap">
           <Header isHome={true} />
-          <Search onSearch={this.onSearch} />
+          <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
         </div>
         <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} url={this.props.url}/>
       </div>

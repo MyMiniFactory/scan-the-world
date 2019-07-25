@@ -45,7 +45,7 @@ class Search extends React.Component {
 
     this.state = {
       value: '',
-      sortBy: 'popularity',
+      sortBy: props.sortBy,
       suggestions: []
     };
     this.onChange = this.onChange.bind(this)
