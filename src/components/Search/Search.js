@@ -73,7 +73,7 @@ class Search extends React.Component {
 
   clearValue() {
     this.setState({value: ''})
-    this.props.onSearch(this.state.value, 'popularity')
+    this.props.onSearch('', 'popularity')
   }
 
   onSuggestionsFetchRequested = ({value}) => {
