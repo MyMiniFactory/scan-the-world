@@ -9,6 +9,8 @@ module.exports = {
     {
       resolve: "gatsby-source-mmf",
       options: {
+        name: "MyMiniFactoryObject",
+        url: "https://www.myminifactory.com/api/v2/search",
         key: "8e551c42-0fd1-4b8b-bd26-8b5d79e74099",
         cat: "112",
         per_page: "23",
@@ -16,6 +18,14 @@ module.exports = {
         sort: "popularity",
       },
     },
+    {
+      resolve: "gatsby-source-mmf-map",
+      options: {
+        name: "MapTile",
+        url: "https://www.myminifactory.com/stw/objects/map",
+      },
+    },
+    `gatsby-plugin-react-leaflet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

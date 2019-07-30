@@ -1,4 +1,4 @@
-# gatsby-source-mmf
+# gatsby-source-mmf-map
 
 This plugin sets up source for Gatsby application fetching data from MyMiniFactory API
 
@@ -18,37 +18,37 @@ To install the plugin, follow these steps.
 
 ## Configure the plugin
 
-Open `gatsby-config.js` from the root directory of your project site, and add the gatsby-source-mmf plugin inside plugin table:
+Open `gatsby-config.js` from the root directory of your tutorial site, and add the gatsby-source-mmf-map plugin inside plugin table:
 
 ```javascript
 plugins: [
   ...,
   {
-    resolve: "gatsby-source-mmf",
+    resolve: "gatsby-source-mmf-map",
     options: {
-      name: "MyMiniFactoryObject",
-      url: "https://www.myminifactory.com/api/v2/search",
-      key: <API-KEY>,
-      cat: "112",
-      per_page: "23",
-      light: "1",
-      sort: "popularity",
+      name: "MapTile",
+      url: "https://www.myminifactory.com/stw/objects/map",
     },
   },
 ]
 ```
 ## Query for result
 
-Your plugin is ready. Start `gatsby develop` and open a browser at http://localhost:8000/___graphql. The MyMiniFactory data can be queried from here. try:
+Your plugin is ready. Start `gatsby develop` and open a browser at http://localhost:8000/___graphql. The map tile data can be queried from here. try:
 
 ```graphql
 query MyQuery {
-  allMyMiniFactoryObject {
+  allMapTileObject {
     edges {
       node {
         id
-        url
-        name
+      }
+    }
+  }
+  allMapTilePlace {
+    edges {
+      node {
+        id
       }
     }
   }

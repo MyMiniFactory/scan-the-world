@@ -6,7 +6,7 @@ exports.sourceNodes = (
 	configOptions
 ) => {
 	const { createNode } = actions
-
+	const { name, ...apiOptions } = configOptions
 	// Gatsby adds a configOption that's not need for this plugin, delete it
 	delete configOptions.plugins
 	// Helper function that processes a object to match Gatsby's node structure
@@ -18,7 +18,7 @@ exports.sourceNodes = (
 			parent: null,
 			children: [],
 			internal: {
-				type: `MyMiniFactoryObject`,
+				type: name,
 				content: nodeContent,
 				contentDigest: createContentDigest(object),
 			}
@@ -27,9 +27,10 @@ exports.sourceNodes = (
 	}
 
 	// Convert the options object into a query string
-	const apiOptions = queryString.stringify(configOptions)
+	const {url, ...query} = apiOptions
+	const urlOptions = queryString.stringify(query)
 	// Join apiOptions with the MyMiniFactory API URL
-	const apiUrl = `https://www.myminifactory.com/api/v2/search?${apiOptions}`
+	const apiUrl = `${url}?${urlOptions}`
 	// Gatsby expects sourceNodes to return a promise
 	return (
 		// Parse a response from the apiUrl
@@ -45,7 +46,7 @@ exports.sourceNodes = (
 				.then(data => {
 					// For each query result
 					data.items.forEach(item => {
-						// Process the photo data to match the structure of Gatsby node
+						// Process the mmf data to match the structure of Gatsby node
 						const nodeData = processObject(item)
 						// Use Gatsby's createNode helper to create a node from the node data
 						createNode(nodeData)
