@@ -14,8 +14,9 @@
 }
 
 .stw-quote {
-    color: rgb(48, 48, 48);
-    text-align: right;
+  margin-top: 15px;
+  color: rgb(48, 48, 48);
+  text-align: right;
 }
 
 .member img {

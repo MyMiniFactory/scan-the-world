@@ -7,7 +7,7 @@ function Member(props) {
       <img src={props.profilePicture} alt="profile"/>
       <p>{props.name}</p>
       <p>{props.role}</p>
-      <p className="stw-quote" style={{marginTop: `15px`}}>{props.quote}</p>
+      <p className="stw-quote">{props.quote}</p>
     </div>
   )
 }
@@ -20,7 +20,7 @@ export default ({ members }) => (
         name={member.title}
         role={member.position}
         quote={member.quote}
-      />)
-    )}
+      />
+    ))}
   </div>
 )
