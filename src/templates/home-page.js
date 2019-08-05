@@ -9,7 +9,7 @@ import scan_the_world from '../images/scan_the_world.svg'
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { edges:storyEdges } = data.stories
+  const { edges:stories } = data.stories
   return (
     <>
       <main style={{marginTop:`40px`}}>
@@ -24,7 +24,7 @@ const HomePage = ({ data }) => {
           </div>
           <div className="masonry">
             <iframe title="introduction to scan the world" src="https://player.vimeo.com/video/347516450?color=ff9933&title=0&byline=0&portrait=0" width="640" frameBorder="0" allow="fullscreen" allowFullScreen></iframe>
-            {
+            {frontmatter.trends &&
               frontmatter.trends.map((trend, index) => {
                 const { width, marginTop, float } = trend
                 const m = marginTop ? {marginTop: `${marginTop}px`} : null
@@ -40,11 +40,11 @@ const HomePage = ({ data }) => {
               })
             }
             {
-              storyEdges.map((story, index) => {
-                const { frontmatter, fields } = story.node
+              stories.map((story, index) => {
+                const { frontmatter, fields, id } = story.node
                 const float = index%2 === 0 ? {float: `left`} : {float: `right`}
                 return (
-                  <div key={story.id} style={{width: `70%`, marginTop: `50px`, ...float}}>
+                  <div key={id} style={{width: `70%`, marginTop: `50px`, ...float}}>
                     <Link to={fields.slug}>
                       <img src={frontmatter.storyImage.childImageSharp.original.src} alt={frontmatter.title} />
                     </Link>
@@ -113,18 +113,23 @@ export const query = graphql `
     }
     allMyMiniFactoryObject {
       nodes {
-        images {
-          thumbnail {
-            url
+        artist
+        id
+        place
+        threedObject {
+          designer {
+            avatar_thumbnail_url
+            name
+            profile_url
           }
+          images {
+            thumbnail {
+              url
+            }
+          }
+          url
         }
-        name
-        url
-        designer {
-          avatar_thumbnail_url
-          name
-          profile_url
-        }
+        title
       }
     }
   }
