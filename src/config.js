@@ -1,10 +1,9 @@
-const access_token = "8e551c42-0fd1-4b8b-bd26-8b5d79e74099"
-
 const config = {
     myminifactory_url: "https://www.myminifactory.com",
     logo_url: "https://www.myminifactory.com/images/logo_mobile.png",
-    objects_url: `https://www.myminifactory.com/api/v2/search?cat=112&per_page=23&light=1${access_token ? "&key=" + access_token : null }`,
-    suggester_url: "https://www.myminifactory.com/search/search-suggester",
+    objects_url: `https://www.myminifactory.com/stw/objects/search`,
+    statistic: `https://www.myminifactory.com/stw/statistic`,
+    randomObject: `http://192.168.1.64:8080/stw/objects/random`,
     social_links: [
         {
             name: "Instagram",
