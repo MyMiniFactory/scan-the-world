@@ -1,10 +1,4 @@
-.search {
-    display: flex;
-    flex-direction: column;
-}
-
 .sortby {
-    float: right;
     min-width: 150px;
     cursor: pointer;
     margin: 0;
@@ -14,6 +8,7 @@
     display: flex;
     border-bottom: 1px solid black;
     margin: 0;
+    width: 200px;
 
     button {
       border: none;
@@ -30,12 +25,13 @@
     }
 
     input {
-        height: 25px;
-        padding: 5px;
-        color: #222;
-        border: 0;
-        box-shadow: none;
-        margin: 0;
+      flex: 1 0 auto;
+      height: 25px;
+      padding: 5px;
+      color: #222;
+      border: 0;
+      box-shadow: none;
+      margin: 0;
     }
 }
 
@@ -43,10 +39,15 @@
     text-decoration: none;
 }
 
+.search-table {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
 .search-suggestion {
     margin: 0;
     display: flex;
-    flex-flow: row nowrap;
     height: 50px;
 
     img {

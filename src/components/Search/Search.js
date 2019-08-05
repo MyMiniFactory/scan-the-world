@@ -2,41 +2,60 @@ import './Search.scss'
 
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
-import {FaSearch} from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import config from '../../config';
 
+
+const _getSuggestions = (objects, value) => {
+  const inputValue = value.trim().toLowerCase()
+  const inputLength = inputValue.length
+  return inputLength === 0 ? [] : objects.filter(item =>
+    item.name.toLowerCase().includes(inputValue)
+  ).slice(0, 5)
+}
+
 const adaptSuggestions = ({items}) => {
-  return items.slice(0, 4).map(item => ({name: item[1], image: item[2], designer: item[3], url: item[4]}));
+  return items.slice(0, 4).map(item => (
+    {
+      name: item.title,
+      image: item.threedObject.images[0].thumbnail.url,
+      designer: item.threedObject.designer.username,
+      url: item.threedObject.url,
+    }
+  ))
 }
 
 const getSuggestionValue = suggestion => suggestion.name
 
-function renderSuggestion(suggestion) {
-  return (<a className="url-suggestion" href={suggestion.url}>
-    <div className="search-suggestion">
-      <img alt="suggested object" src={suggestion.image}/>
-      <div className="text" title={suggestion.name}>
-        <p>{suggestion.name}</p>
-        <p className="author">{suggestion.designer}</p>
+function renderObjectSuggestion(suggestion) {
+  return (
+    <a className="url-suggestion" href={suggestion.url}>
+      <div className="search-suggestion">
+        <img alt="suggested object" src={suggestion.image}/>
+        <div className="text" title={suggestion.name}>
+          <p>{suggestion.name}</p>
+          <p className="author">{suggestion.designer}</p>
+        </div>
       </div>
-    </div>
-  </a>);
+    </a>);
+}
+
+function renderSuggestion(suggestion) {
+  return (
+    <div className="search-table">
+      <p>{suggestion.name}</p>
+    </div>)
 }
 
 const renderInput = (inputProps) => {
-  const {
-    submit,
-    clear,
-    ...inputs
-  } = inputProps;
+  const { clear, ...inputs } = inputProps
   return (
-    <form onSubmit={submit}>
-      <button type='submit'><FaSearch/></button>
+    <span>
       <input {...inputs}/>
       {inputs.value.length > 0 &&
-        <button onClick={clear}>X</button>
+        <span onClick={clear}>X</span>
       }
-    </form>)
+    </span>)
 }
 
 class Search extends React.Component {
@@ -44,74 +63,153 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      value: '',
+      object: '',
+      artist: '',
+      artists: [],
+      place: '',
+      places: [],
       sortBy: props.sortBy,
-      suggestions: []
+      objectSuggestions: [],
+      artistSuggestions: [],
+      placeSuggestions: [],
     };
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.changeSorting = this.changeSorting.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.clearValue = this.clearValue.bind(this)
-    this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this)
+    this.searchOnChange = this.searchOnChange.bind(this)
+    this.onObjectSuggestionsFetchRequested = this.onObjectSuggestionsFetchRequested.bind(this)
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this)
   }
 
-  onChange(event, {newValue}) {
-    this.setState({value: newValue})
+  componentDidMount() {
+    fetch('https://www.myminifactory.com/stw/objects/filter-artist')
+    .then(res => res.json())
+    .then(
+      result => this.setState({ artists: result.objects })
+    )
+    fetch('https://www.myminifactory.com/stw/objects/filter-place')
+    .then(res => res.json())
+    .then(
+      result => this.setState({ places: result.objects })
+    )
+  }
+
+  handleChange(event, { newValue }) {
+    const { target } = event
+    this.setState({
+      [target.name]: newValue
+    })
   }
 
   changeSorting(sortBy) {
+    const { object, artist, place } = this.state
     this.setState({sortBy: sortBy})
-    this.props.onSearch(this.state.value, sortBy)
+    this.props.onSearch(`q=${object}&artist=${artist}&place=${place}`, sortBy)
   }
 
   handleSubmit(event) {
-    this.setState({sortBy: 'popularity'})
-    this.props.onSearch(this.state.value, 'popularity')
+    const { object, artist, place } = this.state
+    const sortBy = this.state.sortBy === 'random'? 'popularity':this.state.sortBy
+    this.setState({sortBy})
+    this.props.onSearch(`q=${object}&artist=${artist}&place=${place}`, sortBy)
     event.preventDefault()
   }
 
-  clearValue() {
-    this.setState({value: ''})
-    this.props.onSearch('', 'popularity')
+  searchOnChange(name, value, doSearch) {
+    const { object, artist, place } = this.state
+    const sortBy = this.state.sortBy === 'random'? 'popularity':this.state.sortBy
+    const state = {object, artist, place, sortBy}
+    state[name] = value
+    this.setState(state)
+    if (doSearch) {
+      this.props.onSearch(`q=${state.object}&artist=${state.artist}&place=${state.place}`, sortBy)
+    }
   }
 
-  onSuggestionsFetchRequested = ({value}) => {
-    fetch(`${config.suggester_url}/${value}?cat=112`).then(res => res.json()).then(result => {
-      this.setState({suggestions: adaptSuggestions(result)});
-    }, error => console.log(error))
+  onObjectSuggestionsFetchRequested = (data, suggestions, value) => {
+    if (data) {
+      return this.setState({[suggestions]: _getSuggestions(data, value)})
+    }
+    const { artist, place } = this.state
+    fetch(`${config.objects_url}?q=${value}&artist=${artist}&place=${place}`)
+      .then(res => res.json())
+      .then(
+        result => this.setState({[suggestions]: adaptSuggestions(result)}),
+        error => console.log(error))
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
-  onSuggestionsClearRequested = () => this.setState({suggestions: []});
+  onSuggestionsClearRequested = suggestions => this.setState({[suggestions]: []});
+
+  inputProps = (placeholder, value, name) => {
+    return {
+      placeholder: placeholder,
+      value,
+      name: name,
+      clear: () => this.searchOnChange(name, '', true),
+      onChange: this.handleChange,
+    }
+  }
 
   render() {
-    const {value, suggestions} = this.state;
-    // Autosuggest will pass through all these props to the input.
-    const inputProps = {
-      placeholder: 'Search the collection',
-      value,
-      clear: this.clearValue,
-      onChange: this.onChange,
-      submit: this.handleSubmit
-    }
-
+    const {object, artist, place, objectSuggestions, artistSuggestions, placeSuggestions} = this.state;
     return (<div className="search">
       <p className="sortby">
-        <span onClick={() => this.changeSorting('date')} className={this.state.sortBy === 'date'
-          ? 'active'
-          : ''}>recent
+        <span
+          onClick={() => this.changeSorting('date')}
+          className={this.state.sortBy === 'date'?'active':''}
+        >
+          recent
         </span>
         <span style={{margin:`0 5px 0 5px`}}>|</span>
-        <span onClick={() => {
-          this.changeSorting('popularity')
-        }} className={this.state.sortBy !== 'date'
-          ? 'active'
-          : ''}>
+        <span
+          onClick={() => this.changeSorting('popularity')}
+          className={this.state.sortBy === 'popularity'?'active':''}
+        >
           popular
         </span>
+        <span style={{margin:`0 5px 0 5px`}}>|</span>
+        <span
+          onClick={() => this.changeSorting('random')}
+          className={this.state.sortBy === 'random'?'active':''}
+        >
+          random
+        </span>
       </p>
-      <Autosuggest suggestions={suggestions} onSuggestionsFetchRequested={this.onSuggestionsFetchRequested} onSuggestionsClearRequested={this.onSuggestionsClearRequested} getSuggestionValue={getSuggestionValue} renderSuggestion={renderSuggestion} inputProps={inputProps} renderInputComponent={renderInput}/>
+      <form onSubmit={this.handleSubmit}>
+        <Autosuggest
+          suggestions={objectSuggestions}
+          onSuggestionsFetchRequested={({value}) => this.onObjectSuggestionsFetchRequested(null, 'objectSuggestions', value)}
+          onSuggestionsClearRequested={() => this.onSuggestionsClearRequested('objectSuggestions')}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderObjectSuggestion}
+          inputProps={this.inputProps('search on collection', object, 'object')}
+          renderInputComponent={renderInput}
+        />
+        <Autosuggest
+          suggestions={artistSuggestions}
+          onSuggestionsFetchRequested={
+            ({value}) => this.onObjectSuggestionsFetchRequested(this.state.artists, 'artistSuggestions', value)}
+          onSuggestionsClearRequested={() => this.onSuggestionsClearRequested('artistSuggestions')}
+          onSuggestionSelected={(event, { suggestionValue }) => this.searchOnChange('artist', suggestionValue, false)}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={this.inputProps('search by artist', artist, 'artist')}
+          renderInputComponent={renderInput}
+        />
+        <Autosuggest
+          suggestions={placeSuggestions}
+          onSuggestionsFetchRequested={
+            ({value}) => this.onObjectSuggestionsFetchRequested(this.state.places, 'placeSuggestions', value)}
+          onSuggestionsClearRequested={() => this.onSuggestionsClearRequested('placeSuggestions')}
+          onSuggestionSelected={(event, { suggestionValue }) => this.searchOnChange('place', suggestionValue, false)}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={this.inputProps('search by place', place, 'place')}
+          renderInputComponent={renderInput}
+        />
+        <button type='submit'><FaSearch/></button>
+      </form>
     </div>);
   }
 }
