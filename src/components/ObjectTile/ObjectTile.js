@@ -3,16 +3,16 @@ import './ObjectTile.css'
 import React from 'react';
 
 function ObjectTile({ object }) {
-  const { designer } = object
+  const { threedObject } = object
   return (
     <div className="object-tile">
-      <a href={object.url} >
-        <img src={object.images[0].thumbnail.url} alt={object.name}/>
+      <a href={threedObject.url} >
+        <img src={threedObject.images[0].thumbnail.url} alt={object.title}/>
       </a>
-      <p>{object.name}</p>
-      {designer &&
-        <a className="object-designer" href={designer.profile_url}>
-          <img src={designer.avatar_thumbnail_url} alt={designer.name}/>
+      <p>{`${object.title}${object.place ? ', ' + object.place : ''} ${object.artist ? 'by ' + object.artist : ''}`}</p>
+      {threedObject.designer &&
+        <a className="object-designer" href={threedObject.designer.profile_url}>
+          <img src={threedObject.designer.avatar_thumbnail_url} alt={threedObject.designer.name}/>
         </a>
       }
     </div>

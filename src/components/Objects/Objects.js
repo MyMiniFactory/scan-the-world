@@ -29,16 +29,18 @@ const skeleton = () => {
 
 function plusButton(url) {
   return {
-    url: "https://www.myminifactory.com/upload/object?type=scantheworld",
-    name: "Contribute now",
-    images: [
-      {
-        thumbnail:
+    title: "Contribute now",
+    threedObject: {
+      url: "https://www.myminifactory.com/upload/object?type=scantheworld",
+      images: [
         {
-          url:url
+          thumbnail:
+          {
+            url:url
+          }
         }
-      }
-    ]
+      ]
+    }
   }
 }
 
@@ -46,10 +48,11 @@ class Objects extends React.Component {
 
     constructor(props) {
         super(props);
+        const page = props.objects.length? 1:0
         this.state = {
             objects: props.objects,
-            isLoaded: true,
-            currentPage: 1,
+            isLoaded: false,
+            currentPage: page,
             hasMore: true,
             query: props.query,
             sortBy: props.sortBy
@@ -65,18 +68,19 @@ class Objects extends React.Component {
                 objects: [],
                 query: this.props.query,
                 sortBy: this.props.sortBy,
-                isLoaded: false
+                isLoaded: false,
+                hasMore: true
             })
         }
     }
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      fetch(`${config.objects_url}&page=${fetchedPage}&q=${this.state.query}&sort=${this.state.sortBy}`)
+      fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}`)
           .then(res => res.json())
           .then(
               (result) => {
-                  if (result.items){
+                  if (result.items.length){
                       this.setState({
                         isLoaded: true,
                         objects: this.state.objects.concat(result.items),
@@ -101,15 +105,15 @@ class Objects extends React.Component {
     render() {
 
         if (this.state.isLoaded && this.state.objects.length === 0){
-          return (<p>No objects found :(<br/>Try reloading the page</p>);
+          return (<p style={{marginLeft:`260px`}}>No objects found :(<br/>Try reloading the page</p>);
         }
 
         const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
-            return [<ObjectTile key={0} object={plusButton(this.props.url)} />, <ObjectTile key={i+1} object={object} />]
+            return [<ObjectTile key={0} object={plusButton(this.props.url)} />, <ObjectTile key={object.id} object={object} />]
           }
           return (
-            <ObjectTile key={i+1} object={object} />
+            <ObjectTile key={object.id} object={object} />
           )
         })
 
