@@ -5,33 +5,58 @@ import Banner from "../components/banner"
 import SEO from "../components/seo"
 import Team from "../components/team"
 import { FaArrowRight } from 'react-icons/fa'
-import './about-page.css';
+import config from '../config'
+import './about-page.css'
 
 
 
-const AboutPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+class AboutPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: props.data,
+      statistic: {},
+    }
+  }
 
-  return (
-    <Layout>
-      <SEO title="About" />
-      <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
-      <div className="about-container">
-        <div className="about-content">
-          <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
-          <div>
-            <Link to={'/about/uses'}>
-              Learn more about us <FaArrowRight />
-            </Link>
+  componentDidMount() {
+    fetch(config.statistic)
+    .then(res => res.json())
+    .then(statistic => this.setState({
+      statistic,
+    }))
+  }
+
+  render () {
+    const { data, statistic } = this.state
+    const { frontmatter } = data.markdownRemark
+    console.log(this.state)
+    return (
+      <Layout>
+        <SEO title="About" />
+        <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
+        <div className="about-container">
+          <div className="about-content">
+            <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
+            <div>
+              <Link to={'/about/uses'}>
+                Learn more about us <FaArrowRight />
+              </Link>
+            </div>
+            <div style={{display: `flex`, justifyContent: `space-between`}}>
+              <span>objects: {statistic.objects}</span>
+              <span>artists: {statistic.artists}</span>
+              <span>places: {statistic.places}</span>
+            </div>
+          </div>
+          <div className="team">
+            <h2>the team</h2>
+            <Team members={frontmatter.team}/>
           </div>
         </div>
-        <div className="team">
-          <h2>the team</h2>
-          <Team members={frontmatter.team}/>
-        </div>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export const query = graphql `
