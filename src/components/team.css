@@ -33,6 +33,6 @@
 @media only screen and (max-width: 1310px) {
     .members {
       flex-flow: row wrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 }
