@@ -1,0 +1,44 @@
+.random-container {
+    margin-left: 260px;
+}
+
+.random-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.random-intro #random-title {
+  text-transform: capitalize!important;
+}
+
+.random-intro h3 {
+  font-style: italic;
+  text-transform: capitalize!important;
+  margin: 0;
+}
+
+.random-widget {
+  display: flex;
+}
+
+.random-widget > a {
+  margin-right: 10px;
+}
+
+.random-curator a {
+  color: black;
+  text-decoration: none;
+}
+
+.random-curator a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .random-container {
+      margin-left: 0;
+      padding: 10px;
+  }
+}
