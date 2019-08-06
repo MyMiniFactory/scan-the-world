@@ -37,17 +37,16 @@ class AboutPage extends React.Component {
         <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
         <div className="about-container">
           <div className="about-content">
+            <h3>Project Start Date - 28th June 2014</h3>
+            <div className="about-statistic">
+              <h3>objects: {statistic.objects}</h3>
+              <h3 style={{margin:`0 50px 0 50px`}}>artists: {statistic.artists}</h3>
+              <h3>places: {statistic.places}</h3>
+            </div>
             <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
-            <div>
-              <Link to={'/about/uses'}>
-                Learn more about us <FaArrowRight />
-              </Link>
-            </div>
-            <div style={{display: `flex`, justifyContent: `space-between`}}>
-              <span>objects: {statistic.objects}</span>
-              <span>artists: {statistic.artists}</span>
-              <span>places: {statistic.places}</span>
-            </div>
+            <Link to={'/about/uses'}>
+              Learn more about us <FaArrowRight />
+            </Link>
           </div>
           <div className="team">
             <h2>the team</h2>
