@@ -30,7 +30,6 @@ class AboutPage extends React.Component {
   render () {
     const { data, statistic } = this.state
     const { frontmatter } = data.markdownRemark
-    console.log(this.state)
     return (
       <Layout>
         <SEO title="About" />
