@@ -4,7 +4,7 @@ module.exports = {
     description: ``,
     author: `Jean-Baptiste Paux`,
   },
-  pathPrefix: "/scan-the-world",
+  pathPrefix: "/scantheworld",
   plugins: [
     {
       resolve: "gatsby-source-mmf",
