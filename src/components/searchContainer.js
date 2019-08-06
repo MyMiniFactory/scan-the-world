@@ -41,7 +41,7 @@ class SearchContainer extends React.Component {
       <div className="search-container">
         <div className="search-wrap">
           <Header isHome={true} onSearch={this.onSearch}/>
-          <Link to='/map'><img src={earth} height={18} style={{marginRight:`5px`}} alt='earth'/>Map view</Link>
+          <Link to='/map'><img src={earth} style={{marginRight:`5px`, width:`18px`}} alt='earth'/>Map view</Link>
           <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
         </div>
         {content}

@@ -4,8 +4,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
-#___gatsby h1, h2, button {
+#___gatsby h1, h2, h3, button {
   font-family: 'atamiregular', sans-serif!important;
+}
+
+#___gatsby h1, h2 {
   text-transform: lowercase!important;
 }
 

@@ -213,7 +213,7 @@ class Search extends React.Component {
           inputProps={this.inputProps('search by place...', place, 'place')}
           renderInputComponent={renderInput}
         />
-        <button className="stw-search-button" type='submit'><img src={searchIcon} height={15} alt='search' style={{marginRight:`5px`}}/>submit</button>
+        <button className="stw-search-button" type='submit'><img src={searchIcon} alt='search' style={{marginRight:`5px`, width:`15px`}}/>submit</button>
       </form>
     </div>);
   }

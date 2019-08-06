@@ -17,7 +17,8 @@
   display: flex;
   flex-flow: column;
 }
-.stw-input-search {
+
+input.stw-input-search {
   display: block;
   height: 20px;
   width: 100%;
@@ -28,7 +29,7 @@
   box-shadow: none;
 }
 
-.stw-search-button {
+button.stw-search-button {
   width: 75px;
   border: 1px black;
   border-style: solid;
@@ -38,7 +39,7 @@
   font-size: 0.9em;
 }
 
-.stw-search-button > img {
+button.stw-search-button > img {
   vertical-align: sub;
 }
 
