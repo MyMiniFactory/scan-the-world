@@ -6,7 +6,7 @@ team:
   - memberImage: /assets/s5fltm9r_400x400.png
     position: Founder and Project Manager
     quote: jon@myminifactory.com
-    title: Jon
+    title: Jon Beck
   - memberImage: /assets/excuse-me.jpg
     position: Community Manager
     quote: vickie@myminifactory.com
