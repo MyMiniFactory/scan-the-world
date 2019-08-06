@@ -3,7 +3,7 @@ templateKey: about-page
 title: who we are
 bannerImage: /assets/about-banner.jpg
 team:
-  - memberImage: /assets/bustofayoungwoman.jpg
+  - memberImage: /assets/s5fltm9r_400x400.png
     position: Founder and Project Manager
     quote: jon@myminifactory.com
     title: Jon
