@@ -7,7 +7,7 @@ import { FaMedium } from 'react-icons/fa';
 import config from '../../config';
 
 class SocialBar extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -33,18 +33,16 @@ class SocialBar extends Component {
                     icon = <FaTwitter />;
                 break;
             }
-            return (<li key={i} className="link-item" title={link.name} ><a href={link.url} >{icon}</a></li>)
+            return (<a key={i} href={link.url}>{icon}</a>)
         })
         return renderedLinks;
     }
-    
+
     render() {
         return (
             <div className="social-bar">
                 <p className="social" >social</p>
-                <ul className="links" >
-                    { this.renderLinks() }
-                </ul>
+                { this.renderLinks() }
             </div>
         );
     }

@@ -1,25 +1,19 @@
 .social-bar {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  z-index: 5000;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
 
-    .social {
-        transform: rotate(90deg);
-        margin-left: 15px;
-        margin-bottom: 25px;
-    }
+  .social {
+      writing-mode: tb-rl;
+      margin-bottom: 10px;
+  }
 
-    .link-item {
-        margin: 5px;
-        list-style: none;
-
-        a {
-          color: #222;
-          text-decoration: none;
-        }
-
-        a:hover {
-          color: #222;
-        }
-    }
+  a {
+    color: #222;
+    text-decoration: none;
+  }
 }
