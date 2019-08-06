@@ -5,6 +5,7 @@ import Search from './Search/Search'
 import Header from './header'
 import RandomArt from './randomArt'
 import './searchContainer.css'
+import earth from '../images/earth.svg'
 
 class SearchContainer extends React.Component {
   constructor(props) {

@@ -18,6 +18,14 @@
   align-self: flex-start;
 }
 
+.search-wrap > a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
 .nav-link {
   display: flex;
   flex-flow: row wrap;
