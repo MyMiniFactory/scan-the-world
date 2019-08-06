@@ -38,7 +38,7 @@ class Header extends React.Component {
     if (isHome) {
       return (
         <>
-          <img src={logo} alt="stw" style={{marginBottom:`20px`, height:`30px`}} />
+          <img src={logo} alt="stw" onClick={() => this.props.onSearch('', 'popularity')} style={{marginBottom:`20px`, height:`30px`}}/>
           <nav className="nav-link">
             <Link to='/about'>About</Link>
             <Link to='/community/stories'>Community</Link>
