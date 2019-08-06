@@ -29,13 +29,17 @@
 }
 
 .stw-search-button {
-  display: flex;
-  align-items: center;
-  border: none;
+  width: 75px;
+  border: 1px black;
+  border-style: solid;
   margin-top: 10px;
   background: none;
   padding: 0;
-  font-size: 1em;
+  font-size: 0.9em;
+}
+
+.stw-search-button > img {
+  vertical-align: sub;
 }
 
 .url-suggestion {
