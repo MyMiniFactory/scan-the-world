@@ -3,14 +3,14 @@ templateKey: about-page
 title: who we are
 bannerImage: /assets/about-banner.jpg
 team:
-  - memberImage: /assets/bustofayoungwoman.jpg
+  - mail: jon@myminifactory.com
+    memberImage: /assets/s5fltm9r_400x400.png
     position: Founder and Project Manager
-    mail: jon@myminifactory.com
-    title: Jon
-  - memberImage: /assets/excuse-me.jpg
+    title: Jon Beck
+  - mail: vickie@myminifactory.com
+    memberImage: /assets/excuse-me.jpg
     position: Community Manager
-    mail: vickie@myminifactory.com
-    title: Vickie
+    title: Vickie Licková
 ---
 Scan the World is an ambitious initiative that gives you the possibility to
 enjoy 3D printable representations of cultural artifacts in a remarkably
