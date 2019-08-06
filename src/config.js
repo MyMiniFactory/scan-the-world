@@ -3,7 +3,7 @@ const config = {
     logo_url: "https://www.myminifactory.com/images/logo_mobile.png",
     objects_url: `https://www.myminifactory.com/stw/objects/search`,
     statistic: `https://www.myminifactory.com/stw/statistic`,
-    randomObject: `http://192.168.1.64:8080/stw/objects/random`,
+    randomObject: `https://www.myminifactory.com/stw/objects/random`,
     social_links: [
         {
             name: "Instagram",
