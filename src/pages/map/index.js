@@ -15,49 +15,48 @@ import Layout from '../../components/layout'
 const id = 'romainbou.pljg503g'
 const accessToken = 'pk.eyJ1Ijoicm9tYWluYm91IiwiYSI6ImNpbXhta3U5bTAwZG12emx5dmF2aW05dnIifQ.HcDxPxknP7xvs2Wb8rsEpw'
 
-
-const sculptureIcon = new L.icon({
-  iconUrl: sculpture_icon,
-  iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [31, 50],
-})
-
-const museumIcon = new L.icon({
-  iconUrl: museum_icon,
-  iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [31, 50],
-})
-
-const createClusterCustomIcon = function (cluster) {
-  const markers = cluster.getAllChildMarkers()
-  let n = 0
-
-  markers.forEach(marker => {
-    n += Number(marker.options.alt)
-  })
-
-  let c = ' marker-cluster-';
-  if (n < 10) {
-    c += 'small';
-  } else if (n < 100) {
-    c += 'medium';
-  } else {
-    c += 'large';
-  }
-  return L.divIcon({
-    html: `<div><span>${n}</span></div>`,
-    className: `marker-cluster ${c}`,
-    iconSize: new L.Point(40, 40, true)
-  })
-}
-
 export default ({ data }) => {
   const { edges: places } = data.allMapTilePlace
   const { edges: objects } = data.allMapTileObject
 
   if (typeof window !== 'undefined') {
+    const sculptureIcon = new L.icon({
+      iconUrl: sculpture_icon,
+      iconAnchor: [5, 55],
+      popupAnchor: [10, -44],
+      iconSize: [31, 50],
+    })
+
+    const museumIcon = new L.icon({
+      iconUrl: museum_icon,
+      iconAnchor: [5, 55],
+      popupAnchor: [10, -44],
+      iconSize: [31, 50],
+    })
+
+    const createClusterCustomIcon = function (cluster) {
+      const markers = cluster.getAllChildMarkers()
+      let n = 0
+
+      markers.forEach(marker => {
+        n += Number(marker.options.alt)
+      })
+
+      let c = ' marker-cluster-';
+      if (n < 10) {
+        c += 'small';
+      } else if (n < 100) {
+        c += 'medium';
+      } else {
+        c += 'large';
+      }
+      return L.divIcon({
+        html: `<div><span>${n}</span></div>`,
+        className: `marker-cluster ${c}`,
+        iconSize: new L.Point(40, 40, true)
+      })
+    }
+    
     return (
       <Layout>
         <div className="stw-map">
