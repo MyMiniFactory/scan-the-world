@@ -4,7 +4,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-#___gatsby h1, h2 {
+#___gatsby h1, h2, button {
   font-family: 'atamiregular', sans-serif!important;
   text-transform: lowercase!important;
 }

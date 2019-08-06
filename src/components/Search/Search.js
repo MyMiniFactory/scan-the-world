@@ -1,10 +1,8 @@
-import './Search.scss'
-
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
-import { FaSearch } from 'react-icons/fa';
 import config from '../../config';
-
+import './Search.scss'
+import searchIcon from '../../images/search.svg'
 
 const _getSuggestions = (objects, value) => {
   const inputValue = value.trim().toLowerCase()
@@ -50,12 +48,12 @@ function renderSuggestion(suggestion) {
 const renderInput = (inputProps) => {
   const { clear, ...inputs } = inputProps
   return (
-    <span>
+    <>
       <input {...inputs}/>
       {inputs.value.length > 0 &&
         <span onClick={clear}>X</span>
       }
-    </span>)
+    </>)
 }
 
 class Search extends React.Component {
@@ -79,6 +77,12 @@ class Search extends React.Component {
     this.searchOnChange = this.searchOnChange.bind(this)
     this.onObjectSuggestionsFetchRequested = this.onObjectSuggestionsFetchRequested.bind(this)
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this)
+  }
+
+  componentDidUpdate(prevProps) {
+      if (this.props.sortBy !== prevProps.sortBy) {
+        this.setState({sortBy: this.props.sortBy})
+      }
   }
 
   componentDidMount() {
@@ -143,6 +147,7 @@ class Search extends React.Component {
 
   inputProps = (placeholder, value, name) => {
     return {
+      className: 'stw-input-search',
       placeholder: placeholder,
       value,
       name: name,
@@ -176,14 +181,14 @@ class Search extends React.Component {
           random
         </span>
       </p>
-      <form onSubmit={this.handleSubmit}>
+      <form className="stw-search-form" onSubmit={this.handleSubmit}>
         <Autosuggest
           suggestions={objectSuggestions}
           onSuggestionsFetchRequested={({value}) => this.onObjectSuggestionsFetchRequested(null, 'objectSuggestions', value)}
           onSuggestionsClearRequested={() => this.onSuggestionsClearRequested('objectSuggestions')}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderObjectSuggestion}
-          inputProps={this.inputProps('search on collection', object, 'object')}
+          inputProps={this.inputProps('search the collection...', object, 'object')}
           renderInputComponent={renderInput}
         />
         <Autosuggest
@@ -194,7 +199,7 @@ class Search extends React.Component {
           onSuggestionSelected={(event, { suggestionValue }) => this.searchOnChange('artist', suggestionValue, false)}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderSuggestion}
-          inputProps={this.inputProps('search by artist', artist, 'artist')}
+          inputProps={this.inputProps('search by artist...', artist, 'artist')}
           renderInputComponent={renderInput}
         />
         <Autosuggest
@@ -205,10 +210,10 @@ class Search extends React.Component {
           onSuggestionSelected={(event, { suggestionValue }) => this.searchOnChange('place', suggestionValue, false)}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderSuggestion}
-          inputProps={this.inputProps('search by place', place, 'place')}
+          inputProps={this.inputProps('search by place...', place, 'place')}
           renderInputComponent={renderInput}
         />
-        <button type='submit'><FaSearch/></button>
+        <button className="stw-search-button" type='submit'><img src={searchIcon} height={15} alt='search' style={{marginRight:`5px`}}/>submit</button>
       </form>
     </div>);
   }

@@ -1,38 +1,40 @@
 .sortby {
-    min-width: 150px;
-    cursor: pointer;
-    margin: 0;
+  display: flex;
+  justify-content: space-between;
+  min-width: 150px;
+  cursor: pointer;
+  margin: 0;
 }
 
-.react-autosuggest__container > form {
+.react-autosuggest__container {
     display: flex;
-    border-bottom: 1px solid black;
-    margin: 0;
-    width: 200px;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    margin-bottom: 5px;
+}
 
-    button {
-      border: none;
-      text-decoration: none;
-      background: white;
-      padding: 0;
-      margin: 0;
-      color: black;
-      transition: none;
+.stw-search-form {
+  display: flex;
+  flex-flow: column;
+}
+.stw-input-search {
+  display: block;
+  height: 20px;
+  width: 100%;
+  padding: 0;
+  color: #222;
+  font-style: italic;
+  border: 0;
+  box-shadow: none;
+}
 
-      svg {
-        vertical-align: middle;
-      }
-    }
-
-    input {
-      flex: 1 0 auto;
-      height: 25px;
-      padding: 5px;
-      color: #222;
-      border: 0;
-      box-shadow: none;
-      margin: 0;
-    }
+.stw-search-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1em;
 }
 
 .url-suggestion {
