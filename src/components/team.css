@@ -13,10 +13,14 @@
   margin: 0;
 }
 
-.stw-quote {
+.stw-mail {
   margin-top: 15px;
   color: rgb(48, 48, 48);
-  text-align: right;
+  text-decoration: none;
+}
+
+.stw-mail:hover {
+  text-decoration: underline;
 }
 
 .member img {

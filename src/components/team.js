@@ -7,7 +7,7 @@ function Member(props) {
       <img src={props.profilePicture} alt="profile"/>
       <p>{props.name}</p>
       <p>{props.role}</p>
-      <p className="stw-quote">{props.quote}</p>
+      <a href={`mailto:${props.mail}`} className="stw-mail">{props.mail}</a>
     </div>
   )
 }
@@ -19,7 +19,7 @@ export default ({ members }) => (
         profilePicture={member.memberImage.childImageSharp.original.src}
         name={member.title}
         role={member.position}
-        quote={member.quote}
+        mail={member.mail}
       />
     ))}
   </div>

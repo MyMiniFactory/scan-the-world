@@ -14,6 +14,6 @@ trends:
 team:
   - memberImage: /images/favicon.png
     position: position
-    quote: quote
+    mail: mail
     title: title
 ---

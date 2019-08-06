@@ -73,7 +73,7 @@ export const query = graphql `
         title
         team {
           position
-          quote
+          mail
           memberImage {
             childImageSharp {
               original {

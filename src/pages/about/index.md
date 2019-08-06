@@ -5,11 +5,11 @@ bannerImage: /assets/about-banner.jpg
 team:
   - memberImage: /assets/bustofayoungwoman.jpg
     position: Founder and Project Manager
-    quote: jon@myminifactory.com
+    mail: jon@myminifactory.com
     title: Jon
   - memberImage: /assets/excuse-me.jpg
     position: Community Manager
-    quote: vickie@myminifactory.com
+    mail: vickie@myminifactory.com
     title: Vickie
 ---
 Scan the World is an ambitious initiative that gives you the possibility to
