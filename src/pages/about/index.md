@@ -8,7 +8,7 @@ team:
     position: Founder and Project Manager
     title: Jon Beck
   - mail: vickie@myminifactory.com
-    memberImage: /assets/excuse-me.jpg
+    memberImage: /assets/myface.jpg
     position: Community Manager
     title: Vickie Licková
 ---
