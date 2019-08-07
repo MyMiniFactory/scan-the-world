@@ -1,3 +1,6 @@
 [submodule "plugins/gatsby-source-mmf-map"]
 	path = plugins/gatsby-source-mmf-map
 	url = https://github.com/MyMiniFactory/gatsby-source-mmf-map
+[submodule "plugins/gatsby-source-mmf"]
+	path = plugins/gatsby-source-mmf
+	url = https://github.com/MyMiniFactory/gatsby-source-mmf
