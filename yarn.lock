@@ -5828,6 +5828,20 @@ gatsby-source-filesystem@^2.1.8:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
+"gatsby-source-mmf-map@https://github.com/MyMiniFactory/gatsby-source-mmf-map":
+  version "1.0.0"
+  resolved "https://github.com/MyMiniFactory/gatsby-source-mmf-map#0e1f2988438a8218ca06a71b6ff1ad8fee70c4ef"
+  dependencies:
+    node-fetch "^2.6.0"
+    query-string "^6.7.0"
+
+"gatsby-source-mmf@https://github.com/MyMiniFactory/gatsby-source-mmf":
+  version "1.0.0"
+  resolved "https://github.com/MyMiniFactory/gatsby-source-mmf#ece9ee78ac1ec2d5f130976e3080677a6aebd3b0"
+  dependencies:
+    node-fetch "^2.6.0"
+    query-string "^6.7.0"
+
 gatsby-telemetry@^1.1.11:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.11.tgz#7c98881759fa8f61a6bf4f2ee2fb9ac74c6eb592"
@@ -10924,7 +10938,7 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.1.0:
+query-string@^6.1.0, query-string@^6.7.0:
   version "6.8.2"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.2.tgz#36cb7e452ae11a4b5e9efee83375e0954407b2f6"
   integrity sha512-J3Qi8XZJXh93t2FiKyd/7Ec6GNifsjKXUsVFkSBj/kjLsDylWhnCz4NT1bkPcKotttPW+QbKGqqPH8OoI2pdqw==

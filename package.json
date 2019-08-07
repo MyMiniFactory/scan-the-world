@@ -34,7 +34,9 @@
     "react-infinite-scroller": "^1.2.4",
     "react-leaflet": "^2.4.0",
     "react-leaflet-fullscreen-control": "^0.0.4",
-    "react-leaflet-markercluster": "^2.0.0-rc3"
+    "react-leaflet-markercluster": "^2.0.0-rc3",
+    "gatsby-source-mmf": "https://github.com/MyMiniFactory/gatsby-source-mmf",
+    "gatsby-source-mmf-map": "https://github.com/MyMiniFactory/gatsby-source-mmf-map"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
