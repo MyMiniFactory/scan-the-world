@@ -1,0 +1,8 @@
+.stories-container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.stories-container > h1{
+  margin-left: 20px;
+}

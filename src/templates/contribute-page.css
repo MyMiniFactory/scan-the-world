@@ -1,0 +1,31 @@
+.contribute-container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.contribute-content p {
+  width: 940px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.contributions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.contribution-item {
+  width: 450px;
+  margin: 0 40px 80px 40px;
+}
+
+.contribution-item > a > img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contribution-item > h2 {
+  text-transform: lowercase;
+  text-align: center;
+}

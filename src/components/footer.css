@@ -1,0 +1,11 @@
+footer {
+  padding: 5px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+}
+
+footer > a {
+  margin-right: 20px;
+}

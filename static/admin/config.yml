@@ -1,0 +1,115 @@
+backend:
+  name: github
+  repo: myminifactory/scan-the-world
+  branch: jb-branch
+
+site_url: https://myminifactory.com/scan-the-world
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: pages
+    label: Pages
+    delete: false
+    files:
+      - label: Home Page
+        name: home
+        file: src/pages/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: home-page }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: featuredImage, label: Contribute, widget: image }
+          - name: trends
+            label: Trends
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: trendImage, label: Image, widget: image }
+              - { name: href, label: Link, widget: string, default: ' ', required: false }
+              - { name: alt, label: Alt, widget: string, default: ' ', required: false }
+              - { name: float, label: Float, widget: select, options: [left, right] }
+              - { name: width, label: "Width (%)", widget: number, valueType: int, default: 0, min: 0}
+              - { name: marginTop, label: "Margin top (px)", widget: number, valueType: int, default: 0, min: 0}
+      - label: About Page
+        name: about
+        file: src/pages/about/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: about-page }
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Intro, widget: markdown }
+          - { name: bannerImage, label: Banner, widget: image }
+          - name: team
+            label: Team
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: position, label: Position, widget: string }
+              - { name: mail, label: Mail, widget: string }
+              - { name: memberImage, label: Photo, widget: image }
+      - label: Contribute Page
+        name: contribute
+        file: src/pages/contribute/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: contribute-page }
+          - { name: title, label: Title, widget: string }
+          - { name: intro, label: Intro, widget: text }
+          - { name: bannerImage, label: Banner, widget: image }
+          - name: contributions
+            label: Contributions
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: contributionImage, label: Image, widget: image }
+              - { name: href, label: Link, widget: string, default: "#", required: false }
+              - { name: alt, label: Alt, widget: string, default: ' ', required: false }
+              - { name: intro, label: Intro, widget: text }
+      - label: Learn Page
+        name: learn
+        file: src/pages/learn/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: learn-page}
+          - { name: bannerImage, label: Banner, widget: image }
+      - label: Stories Page
+        name: storiesPage
+        file: src/pages/community/stories/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: stories-page}
+          - { name: bannerImage, label: Banner, widget: image }
+      - label: Uses Page
+        name: uses
+        file: src/pages/about/uses/index.md
+        fields:
+          - { name: templateKey, widget: hidden, default: uses-page }
+          - { name: bannerImage, label: Banner, widget: image }
+          - name: uses
+            label: Uses
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: useImage, label: Image, widget: image }
+              - { name: intro, label: Intro, widget: text }
+
+  - name: stories
+    label: Stories
+    folder: src/pages/community/stories
+    create: true
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
+    fields:
+      - { name: templateKey, widget: hidden, default: story-page }
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Publish date, widget: "datetime" }
+      - { name: storyImage, label: Image, widget: image }
+      - { name: featured, label: Featured, widget: boolean }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: tutorials
+    label: Tutorials
+    folder: src/pages/learn/tutorials
+    create: true
+    fields:
+      - { name: templateKey, widget: hidden, default: tutorial-page }
+      - { name: title, label: Title, widget: string }
+      - { name: intro, label: Intro, widget: text }
+      - { name: tutorialImage, label: Image, widget: image }
+      - { name: body, label: Body, widget: markdown }

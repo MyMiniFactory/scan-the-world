@@ -1,0 +1,10 @@
+.nav-learn {
+  display: flex;
+}
+
+.nav-learn > a {
+  flex: auto;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
