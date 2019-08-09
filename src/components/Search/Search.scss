@@ -30,6 +30,10 @@ input.stw-input-search {
   box-shadow: none;
 }
 
+input.stw-input-search::placeholder {
+  color: black;
+}
+
 button.stw-search-button {
   color: black;
   width: 75px;

@@ -12,10 +12,6 @@
   text-transform: lowercase!important;
 }
 
-#___gatsby h3 {
-  font-size: 1.66em;
-}
-
 @font-face {
     font-family: 'atamibold';
     src: url('../fonts/atami-bold.woff2') format('woff2'),

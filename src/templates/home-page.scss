@@ -1,65 +1,173 @@
-.intro {
-  max-width: 730px;
-  margin: 20px auto 40px 260px;
-  padding: 0 10px 0 10px;
-}
-
-
 .home-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-flow: row;
-  /* margin: 0 150px 0 150px; */
-}
-
-.masonry {
-  margin: 110px 0 0 30px;
-  max-width: 460px;
-}
-
-.masonry > div {
-  position: relative;
-  /* overflow: auto; */
-  margin-bottom: 5em;
-}
-
-.masonry > div > p {
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  visibility: hidden;
-  color: white;
-  margin: 0;
-  opacity: 0;
-  transition: opacity .2s, visibility .2s;
-  text-shadow: 1px 1px 2px black;
-}
-
-.masonry > div > a > img {
-  display: block;
-  width: 100%;
-  height: auto;
-  opacity: 0.4;
-}
-
-.masonry > div:hover img {
-  opacity: 1;
-}
-
-.masonry > div:hover p {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media only screen and (max-width: 1300px) {
-  .masonry {
-    display: none;
-  }
+  max-width: 1520px;
+  margin: 40px auto;
 
   .intro {
-    margin: 0px auto 40px 0;
-    padding: 0 10px 0 10px;
-    min-width: none;
+    max-width: 730px;
+    margin-left: 250px;
+    padding: 0 10px;
+  }
+
+  .home-content {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+
+
+    .search-wrap {
+      align-self: flex-start;
+      flex-shrink: 0;
+      display: flex;
+      flex-flow: column;
+      position: sticky;
+      top: 5px;
+      width: 220px;
+      margin: 10px 30px 0 0;
+      padding: 10px;
+
+      & > img {
+        align-self: flex-start;
+      }
+
+      & > a {
+        display: flex;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 30px;
+      }
+
+      .nav-link {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 30px;
+
+        & > a {
+          min-width: 100px;
+          font-family: 'atamiregular', sans-serif!important;
+          flex: auto;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .search-container {
+      display: flex;
+      flex-flow: column;
+      max-width: 750px;
+      justify-content: flex-start;
+    }
+
+    .masonry {
+      align-content: flex-end;
+      margin: 0 30px 0;
+      max-width: 460px;
+
+      & > iframe {
+        width: 100%;
+      }
+
+      & > div {
+        position: relative;
+        min-width: 215px;
+        margin-bottom: 5em;
+
+        & > p {
+          position: absolute;
+          left: 5px;
+          bottom: 5px;
+          visibility: hidden;
+          color: white;
+          margin: 0;
+          opacity: 0;
+          transition: opacity .2s, visibility .2s;
+          text-shadow: 1px 1px 2px black;
+        }
+
+        & > a > img {
+          display: block;
+          width: 100%;
+          height: auto;
+          opacity: 0.4;
+        }
+
+        &:hover {
+          img {
+            opacity: 1;
+          }
+
+          p {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home-container {
+    .intro {
+      display: none
+    }
+
+    .home-content {
+      flex-flow: column;
+      align-items: center;
+
+      .search-wrap {
+        align-self: center;
+        width: 100%;
+        position: static;
+        margin: 0;
+        .nav-link {
+          & > a {
+            min-width: inherit;
+            margin-right: 20px;
+            margin-bottom: 5px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1265px) {
+  .search-container {
+    width: 750px;
+    flex-shrink: 0;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1265px) {
+  .home-container .intro {
+    max-width: 500px;
+    margin-left: 250px;
+    padding: 0 10px;
+  }
+
+  .search-container {
+    width: 500px;
+    flex-shrink: 0;
+  }
+}
+
+@media only screen and (max-width: 1016px) {
+  .home-container {
+    max-width: 750px;
+
+    .home-content {
+      .masonry {
+        display: none;
+      }
+    }
+
+    .intro {
+      margin-left: 0;
+      max-width: 750px;
+    }
   }
 }
