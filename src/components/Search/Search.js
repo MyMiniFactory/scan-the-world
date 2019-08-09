@@ -115,7 +115,7 @@ class Search extends React.Component {
     const { object, artist, place } = this.state
     const sortBy = this.state.sortBy === 'random'? 'popularity':this.state.sortBy
     this.setState({sortBy})
-    this.props.onSearch(`q=${object}&artist=${artist}&place=${place}`, sortBy)
+    this.props.onSearch(`query=${object}&artist=${artist}&place=${place}`, sortBy)
     event.preventDefault()
   }
 
@@ -126,7 +126,7 @@ class Search extends React.Component {
     state[name] = value
     this.setState(state)
     if (doSearch) {
-      this.props.onSearch(`q=${state.object}&artist=${state.artist}&place=${state.place}`, sortBy)
+      this.props.onSearch(`query=${state.object}&artist=${state.artist}&place=${state.place}`, sortBy)
     }
   }
 
@@ -135,7 +135,7 @@ class Search extends React.Component {
       return this.setState({[suggestions]: _getSuggestions(data, value)})
     }
     const { artist, place } = this.state
-    fetch(`${config.objects_url}?q=${value}&artist=${artist}&place=${place}&strict=1`)
+    fetch(`${config.objects_url}?query=${value}&artist=${artist}&place=${place}&strict=1`)
       .then(res => res.json())
       .then(
         result => this.setState({[suggestions]: adaptSuggestions(result)}),
