@@ -20,20 +20,19 @@ class SocialBar extends Component {
 
             let icon = null;
             switch (link.name.toLowerCase()) {
-                case 'twitter':
-                    icon = <FaTwitter />;
-                break;
-                case 'medium':
-                    icon = <FaMedium />;
-                break;
-                case 'instagram':
-                    icon = <FaInstagram />;
-                break;
-                default:
-                    icon = <FaTwitter />;
-                break;
+            case 'twitter':
+              icon = <FaTwitter />
+              break
+            case 'medium':
+              icon = <FaMedium />
+              break
+            case 'instagram':
+              icon = <FaInstagram />
+              break
+            default:
+              break
             }
-            return (<a key={i} href={link.url}>{icon}</a>)
+            return (icon && <a key={i} href={link.url}>{icon}</a>)
         })
         return renderedLinks;
     }
