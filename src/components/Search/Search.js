@@ -108,7 +108,7 @@ class Search extends React.Component {
   changeSorting(sortBy) {
     const { object, artist, place } = this.state
     this.setState({sortBy: sortBy})
-    this.props.onSearch(`q=${object}&artist=${artist}&place=${place}`, sortBy)
+    this.props.onSearch(`query=${object}&artist=${artist}&place=${place}`, sortBy)
   }
 
   handleSubmit(event) {
