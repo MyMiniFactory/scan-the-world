@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Banner from '../components/banner'
-import './uses-page.css'
+import './uses-page.scss'
 
 const UsesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -13,9 +13,9 @@ const UsesPage = ({ data }) => {
         {frontmatter.uses.map((use, index) => {
           if (index % 2 === 0) {
             return (
-              <div className="use-item" key={index}>
+              <div className="use-item item-even" key={index}>
                 <img src={use.useImage.childImageSharp.original.src} alt={use.title}/>
-                <div style={{paddingLeft:`30px`}}>
+                <div>
                   <h2>{use.title}</h2>
                   {use.intro.split('\n').map((pg) => (
                     <p>{pg}</p>
@@ -25,8 +25,8 @@ const UsesPage = ({ data }) => {
             )
           }
           return (
-            <div className="use-item" key={index}>
-              <div style={{paddingRight:`30px`}}>
+            <div className="use-item item-odd" key={index}>
+              <div>
                 <h2>{use.title}</h2>
                 {use.intro.split('\n').map((pg) => (
                   <p>{pg}</p>

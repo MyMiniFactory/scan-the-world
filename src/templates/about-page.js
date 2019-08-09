@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Team from "../components/team"
 import { FaArrowRight } from 'react-icons/fa'
 import config from '../config'
-import './about-page.css'
+import './about-page.scss'
 
 
 
@@ -36,11 +36,11 @@ class AboutPage extends React.Component {
         <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
         <div className="about-container">
           <div className="about-content">
-            <h3>Project Start Date - 28th June 2014</h3>
+            <h2>Project Start Date - 28th June 2014</h2>
             <div className="about-statistic">
-              <h3>Objects: {statistic.objects}</h3>
-              <h3 style={{margin:`0 50px 0 50px`}}>Artists: {statistic.artists}</h3>
-              <h3>Places: {statistic.places}</h3>
+              <h2>Objects: {statistic.objects}</h2>
+              <h2 style={{margin:`0 50px 0 50px`}}>Artists: {statistic.artists}</h2>
+              <h2>Places: {statistic.places}</h2>
             </div>
             <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
             <Link to={'/about/uses'}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import './storyRoll.css'
+import './storyRoll.scss'
 
 export default ({ edges: stories }) => (
   <div className="stories">

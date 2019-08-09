@@ -5,3 +5,9 @@
   background-repeat: repeat-x;
   margin-bottom: 80px;
 }
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    height: 150px;
+  }
+}

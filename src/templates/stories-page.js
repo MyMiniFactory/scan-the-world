@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import StoryRoll from '../components/storyRoll'
 import Banner from '../components/banner'
-import './stories-page.css'
+import './stories-page.scss'
 
 export default ({ data }) => (
     <Layout>

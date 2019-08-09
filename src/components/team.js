@@ -1,5 +1,5 @@
 import React from 'react'
-import "./team.css"
+import "./team.scss"
 
 function Member(props) {
   return (

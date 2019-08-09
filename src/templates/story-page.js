@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { FaArrowLeft } from 'react-icons/fa'
 import Layout from "../components/layout"
-import './story-page.css'
+import './story-page.scss'
 
 const StoryPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark

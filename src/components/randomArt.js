@@ -1,7 +1,7 @@
 import React from 'react'
 import config from '../config'
 import { FaRedo } from 'react-icons/fa'
-import './randomArt.css'
+import './randomArt.scss'
 import download from '../images/download.svg'
 
 class RandomArt extends React.Component {

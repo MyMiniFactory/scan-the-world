@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Banner from '../components/banner'
-import './learn-page.css'
+import './learn-page.scss'
 
 export default ({ data }) => {
   const { edges: tutorials } = data.allMarkdownRemark

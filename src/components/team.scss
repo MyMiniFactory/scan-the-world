@@ -1,0 +1,38 @@
+.members {
+  display: flex;
+  flex-flow: column;
+
+  .member {
+    margin-bottom: 50px;
+    padding: 15px;
+    
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 100px;
+      border-radius: 90px;
+      box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .stw-mail {
+    margin-top: 15px;
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+    .members {
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+}

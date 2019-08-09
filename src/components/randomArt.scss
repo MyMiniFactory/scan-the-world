@@ -1,0 +1,42 @@
+.random-container {
+
+  .random-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    #random-title {
+      text-transform: capitalize!important;
+    }
+
+    h3 {
+      font-style: italic;
+      text-transform: capitalize!important;
+      margin: 0;
+
+    }
+  }
+
+  .random-curator > a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+
+  .random-widget {
+    display: flex;
+
+    & > a {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .random-container {
+      padding: 20px;
+  }
+}
