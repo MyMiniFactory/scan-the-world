@@ -13,24 +13,41 @@ class Header extends React.Component {
     this.state = {
       isHome: props.isHome,
       isHovering: false,
+      isTransiting: false,
       src: logo_static,
     }
-    this.handleHover = this.handleHover.bind(this)
+    this.handleIn = this.handleIn.bind(this)
+    this.handleOut = this.handleOut.bind(this)
   }
 
-  handleHover() {
-    if (!this.state.isHovering) {
-      this.setState({
-        isHovering: true,
-        src: logo_in,
-      })
+  handleIn() {
+    const state = {isHovering: true}
+    if (!this.state.isTransiting) {
+      state.src = logo_in
+      state.isTransiting = true
+      setTimeout(() => {
+        this.setState({isTransiting: false})
+        if (!this.state.isHovering) {
+          this.handleOut()
+        }
+      }, 800)
     }
-    else {
-      this.setState({
-        isHovering: false,
-        src: logo_out,
-      })
+    this.setState(state)
+  }
+
+  handleOut() {
+    const state = {isHovering: false}
+    if (!this.state.isTransiting) {
+      state['src'] = logo_out
+      state.isTransiting = true
+      setTimeout(() => {
+        this.setState({isTransiting: false})
+        if (this.state.isHovering) {
+          this.handleIn()
+        }
+      }, 800)
     }
+    this.setState(state)
   }
 
   render() {
@@ -53,8 +70,9 @@ class Header extends React.Component {
       <header className="stw-header">
         <Link to='/'>
           <img className="stw-logo"
-            onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
+            onMouseEnter={this.handleIn} onMouseLeave={this.handleOut}
             src={this.state.src} alt="Scan the world"/>
+          <img className="stw-logo-mobile" src={logo} alt="Scan the World mobile"/>
         </Link>
         <nav>
           <Link to='/about'>About</Link>
