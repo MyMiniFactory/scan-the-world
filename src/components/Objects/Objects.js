@@ -76,7 +76,7 @@ class Objects extends React.Component {
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}`)
+      fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sortBy=${this.state.sortBy}`)
           .then(res => res.json())
           .then(
               (result) => {
