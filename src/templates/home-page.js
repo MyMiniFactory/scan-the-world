@@ -5,7 +5,7 @@ import Objects from '../components/Objects/Objects'
 import Search from '../components/Search/Search'
 import Header from '../components/header'
 import RandomArt from '../components/randomArt'
-import SocialBar from '../components/SocialBar/SocialBar'
+import SocialBar from '../components/socialBar/socialBar'
 import scan_the_world from '../images/scan_the_world.svg'
 import './home-page.scss'
 import earth from '../images/earth.svg'
@@ -42,7 +42,7 @@ class HomePage extends React.Component {
     const { frontmatter } = data.markdownRemark
     const content = this.state.showingRandom
       ? <RandomArt />
-      : <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} url={frontmatter.featuredImage.childImageSharp.original.src}/>
+      : <Objects objects={this.state.objects} query={this.state.query} sortBy={this.state.sortBy} childImageSharp={frontmatter.featuredImage.childImageSharp}/>
     return (
       <>
         <main className="home-container">
@@ -106,8 +106,8 @@ export const query = graphql `
       frontmatter {
         featuredImage {
           childImageSharp {
-            original {
-              src
+            fluid(maxWidth: 230, maxHeight: 230) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

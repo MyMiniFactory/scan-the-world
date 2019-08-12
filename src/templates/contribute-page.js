@@ -3,14 +3,15 @@ import { graphql} from "gatsby"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 import SEO from "../components/seo"
-import "./contribute-page.css"
+import Img from "gatsby-image"
+import "./contribute-page.scss"
 
 const ContributePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
       <SEO title="Contribute" />
-      <Banner url={'/'} bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
+      <Banner url={'/'} childImageSharp={frontmatter.bannerImage.childImageSharp}/>
       <div className="contribute-container">
         <div className="contribute-content">
           <p>{frontmatter.intro}</p>
@@ -18,9 +19,9 @@ const ContributePage = ({ data }) => {
         <div className="contributions">
           { frontmatter.contributions.map((ctb, index) => {
             return (
-              <div className="contribution-item">
-                <a href={ctb.href} key={index} target='_blank' rel="noopener noreferrer">
-                  <img src={ctb.contributionImage.childImageSharp.original.src} alt={ctb.alt}/>
+              <div key={index} className="contribution-item">
+                <a href={ctb.href} target='_blank' rel="noopener noreferrer">
+                  <Img className="contribute-image" fluid={ctb.contributionImage.childImageSharp.fluid} alt={ctb.alt}/>
                 </a>
                 <h2>{ctb.title}</h2>
                 <p>{ctb.intro}</p>
@@ -39,8 +40,8 @@ export const query = graphql `
         frontmatter {
           bannerImage {
             childImageSharp {
-              original {
-                src
+              fluid(maxWidth: 2000, quality: 100, cropFocus: CENTER) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -50,8 +51,8 @@ export const query = graphql `
             href
             contributionImage {
               childImageSharp {
-                original {
-                  src
+                fluid(maxWidth: 380) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

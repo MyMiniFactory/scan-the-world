@@ -1,21 +1,24 @@
 .tutorials-container {
-  max-width: 1260px;
-  margin: 0 auto 80px auto;
-  padding: 0 20px;
+  max-width: 1380px;
+  margin: 0 auto;
 
+  & > h1{
+    margin-left: 20px;
+  }
+  
   .tutorials {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .tutorial-item {
-    max-width: 450px;
-    margin-bottom: 30px;
+    max-width: 380px;
+    padding: 20px;
+    margin-bottom: 40px;
 
-    & > a > img {
-      width: 100%;
-      margin-bottom: 20px;
+    & > a {
+      height: 240px;
     }
 
     & > h2 {

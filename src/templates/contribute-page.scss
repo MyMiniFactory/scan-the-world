@@ -1,0 +1,31 @@
+.contribute-container {
+  max-width: 1260px;
+  margin: 0 auto;
+
+  & > p {
+    width: 940px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  .contributions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .contribution-item {
+      max-width: 380px;
+      margin: 0 40px 80px 40px;
+
+      .contribute-image {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      & > h2 {
+        text-transform: lowercase;
+        text-align: center;
+      }
+    }
+  }
+}

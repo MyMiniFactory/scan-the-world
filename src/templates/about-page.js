@@ -33,13 +33,13 @@ class AboutPage extends React.Component {
     return (
       <Layout>
         <SEO title="About" />
-        <Banner bannerUrl={frontmatter.bannerImage.childImageSharp.original.src}/>
+        <Banner childImageSharp={frontmatter.bannerImage.childImageSharp}/>
         <div className="about-container">
           <div className="about-content">
             <h2>Project Start Date - 28th June 2014</h2>
             <div className="about-statistic">
               <h2>Objects: {statistic.objects}</h2>
-              <h2 style={{margin:`0 50px 0 50px`}}>Artists: {statistic.artists}</h2>
+              <h2>Artists: {statistic.artists}</h2>
               <h2>Places: {statistic.places}</h2>
             </div>
             <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
@@ -63,8 +63,8 @@ export const query = graphql `
       frontmatter {
         bannerImage {
           childImageSharp {
-            original {
-              src
+            fluid(maxWidth: 2000, maxHeight: 250, quality: 100, cropFocus: CENTER) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -74,8 +74,8 @@ export const query = graphql `
           mail
           memberImage {
             childImageSharp {
-              original {
-                src
+              fixed(width: 100, height: 100) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

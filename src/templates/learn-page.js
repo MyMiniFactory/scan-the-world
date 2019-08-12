@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Banner from '../components/banner'
 import './learn-page.scss'
@@ -8,7 +9,7 @@ export default ({ data }) => {
   const { edges: tutorials } = data.allMarkdownRemark
   return (
     <Layout>
-      <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
+      <Banner url={'/'} childImageSharp={data.banner.frontmatter.bannerImage.childImageSharp}/>
       <section className='tutorials-container'>
         <h1>tutorials</h1>
         <div className="tutorials">
@@ -16,7 +17,7 @@ export default ({ data }) => {
             tutorials.map(({ node: tutorial }) => (
               <div key={tutorial.id} className="tutorial-item">
                 <Link to={tutorial.fields.slug}>
-                  <img src={tutorial.frontmatter.tutorialImage.childImageSharp.original.src} alt=""/>
+                  <Img fluid={tutorial.frontmatter.tutorialImage.childImageSharp.fluid} />
                 </Link>
                 <h2>{tutorial.frontmatter.title}</h2>
                 <p>{tutorial.frontmatter.intro}</p>
@@ -39,8 +40,8 @@ export const query = graphql `
             title
             tutorialImage {
               childImageSharp {
-                original {
-                  src
+                fluid(maxWidth: 380) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -55,8 +56,8 @@ export const query = graphql `
       frontmatter {
         bannerImage {
           childImageSharp {
-            original {
-              src
+            fluid(maxWidth: 2000, quality: 100, cropFocus: CENTER) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

@@ -5,4 +5,59 @@
   & > h1{
     margin-left: 20px;
   }
+
+  .stories {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+    .story-item {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      max-width: 380px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .story-header {
+      display: flex;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      margin: 0;
+
+      .story-image {
+        width: 100%;
+        height: 240px;
+      }
+
+      h1 {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        color: white;
+      }
+    }
+
+    .story-footer {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        margin: 0;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

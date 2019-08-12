@@ -1,16 +1,35 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import StoryRoll from '../components/storyRoll'
 import Banner from '../components/banner'
 import './stories-page.scss'
 
 export default ({ data }) => (
     <Layout>
-      <Banner url={'/'} bannerUrl={data.banner.frontmatter.bannerImage.childImageSharp.original.src}/>
+      <Banner url={'/'} childImageSharp={data.banner.frontmatter.bannerImage.childImageSharp}/>
       <section className='stories-container'>
         <h1>Latest Stories</h1>
-        <StoryRoll edges={data.allMarkdownRemark.edges} />
+        <div className="stories">
+          {data.allMarkdownRemark.edges &&
+            data.allMarkdownRemark.edges.map(({ node: story }) => (
+              <article key={story.id} className="story-item">
+                <Link className="story-header" to={story.fields.slug}>
+                  <Img className="story-image" fluid={story.frontmatter.storyImage.childImageSharp.fluid} />
+                  <h1>{story.frontmatter.title}</h1>
+                </Link>
+                <p>
+                  {story.excerpt}
+                </p>
+                <div className="story-footer">
+                  <p>{story.frontmatter.date}</p>
+                  <Link to={story.fields.slug}>
+                    Keep Reading →
+                  </Link>
+                </div>
+              </article>
+            ))}
+        </div>
       </section>
     </Layout>
 )
@@ -26,8 +45,8 @@ export const query = graphql `
             date(formatString: "DD MMMM, YYYY")
             storyImage {
               childImageSharp {
-                original {
-                  src
+                fluid(maxWidth: 380, duotone: {highlight: "#404040", shadow: "#404040", opacity: 50}) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -43,8 +62,8 @@ export const query = graphql `
       frontmatter {
         bannerImage {
           childImageSharp {
-            original {
-              src
+            fluid(maxWidth: 2000, quality: 100, cropFocus: CENTER) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

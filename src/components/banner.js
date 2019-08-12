@@ -1,8 +1,7 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import './banner.scss'
 
-const Banner = (props) => (
-    <div className="banner" style={{backgroundImage: `url(${props.bannerUrl})`}}/>
+export default ({ childImageSharp }) => (
+  <Img className="banner" fluid={childImageSharp.fluid} />
 )
-
-export default Banner

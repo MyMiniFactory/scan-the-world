@@ -1,11 +1,10 @@
-import './Objects.css'
-
-import config from '../../config';
-import React from 'react';
-import InfiniteScroll from 'react-infinite-scroller';
-import ContentLoader from "react-content-loader"
-
-import ObjectTile from '../ObjectTile/ObjectTile';
+import React from 'react'
+import Img from 'gatsby-image'
+import InfiniteScroll from 'react-infinite-scroller'
+import ContentLoader from 'react-content-loader'
+import ObjectTile from '../objectTile/objectTile'
+import config from '../../config'
+import './objects.scss'
 
 const skeleton = () => {
     const blocks = Array.from({ length: 2 }, (x, i) => (
@@ -27,22 +26,14 @@ const skeleton = () => {
     </div>)
 }
 
-function plusButton(url) {
-  return {
-    title: "Contribute now",
-    threedObject: {
-      url: "https://www.myminifactory.com/upload/object?type=scantheworld",
-      images: [
-        {
-          thumbnail:
-          {
-            url:url
-          }
-        }
-      ]
-    }
-  }
-}
+const PlusButton = ({childImageSharp}) => (
+  <div className="featured-tile">
+    <a href={config.contributionUrl}>
+      <Img className="featured-image" fluid={childImageSharp.fluid} />
+    </a>
+    <p>Contribute Now!</p>
+</div>
+)
 
 class Objects extends React.Component {
 
@@ -110,7 +101,7 @@ class Objects extends React.Component {
 
         const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
-            return [<ObjectTile key={0} object={plusButton(this.props.url)} />, <ObjectTile key={object.id} object={object} />]
+            return [<PlusButton key={0} childImageSharp={this.props.childImageSharp} />, <ObjectTile key={object.id} object={object} />]
           }
           return (
             <ObjectTile key={object.id} object={object} />

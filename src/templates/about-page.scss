@@ -7,7 +7,7 @@
   .about-content {
     display: flex;
     flex-flow: column;
-    padding: 35px;
+    padding: 0 35px;
     max-width: 900px;
 
     h3 {
@@ -27,13 +27,18 @@
 
     .about-statistic {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-flow: row wrap;
+      align-self: center;
+      max-width: 600px;
       margin: 30px 0 60px 0;
+
+      & > h2 {
+        padding: 0 20px;
+      }
     }
 
   }
-  
+
   .team h2 {
     text-align: center;
     text-transform: lowercase;

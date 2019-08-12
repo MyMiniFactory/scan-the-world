@@ -1,10 +1,11 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import "./team.scss"
 
 function Member(props) {
   return (
     <div className="member">
-      <img src={props.profilePicture} alt="profile"/>
+      <Img className="member-image" fixed={props.childImageSharp.fixed} alt="profile"/>
       <p>{props.name}</p>
       <p>{props.role}</p>
       <a href={`mailto:${props.mail}`} className="stw-mail">{props.mail}</a>
@@ -16,7 +17,7 @@ export default ({ members }) => (
   <div className="members">
     {members.map((member, key) => (
       <Member key={key}
-        profilePicture={member.memberImage.childImageSharp.original.src}
+        childImageSharp={member.memberImage.childImageSharp}
         name={member.title}
         role={member.position}
         mail={member.mail}

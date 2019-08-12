@@ -16,10 +16,8 @@
         margin-bottom: 5px;
     }
 
-    & > img {
+    .use-image {
       flex-shrink: 0;
-      max-height: 300px;
-      max-width: 300px;
     }
   }
 }
