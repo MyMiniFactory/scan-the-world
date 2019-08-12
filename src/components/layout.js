@@ -2,7 +2,7 @@ import './layout.css'
 import React from "react"
 import PropTypes from "prop-types"
 
-import SocialBar from './SocialBar/SocialBar';
+import SocialBar from './socialBar/socialBar';
 import Header from './header';
 import Footer from './footer';
 
