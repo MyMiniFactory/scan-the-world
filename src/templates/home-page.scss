@@ -13,7 +13,6 @@
     flex-flow: row;
     justify-content: flex-start;
 
-
     .search-wrap {
       align-self: flex-start;
       flex-shrink: 0;
@@ -61,7 +60,7 @@
 
     .masonry {
       align-content: flex-end;
-      margin: 0 30px 0;
+      margin: 0 30px;
       max-width: 460px;
 
       & > iframe {
@@ -81,7 +80,7 @@
           color: white;
           margin: 0;
           opacity: 0;
-          transition: opacity .2s, visibility .2s;
+          transition: opacity 0.2s, visibility 0.2s;
           text-shadow: 1px 1px 2px black;
         }
 
@@ -90,14 +89,15 @@
           width: 100%;
           height: auto;
           opacity: 0.4;
+          transition: opacity 0.3s;
         }
 
         &:hover {
-          img {
+          & > a > img {
             opacity: 1;
           }
 
-          p {
+          & > p {
             visibility: visible;
             opacity: 1;
           }
@@ -106,11 +106,10 @@
     }
   }
 }
-
 @media only screen and (max-width: 700px) {
   .home-container {
     .intro {
-      display: none
+      display: none;
     }
 
     .home-content {
@@ -122,6 +121,7 @@
         width: 100%;
         position: static;
         margin: 0;
+
         .nav-link {
           & > a {
             min-width: inherit;
@@ -134,14 +134,12 @@
     }
   }
 }
-
 @media only screen and (min-width: 1265px) {
   .search-container {
     width: 750px;
     flex-shrink: 0;
   }
 }
-
 @media only screen and (min-width: 900px) and (max-width: 1265px) {
   .home-container .intro {
     max-width: 500px;
@@ -154,7 +152,6 @@
     flex-shrink: 0;
   }
 }
-
 @media only screen and (max-width: 1016px) {
   .home-container {
     max-width: 750px;
