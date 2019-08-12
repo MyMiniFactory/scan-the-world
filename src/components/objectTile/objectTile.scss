@@ -1,0 +1,81 @@
+.object-tile {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  margin: 10px;
+  background-color: black;
+
+  & > a > img {
+    transition: opacity 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  & > p {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    visibility: hidden;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  &:hover {
+    & > a > img {
+      opacity: 0.4;
+    }
+
+    & > p {
+      visibility: visible;
+    }
+  }
+
+  .object-designer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 50px;
+
+    & > img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      border-radius: 90px;
+    }
+  }
+}
+
+.loader svg {
+  width: 230px;
+  margin: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .object-tile {
+    width: 45%;
+    height: auto;
+
+    .object-designer {
+      width: 40px;
+    }
+  }
+
+  .loader svg {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .object-tile {
+    width: 40%;
+    height: auto;
+
+    .object-designer {
+      width: 30px;
+    }
+  }
+
+  .loader svg {
+    width: 40%;
+  }
+}
