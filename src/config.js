@@ -4,6 +4,7 @@ const config = {
     objects_url: `https://www.myminifactory.com/stw/objects/search`,
     statistic: `https://www.myminifactory.com/stw/statistic`,
     randomObject: `https://www.myminifactory.com/stw/objects/random`,
+    contributionUrl: `https://www.myminifactory.com/upload/object?type=scantheworld`,
     social_links: [
         {
             name: "Instagram",
