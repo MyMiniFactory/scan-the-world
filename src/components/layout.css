@@ -12,6 +12,10 @@
   text-transform: lowercase!important;
 }
 
+#main, .off-canvas-wrap {
+  overflow: visible;
+}
+
 @font-face {
     font-family: 'atamibold';
     src: url('../fonts/atami-bold.woff2') format('woff2'),
