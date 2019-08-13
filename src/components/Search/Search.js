@@ -135,7 +135,7 @@ class Search extends React.Component {
       return this.setState({[suggestions]: _getSuggestions(data, value)})
     }
     const { artist, place } = this.state
-    fetch(`${config.objects_url}?query=${value}&artist=${artist}&place=${place}&strict=1`)
+    fetch(`${config.objects_url}?query=${value}&artist=${artist}&place=${place}`)
       .then(res => res.json())
       .then(
         result => this.setState({[suggestions]: adaptSuggestions(result)}),
