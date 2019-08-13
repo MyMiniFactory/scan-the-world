@@ -22,14 +22,14 @@ const skeleton = () => {
 
     return (
     <div className="loader" key={0} >
-        {blocks}
+      {blocks}
     </div>)
 }
 
 const PlusButton = ({childImageSharp}) => (
-  <div className="featured-tile">
+  <div className="object-tile">
     <a href={config.contributionUrl}>
-      <Img className="featured-image" fluid={childImageSharp.fluid} />
+      <Img className="tile-image" fluid={childImageSharp.fluid} />
     </a>
     <p>Contribute Now!</p>
 </div>

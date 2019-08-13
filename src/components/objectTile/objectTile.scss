@@ -5,7 +5,7 @@
   margin: 10px;
   background-color: black;
 
-  & > a > img {
+  .tile-image {
     transition: opacity 0.3s;
     display: block;
     width: 100%;
@@ -23,7 +23,7 @@
   }
 
   &:hover {
-    & > a > img {
+    .tile-image {
       opacity: 0.4;
     }
 
@@ -39,6 +39,7 @@
     width: 50px;
 
     & > img {
+      display: block;
       width: 100%;
       height: auto;
       z-index: 1;

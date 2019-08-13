@@ -12,7 +12,7 @@ export default ({ object }) => {
   return (
     <div className="object-tile">
       <a href={threedObject.url} >
-        <img src={threedObject.images[0].thumbnail.url} alt={object.title}/>
+        <img className="tile-image" src={threedObject.images[0].thumbnail.url} alt={object.title}/>
       </a>
       <p>
         <span style={{fontWeight:`bold`}}>{object.title}</span>
