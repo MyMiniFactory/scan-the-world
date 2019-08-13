@@ -6,6 +6,7 @@ import Search from '../components/Search/Search'
 import Header from '../components/header'
 import RandomArt from '../components/randomArt'
 import SocialBar from '../components/socialBar/socialBar'
+import Img from 'gatsby-image'
 import scan_the_world from '../images/scan_the_world.svg'
 import './home-page.scss'
 import earth from '../images/earth.svg'
@@ -70,7 +71,7 @@ class HomePage extends React.Component {
                   return (
                     <div key={index} style={{float, ...m, ...w}}>
                       <a href={trend.href !== ` ` ? trend.href : null}>
-                        <img src={trend.trendImage.childImageSharp.original.src} alt={trend.alt}/>
+                        <Img className="masonry-image" fluid={trend.trendImage.childImageSharp.fluid} alt={trend.alt}/>
                       </a>
                       <p>{trend.title}</p>
                     </div>
@@ -84,7 +85,7 @@ class HomePage extends React.Component {
                   return (
                     <div key={id} style={{width: `70%`, marginTop: `50px`, ...float}}>
                       <Link to={fields.slug}>
-                        <img src={frontmatter.storyImage.childImageSharp.original.src} alt={frontmatter.title} />
+                        <Img className="masonry-image" fluid={frontmatter.storyImage.childImageSharp.fluid} alt={frontmatter.title} />
                       </Link>
                       <p>{frontmatter.title}</p>
                     </div>
@@ -120,8 +121,8 @@ export const query = graphql `
           marginTop
           trendImage {
             childImageSharp {
-              original {
-                src
+              fluid(maxWidth: 460) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -136,8 +137,8 @@ export const query = graphql `
           frontmatter {
             storyImage {
               childImageSharp {
-                original {
-                  src
+                fluid(maxWidth: 460) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
