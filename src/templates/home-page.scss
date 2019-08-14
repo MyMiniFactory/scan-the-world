@@ -1,6 +1,6 @@
 .home-container {
   max-width: 1520px;
-  margin: 40px auto;
+  margin: 0 auto;
 
   .intro {
     max-width: 730px;
@@ -21,33 +21,21 @@
       position: sticky;
       top: 60px;
       width: 220px;
-      margin: 10px 30px 0 0;
-      padding: 10px;
-
-      & > img {
-        align-self: flex-start;
-      }
+      margin: 0 30px 0 0;
+      padding: 0 10px 10px 10px;
 
       & > a {
         display: flex;
-        align-items: center;
         color: black;
         text-decoration: none;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
 
-      .nav-link {
-        display: flex;
-        flex-flow: row wrap;
-        margin-bottom: 30px;
-
-        & > a {
-          min-width: 100px;
-          font-family: 'atamiregular', sans-serif!important;
-          flex: auto;
-          color: black;
-          text-decoration: none;
-        }
+      .stw-icon {
+        margin-right: 5px;
+        width: auto;
+        max-width: none;
+        height: 21px;
       }
     }
 
@@ -73,7 +61,7 @@
         min-width: 215px;
         margin-bottom: 5em;
 
-        & > p {
+        & > a > p {
           position: absolute;
           left: 5px;
           bottom: 5px;
@@ -96,7 +84,7 @@
             opacity: 1;
           }
 
-          & > p {
+          & > a > p {
             visibility: visible;
             opacity: 1;
           }
@@ -120,15 +108,6 @@
         width: 100%;
         position: static;
         margin: 0;
-
-        .nav-link {
-          & > a {
-            min-width: inherit;
-            margin-right: 20px;
-            margin-bottom: 5px;
-            text-align: left;
-          }
-        }
       }
     }
   }
@@ -165,5 +144,10 @@
       margin-left: 0;
       max-width: 750px;
     }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .off-canvas-wrap {
+    overflow: visible;
   }
 }
