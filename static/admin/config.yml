@@ -26,8 +26,8 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: trendImage, label: Image, widget: image }
-              - { name: href, label: Link, widget: string, default: ' ', required: false }
-              - { name: alt, label: Alt, widget: string, default: ' ', required: false }
+              - { name: href, label: Link, widget: string }
+              - { name: alt, label: Alt, widget: string, required: false }
               - { name: float, label: Float, widget: select, options: [left, right] }
               - { name: width, label: "Width (%)", widget: number, valueType: int, default: 0, min: 0}
               - { name: marginTop, label: "Margin top (px)", widget: number, valueType: int, default: 0, min: 0}
@@ -62,7 +62,7 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: contributionImage, label: Image, widget: image }
               - { name: href, label: Link, widget: string, default: "#", required: false }
-              - { name: alt, label: Alt, widget: string, default: ' ', required: false }
+              - { name: alt, label: Alt, widget: string, required: false }
               - { name: intro, label: Intro, widget: text }
       - label: Learn Page
         name: learn
