@@ -11,16 +11,18 @@ export default ({ object }) => {
     : null
   return (
     <div className="object-tile">
-      <a href={threedObject.url} >
-        <img className="tile-image" src={threedObject.images[0].thumbnail.url} alt={object.title}/>
+      <a href={threedObject.url} target='_blank' rel="noopener noreferrer">
+        <div>
+          <img className="tile-image" src={threedObject.images[0].thumbnail.url} alt={object.title}/>
+        </div>
+        <p>
+          <span style={{fontWeight:`bold`}}>{object.title}</span>
+          {place}
+          {artist}
+        </p>
       </a>
-      <p>
-        <span style={{fontWeight:`bold`}}>{object.title}</span>
-        {place}
-        {artist}
-      </p>
       {threedObject.designer &&
-        <a className="object-designer" href={threedObject.designer.profile_url}>
+        <a className="object-designer" href={threedObject.designer.profile_url} target='_blank' rel="noopener noreferrer">
           <img src={threedObject.designer.avatar_thumbnail_url} alt={threedObject.designer.name}/>
         </a>
       }
