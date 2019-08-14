@@ -1,7 +1,7 @@
 ---
 templateKey: story-page
 title: 'Scan the World India: A brief introduction'
-date: 2019-08-13T12:00:00.000Z
+date: 2019-08-14T14:00:00.000Z
 storyImage: /assets/untitled-1.jpg
 featured: true
 ---
