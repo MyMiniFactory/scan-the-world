@@ -1,4 +1,5 @@
 #___gatsby {
+  margin-top: 40px;
   font-family: 'atamiregular', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -12,7 +13,7 @@
   text-transform: lowercase!important;
 }
 
-#main, .off-canvas-wrap {
+#main {
   overflow: visible;
 }
 

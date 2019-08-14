@@ -1,4 +1,4 @@
-import './layout.css'
+import './layout.scss'
 import React from "react"
 import SocialBar from './socialBar/socialBar';
 import Header from './header';
