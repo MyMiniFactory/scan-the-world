@@ -113,7 +113,7 @@ class Search extends React.Component {
 
   handleSubmit(event) {
     const { object, artist, place } = this.state
-    const sortBy = this.state.sortBy === 'random'? 'popularity':this.state.sortBy
+    const sortBy = this.state.sortBy === 'random'? '':this.state.sortBy
     this.setState({sortBy})
     this.props.onSearch(`query=${object}&artist=${artist}&place=${place}`, sortBy)
     event.preventDefault()
@@ -121,7 +121,7 @@ class Search extends React.Component {
 
   searchOnChange(name, value, doSearch) {
     const { object, artist, place } = this.state
-    const sortBy = this.state.sortBy === 'random'? 'popularity':this.state.sortBy
+    const sortBy = this.state.sortBy === 'random'? '':this.state.sortBy
     const state = {object, artist, place, sortBy}
     state[name] = value
     this.setState(state)
@@ -135,12 +135,12 @@ class Search extends React.Component {
       return this.setState({[suggestions]: _getSuggestions(data, value)})
     }
     const { artist, place } = this.state
-    fetch(`${config.objects_url}?query=${value}&artist=${artist}&place=${place}`)
-      .then(res => res.json())
-      .then(
-        result => this.setState({[suggestions]: adaptSuggestions(result)}),
-        error => console.log(error))
-  };
+    fetch(`${config.objects_url}?query=${value}&artist=${artist}&place=${place}&per_page=4`)
+    .then(res => res.json())
+    .then(
+      result => this.setState({[suggestions]: adaptSuggestions(result)}),
+      error => console.log(error))
+  }
 
   // Autosuggest will call this function every time you need to clear suggestions.
   onSuggestionsClearRequested = suggestions => this.setState({[suggestions]: []});
@@ -168,8 +168,8 @@ class Search extends React.Component {
         </span>
         <span style={{margin:`0 5px 0 5px`}}>|</span>
         <span
-          onClick={() => this.changeSorting('popularity')}
-          className={this.state.sortBy === 'popularity'?'active':''}
+          onClick={() => this.changeSorting('')}
+          className={this.state.sortBy === ''?'active':''}
         >
           popular
         </span>
@@ -184,7 +184,7 @@ class Search extends React.Component {
       <form className="stw-search-form" onSubmit={this.handleSubmit}>
         <Autosuggest
           suggestions={objectSuggestions}
-          onSuggestionsFetchRequested={({value}) => this.onObjectSuggestionsFetchRequested(null, 'objectSuggestions', value)}
+          onSuggestionsFetchRequested={({ value }) => this.onObjectSuggestionsFetchRequested(null, 'objectSuggestions', value)}
           onSuggestionsClearRequested={() => this.onSuggestionsClearRequested('objectSuggestions')}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderObjectSuggestion}
