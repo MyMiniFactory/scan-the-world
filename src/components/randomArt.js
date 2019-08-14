@@ -52,7 +52,7 @@ class RandomArt extends React.Component {
             <a href={`${config.myminifactory_url}/download/${item.id}`} target='_blank' rel="noopener noreferrer">
               <img src={download} alt="download" style={{height:`24px`, width:`auto`, maxWidth:`none`}}/>
             </a>
-            <span onClick={this.getRandomArt}><FaRedo size='24px' color="#25282a"/></span>
+            <span onClick={this.getRandomArt} style={{cursor:`pointer`}}><FaRedo size='24px' color="#25282a"/></span>
           </div>
         </div>
         <div dangerouslySetInnerHTML={{__html: item.description}}/>
