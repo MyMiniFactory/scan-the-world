@@ -1,27 +1,28 @@
 .stw-header {
-  height: 70px;
-  margin: 40px 50px 20px 50px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 
   .stw-logo {
-    height: auto;
+    height: 38px;
     max-width: none;
-    width: 100%;
-    max-width: 238px;
+    margin-bottom: 10px;
+    width: auto;
   }
 
-  nav {
+  & > nav {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 10px;
 
     a {
       color: black;
       font-family: 'atamiregular', sans-serif!important;
       text-decoration: none;
-      margin-right: 10px;
+      margin: 0 10px;
 
       &:hover {
         text-decoration: underline;
@@ -29,20 +30,21 @@
     }
   }
 }
+@media only screen and (min-width: 700px) {
+  .stw-header {
+    .stw-nav-home {
+      justify-content: flex-start;
 
-@media only screen and (min-width: 768px) {
-  .stw-logo-mobile {
-    display: none;
+      a {
+        min-width: 100px;
+        flex: auto;
+        margin: 0;
+      }
+    }
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .stw-logo {
-    display: none
-  }
-
-  .stw-logo-mobile {
-    height: 24px;
-    max-width: none;
+@media only screen and (max-width: 700px) {
+  .stw-header {
+    flex-direction: column;
   }
 }

@@ -7,7 +7,7 @@ import config from '../../config'
 import './objects.scss'
 
 const skeleton = () => {
-    const blocks = Array.from({ length: 2 }, (x, i) => (
+    const blocks = Array.from({ length: 6 }, (x, i) => (
         <ContentLoader
           key={i}
           height={230}
@@ -28,11 +28,11 @@ const skeleton = () => {
 
 const PlusButton = ({childImageSharp}) => (
   <div className="object-tile">
-    <a href={config.contributionUrl}>
+    <a href={config.contributionUrl} target='_blank' rel="noopener noreferrer">
       <Img className="tile-image" fluid={childImageSharp.fluid} />
+      <p>Contribute Now!</p>
     </a>
-    <p>Contribute Now!</p>
-</div>
+  </div>
 )
 
 class Objects extends React.Component {
@@ -54,20 +54,21 @@ class Objects extends React.Component {
     componentDidUpdate(prevProps) {
         // Typical usage (don't forget to compare props):
         if (this.props.query !== prevProps.query || this.props.sortBy !== prevProps.sortBy) {
-            this.setState({
-                currentPage: 0,
-                objects: [],
-                query: this.props.query,
-                sortBy: this.props.sortBy,
-                isLoaded: false,
-                hasMore: true
-            })
+          this.setState({
+              currentPage: 0,
+              objects: [],
+              query: this.props.query,
+              sortBy: this.props.sortBy,
+              isLoaded: false,
+              hasMore: true,
+          })
         }
     }
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}`)
+      const perPage = fetchedPage === 1 ? 11 : 12 
+      fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}&per_page=${perPage}`)
           .then(res => res.json())
           .then(
               (result) => {

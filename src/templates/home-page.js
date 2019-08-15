@@ -8,16 +8,18 @@ import RandomArt from '../components/randomArt'
 import SocialBar from '../components/socialBar/socialBar'
 import Img from 'gatsby-image'
 import scan_the_world from '../images/scan_the_world.svg'
-import './home-page.scss'
 import earth from '../images/earth.svg'
+import india from '../images/india.svg'
+import config from '../config'
+import './home-page.scss'
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       objects: props.data.allMyMiniFactoryObject.nodes,
-      query: ``,
-      sortBy: `popularity`,
+      query: `query=&artist=&place=`,
+      sortBy: ``,
       showingRandom: false,
     }
     this.onSearch = this.onSearch.bind(this)
@@ -55,7 +57,10 @@ class HomePage extends React.Component {
           <div className="home-content">
             <div className="search-wrap">
               <Header isHome={true} onSearch={this.onSearch}/>
-              <Link to='/map'><img src={earth} style={{marginRight:`5px`, width:`18px`}} alt='earth'/>Map view</Link>
+              <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
+              <a href={config.indiaUrl} target='_blank' rel="noopener noreferrer">
+                <img className="stw-icon" src={india} alt='india'/>Scan the world India
+              </a>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
@@ -72,8 +77,8 @@ class HomePage extends React.Component {
                     <div key={index} style={{float, ...m, ...w}}>
                       <a href={trend.href !== ` ` ? trend.href : null}>
                         <Img className="masonry-image" fluid={trend.trendImage.childImageSharp.fluid} alt={trend.alt}/>
+                        <p>{trend.title}</p>
                       </a>
-                      <p>{trend.title}</p>
                     </div>
                   )
                 })
@@ -86,8 +91,8 @@ class HomePage extends React.Component {
                     <div key={id} style={{width: `70%`, marginTop: `50px`, ...float}}>
                       <Link to={fields.slug}>
                         <Img className="masonry-image" fluid={frontmatter.storyImage.childImageSharp.fluid} alt={frontmatter.title} />
+                        <p>{frontmatter.title}</p>
                       </Link>
-                      <p>{frontmatter.title}</p>
                     </div>
                   )
                 })

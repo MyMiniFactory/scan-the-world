@@ -1,10 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./header.scss"
-import logo from "../images/stw_logo.svg"
+import logo from "../images/stw_logo.gif"
 import logo_static from "../images/stw_logo_static.gif"
 import logo_in from "../images/stw_logo_in.gif"
 import logo_out from "../images/stw_logo_out.gif"
+import config from "../config"
+
+const Navbar = ({ className }) => (
+  <nav className={className}>
+    <Link to='/about'>About</Link>
+    <Link to='/contribute'>Contribute</Link>
+    <Link to='/learn' >Learn</Link>
+    <Link to='/community/stories'>Community</Link>
+    <a href={config.museumsUrl} target='_blank' rel="noopener noreferrer">Museums</a>
+  </nav>
+)
 
 class Header extends React.Component {
 
@@ -54,33 +65,21 @@ class Header extends React.Component {
     const isHome = this.state.isHome;
     if (isHome) {
       return (
-        <>
-          <img src={logo} alt="stw" onClick={() => this.props.onSearch('', 'popularity')} style={{marginBottom:`20px`, height:`30px`}}/>
-          <nav className="nav-link">
-            <Link to='/about'>About</Link>
-            <Link to='/community/stories'>Community</Link>
-            <Link to='/learn' >Learn</Link>
-            <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
-            <Link to='/contribute'>Contribute</Link>
-          </nav>
-        </>
+        <header className="stw-header">
+          <img className="stw-logo" src={logo} alt="stw" onClick={() => this.props.onSearch('query=&artist=&place=', '')} style={{cursor:`pointer`}}/>
+          <Navbar className="stw-nav-home"/>
+        </header>
       )
     }
     return (
       <header className="stw-header">
         <Link to='/'>
-          <img className="stw-logo"
-            onMouseEnter={this.handleIn} onMouseLeave={this.handleOut}
-            src={this.state.src} alt="Scan the world"/>
-          <img className="stw-logo-mobile" src={logo} alt="Scan the World mobile"/>
+          <picture style={{display:`flex`}}>
+            <source media="(min-width: 800px)" srcSet={this.state.src} style={{height:0}}/>
+            <img className="stw-logo" src={logo} onMouseEnter={this.handleIn} onMouseLeave={this.handleOut} alt="Scan the world"/>
+          </picture>
         </Link>
-        <nav>
-          <Link to='/about'>About</Link>
-          <Link to='/contribute'>Contribute</Link>
-          <Link to='/learn' >Learn</Link>
-          <Link to='/community/stories'>Community</Link>
-          <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
-        </nav>
+        <Navbar />
       </header>
     )
   }
