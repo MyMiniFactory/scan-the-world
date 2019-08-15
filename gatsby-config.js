@@ -3,6 +3,20 @@ module.exports = {
     title: `Scan The World`,
     description: ``,
     author: `Jean-Baptiste Paux`,
+    socialLinks: [
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/scantheworld"
+      },
+      {
+        name: "Twitter",
+        url: "https://twitter.com/Scan_The_World"
+      },
+      {
+        name: "Medium",
+        url: "https://medium.com/scantheworld"
+      }
+    ],
   },
   pathPrefix: "/scantheworld",
   plugins: [
