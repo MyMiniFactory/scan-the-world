@@ -5,6 +5,7 @@ import logo from "../images/stw_logo.gif"
 import logo_static from "../images/stw_logo_static.gif"
 import logo_in from "../images/stw_logo_in.gif"
 import logo_out from "../images/stw_logo_out.gif"
+import config from "../config"
 
 const Navbar = ({ className }) => (
   <nav className={className}>
@@ -12,7 +13,7 @@ const Navbar = ({ className }) => (
     <Link to='/contribute'>Contribute</Link>
     <Link to='/learn' >Learn</Link>
     <Link to='/community/stories'>Community</Link>
-    <a href='https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf' target='_blank' rel="noopener noreferrer">Museums</a>
+    <a href={config.museumsUrl} target='_blank' rel="noopener noreferrer">Museums</a>
   </nav>
 )
 

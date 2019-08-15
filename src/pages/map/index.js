@@ -76,7 +76,7 @@ export default ({ data }) => {
                           <h1>{node.name}</h1>
                           {node.objects &&
                             node.objects.map((object, index) => (
-                              <a key={index} href={`${config.myminifactory_url}/object/${object.url}`}>
+                              <a key={index} href={`${config.myMiniFactoryUrl}/object/${object.url}`}>
                                 <p>{object.title}</p>
                                 <img src={object.image_url} alt='sculture'/>
                               </a>
@@ -96,7 +96,7 @@ export default ({ data }) => {
                     return (
                       <Marker key={index} position={[lat, lng]} icon={sculptureIcon} alt='1' title={node.name}>
                         <Popup>
-                          <a href={`${config.myminifactory_url}/object/${node.url}`}>
+                          <a href={`${config.myMiniFactoryUrl}/object/${node.url}`}>
                             <p>{node.title}</p>
                             <img src={node.image_url} alt='sculture'/>
                           </a>

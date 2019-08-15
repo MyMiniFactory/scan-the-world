@@ -8,9 +8,10 @@ import RandomArt from '../components/randomArt'
 import SocialBar from '../components/socialBar/socialBar'
 import Img from 'gatsby-image'
 import scan_the_world from '../images/scan_the_world.svg'
-import './home-page.scss'
 import earth from '../images/earth.svg'
 import india from '../images/india.svg'
+import config from '../config'
+import './home-page.scss'
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -57,7 +58,9 @@ class HomePage extends React.Component {
             <div className="search-wrap">
               <Header isHome={true} onSearch={this.onSearch}/>
               <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
-              <a><img className="stw-icon" src={india} alt='india'/>Scan the world India</a>
+              <a href={config.indiaUrl} target='_blank' rel="noopener noreferrer">
+                <img className="stw-icon" src={india} alt='india'/>Scan the world India
+              </a>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
