@@ -10,11 +10,6 @@
     padding: 0 35px;
     max-width: 900px;
 
-    h3 {
-      align-self: center;
-      margin: 0;
-    }
-
     p {
         text-align: justify;
         margin-bottom: 15px;
@@ -25,11 +20,16 @@
       text-decoration: none;
     }
 
-    .about-statistic {
+    #about-statistic {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
-      margin: 30px 0 60px 0;
+      justify-content: space-between;
+      margin: 30px 0 40px 0;
+
+      & > h3 {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
     }
 
   }
@@ -50,5 +50,20 @@
 @media only screen and (min-width: 1200px) {
   .team {
     margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about-container {
+    .about-content {
+      & > h2 {
+        text-align: center;
+      }
+
+      #about-statistic {
+        flex-flow: column;
+        align-items: center;
+      }
+    }
   }
 }

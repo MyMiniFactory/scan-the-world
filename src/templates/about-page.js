@@ -37,10 +37,10 @@ class AboutPage extends React.Component {
         <div className="about-container">
           <div className="about-content">
             <h2>Project Start Date - 28th June 2014</h2>
-            <div className="about-statistic">
-              <h2>Objects: {statistic.objects}</h2>
-              <h2>Artists: {statistic.artists}</h2>
-              <h2>Places: {statistic.places}</h2>
+            <div id="about-statistic">
+              <h3>Objects: {statistic.objects}</h3>
+              <h3>Artists: {statistic.artists}</h3>
+              <h3>Places: {statistic.places}</h3>
             </div>
             <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
             <Link to={'/about/uses'}>
