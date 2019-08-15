@@ -1,21 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 import "./header.scss"
 import logo from "../images/stw_logo.gif"
 import logo_static from "../images/stw_logo_static.gif"
 import logo_in from "../images/stw_logo_in.gif"
 import logo_out from "../images/stw_logo_out.gif"
-import config from "../config"
 
-const Navbar = ({ className }) => (
-  <nav className={className}>
-    <Link to='/about'>About</Link>
-    <Link to='/contribute'>Contribute</Link>
-    <Link to='/learn' >Learn</Link>
-    <Link to='/community/stories'>Community</Link>
-    <a href={config.museumsUrl} target='_blank' rel="noopener noreferrer">Museums</a>
-  </nav>
-)
+const Navbar = ({ className }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            museumsUrl
+          }
+        }
+      }
+    `
+  )
+  return (
+    <nav className={className}>
+      <Link to='/about'>About</Link>
+      <Link to='/contribute'>Contribute</Link>
+      <Link to='/learn' >Learn</Link>
+      <Link to='/community/stories'>Community</Link>
+      <a href={site.siteMetadata.museumsUrl} target='_blank' rel="noopener noreferrer">Museums</a>
+    </nav>
+  )
+}
 
 class Header extends React.Component {
 

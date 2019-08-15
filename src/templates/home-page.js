@@ -10,7 +10,6 @@ import Img from 'gatsby-image'
 import scan_the_world from '../images/scan_the_world.svg'
 import earth from '../images/earth.svg'
 import india from '../images/india.svg'
-import config from '../config'
 import './home-page.scss'
 
 class HomePage extends React.Component {
@@ -57,10 +56,10 @@ class HomePage extends React.Component {
           <div className="home-content">
             <div className="search-wrap">
               <Header isHome={true} onSearch={this.onSearch}/>
-              <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
-              <a href={config.indiaUrl} target='_blank' rel="noopener noreferrer">
+              <a href={data.site.siteMetadata.indiaUrl} target='_blank' rel="noopener noreferrer">
                 <img className="stw-icon" src={india} alt='india'/>Scan the world India
               </a>
+              <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
@@ -175,6 +174,11 @@ export const query = graphql `
           url
         }
         title
+      }
+    }
+    site {
+      siteMetadata {
+        indiaUrl
       }
     }
   }

@@ -1,44 +1,45 @@
-import React from 'react'
-import { FaTwitter, FaInstagram, FaMedium } from 'react-icons/fa'
-import config from '../../config'
-import './socialBar.scss'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { FaTwitter, FaInstagram, FaMedium } from "react-icons/fa"
+import "./socialBar.scss"
 
-const Links = ({ links }) => {
-  return links.map((l) => {
-    let icon
-    switch (l.name.toLowerCase()) {
-    case 'twitter':
-      icon = <FaTwitter />
-      break
-    case 'medium':
-      icon = <FaMedium />
-      break
-    case 'instagram':
-      icon = <FaInstagram />
-      break
-    default:
-      break
-    }
-    return (icon && <a key={l.name} href={l.url}>{icon}</a>)
-  })
+const SocialLink = ({ link }) => {
+  let icon
+  switch (link.name.toLowerCase()) {
+  case 'twitter':
+    icon = <FaTwitter />
+    break
+  case 'medium':
+    icon = <FaMedium />
+    break
+  case 'instagram':
+    icon = <FaInstagram />
+    break
+  default:
+    break
+  }
+  return (icon && <a href={link.url} target='_blank' rel="noopener noreferrer">{icon}</a>)
 }
 
-class SocialBar extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        links: props.links ? props.links : config.social_links,
-    }
-  }
-
-  render() {
-    return (
-      <div className="social-bar">
-        <p className="social">social</p>
-        <Links links={this.state.links} />
-      </div>
-    )
-  }
+export default () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            socialLinks {
+              name
+              url
+            }
+          }
+        }
+      }
+    `
+  )
+  return (
+    <div className="social-bar">
+      <p className="social">social</p>
+      {site.siteMetadata.socialLinks.map(link => <SocialLink key={link.name} link={link} />)}
+    </div>
+  )
 }
-
-export default SocialBar;

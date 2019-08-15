@@ -6,20 +6,6 @@ const config = {
     statistic: `https://www.myminifactory.com/stw/statistic`,
     randomObject: `https://www.myminifactory.com/stw/objects/random`,
     contributionUrl: `https://www.myminifactory.com/upload/object?type=scantheworld`,
-    social_links: [
-        {
-            name: "Instagram",
-            url: "https://www.instagram.com/scantheworld"
-        },
-        {
-            name: "Twitter",
-            url: "https://twitter.com/Scan_The_World"
-        },
-        {
-            name: "Medium",
-            url: "https://medium.com/scantheworld"
-        }
-    ]
 };
 
 export default config;
