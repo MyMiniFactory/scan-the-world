@@ -2,4 +2,29 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+
+  .loader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    svg {
+      width: 230px;
+      margin: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .tiles {
+    .loader svg {
+      width: 45%;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  .tiles {
+    .loader svg {
+      width: 40%;
+    }
+  }
 }
