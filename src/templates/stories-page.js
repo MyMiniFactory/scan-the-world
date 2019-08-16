@@ -1,12 +1,14 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
-import Banner from '../components/banner'
-import './stories-page.scss'
+import React from "react"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import Banner from "../components/banner"
+import "./scss/stories-page.scss"
 
 export default ({ data }) => (
     <Layout>
+      <SEO title="Stories" />
       <Banner url={'/'} childImageSharp={data.banner.frontmatter.bannerImage.childImageSharp}/>
       <section className='stories-container'>
         <h1>Latest Stories</h1>

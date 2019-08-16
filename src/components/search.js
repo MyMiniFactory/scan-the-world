@@ -1,8 +1,8 @@
-import React from 'react';
-import Autosuggest from 'react-autosuggest';
-import config from '../../config';
-import './Search.scss'
-import searchIcon from '../../images/search.svg'
+import React from "react"
+import Autosuggest from "react-autosuggest"
+import searchIcon from "../images/search.svg"
+import config from "../config"
+import "./scss/search.scss"
 
 const _getSuggestions = (objects, value) => {
   const inputValue = value.trim().toLowerCase()
@@ -51,7 +51,7 @@ const renderInput = (inputProps) => {
     <>
       <input {...inputs}/>
       {inputs.value.length > 0 &&
-        <span onClick={clear}>X</span>
+        <span onClick={clear} style={{cursor:`pointer`}}>X</span>
       }
     </>)
 }

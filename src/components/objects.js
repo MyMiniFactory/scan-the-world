@@ -1,10 +1,10 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import InfiniteScroll from 'react-infinite-scroller'
-import ContentLoader from 'react-content-loader'
-import ObjectTile from '../objectTile/objectTile'
-import config from '../../config'
-import './objects.scss'
+import React from "react"
+import Img from "gatsby-image"
+import InfiniteScroll from "react-infinite-scroller"
+import ContentLoader from "react-content-loader"
+import ObjectTile from "./object-tile"
+import config from "../config"
+import "./scss/objects.scss"
 
 const skeleton = () => {
     const blocks = Array.from({ length: 6 }, (x, i) => (
@@ -67,7 +67,7 @@ class Objects extends React.Component {
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      const perPage = fetchedPage === 1 ? 11 : 12 
+      const perPage = fetchedPage === 1 ? 11 : 12
       fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}&per_page=${perPage}`)
           .then(res => res.json())
           .then(

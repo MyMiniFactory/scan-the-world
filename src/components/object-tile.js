@@ -1,5 +1,5 @@
-import React from 'react'
-import './objectTile.scss'
+import React from "react"
+import "./scss/object-tile.scss"
 
 export default ({ object }) => {
   const { threedObject } = object

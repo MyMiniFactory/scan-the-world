@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaTwitter, FaInstagram, FaMedium } from "react-icons/fa"
-import "./socialBar.scss"
+import "./scss/social-bar.scss"
 
 const SocialLink = ({ link }) => {
   let icon
