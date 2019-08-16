@@ -2,7 +2,7 @@
 templateKey: story-page
 title: 'Author, Artist...Goddess! The Insider Story of Louise Krasniewicz'
 date: 2019-08-16T13:30:00.000Z
-storyImage: /assets/goddess58.jpeg
+storyImage: /assets/goddess58small.jpg
 featured: true
 ---
 _Louise Krasniewicz is an anthropologist, author and artist. She has understood the potential of 3D printing since its early days and has since used it as an educational tool and also a helping hand with her passion for miniatures and their role in culture. As she recently curated an exhibition of 3D printed goddesses from Scan the World,, we got in touch to discuss how it all began._
