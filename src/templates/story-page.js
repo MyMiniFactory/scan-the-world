@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowLeft } from "react-icons/fa"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
-import './story-page.scss'
+import "./scss/story-page.scss"
 
 const StoryPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
   return (
     <Layout>
+      <SEO title="Story" />
       <div className="story-container">
         <h2>{frontmatter.title}</h2>
         <p>{frontmatter.date}</p>

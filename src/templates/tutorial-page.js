@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowLeft } from "react-icons/fa"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
-import './tutorial-page.css'
+import "./scss/tutorial-page.scss"
 
 const StoryPage = ({ data }) => {
   const { html } = data.markdownRemark
   return (
     <Layout>
+      <SEO title="Tutorial" />
       <div className="tutorial-container">
         <Link to={'/learn'}>
           <p><FaArrowLeft /> back to tutorials.</p>

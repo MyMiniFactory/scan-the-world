@@ -1,8 +1,8 @@
-import React from 'react'
-import config from '../config'
-import { FaRedo } from 'react-icons/fa'
-import './randomArt.scss'
-import download from '../images/download.svg'
+import React from "react"
+import { FaRedo } from "react-icons/fa"
+import config from "../config"
+import download from "../images/download.svg"
+import "./scss/random-art.scss"
 
 class RandomArt extends React.Component {
 

@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Banner from "../components/banner"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import "./contribute-page.scss"
+import "./scss/contribute-page.scss"
 
 const ContributePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark

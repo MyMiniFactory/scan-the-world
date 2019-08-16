@@ -1,14 +1,16 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
-import Banner from '../components/banner'
-import './uses-page.scss'
+import React from "react"
+import { graphql } from "gatsby"
+import SEO from "../components/seo"
+import Img from "gatsby-image"
+import Layout from "../components/layout"
+import Banner from "../components/banner"
+import "./scss/uses-page.scss"
 
 const UsesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
+      <SEO title="Uses" />
       <Banner url={'/about'} childImageSharp={frontmatter.bannerImage.childImageSharp}/>
       <div className="uses-container">
         {frontmatter.uses.map((use, index) => {

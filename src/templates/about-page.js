@@ -1,12 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { FaArrowRight } from "react-icons/fa"
 import Layout from "../components/layout"
 import Banner from "../components/banner"
 import SEO from "../components/seo"
 import Team from "../components/team"
-import { FaArrowRight } from 'react-icons/fa'
-import config from '../config'
-import './about-page.scss'
+import config from "../config"
+import "./scss/about-page.scss"
 
 
 

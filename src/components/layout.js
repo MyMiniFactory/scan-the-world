@@ -1,7 +1,7 @@
-import './layout.scss'
 import React from "react"
-import SocialBar from './socialBar/socialBar';
-import Header from './header';
+import SocialBar from "./social-bar"
+import Header from "./header"
+import "./scss/layout.scss"
 
 
 const Layout = ({ children }) => (
