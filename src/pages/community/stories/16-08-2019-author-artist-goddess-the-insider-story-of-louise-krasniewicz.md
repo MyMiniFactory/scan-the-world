@@ -17,17 +17,14 @@ I went to the University of Connecticut in the 1970s, the first in my family to 
 
 After that my husband and I ended up at UCLA where we established the Digital Archaeology Lab (I was the director), alongside teaching. The lab’s mandate was to explore digital technology for use in archaeological projects. We held conferences with world experts in this emerging field (in the 90s) and eventually published the first digital archaeology monograph that included open access to the raw data of the project. We explored virtual reality technologies during projects in Peru and Belize, where, in the late 1990s, we photographed objects in the national collection with a VR rig and also laser-scanned some of those objects with some emerging scanning technology.
 
-We moved to the University of Pennsylvania where I taught in anthropology and cinema studies and did research on objects in the museum’s collection, focusing on artifacts of gaming, magic, and miniatures. In Philadelphia I also started working seriously in the art of miniatures, entering the Miniature Settings section of the Philadelphia Flower Show and winning Best of Show twice with my miniature recreations of a scene from Harry Potter and another of the set of the movie Rear Window, both with live plants and hand-crafted miniatures (see photos here: https://krazyminiatures.com/portfolio/3-dioramas/). My first use of 3D printing was in the making of a scene from Hitchcock’s The Birds.
+We moved to the University of Pennsylvania where I taught in anthropology and cinema studies and did research on objects in the museum’s collection, focusing on artifacts of gaming, magic, and miniatures. In Philadelphia I also started working seriously in the art of miniatures, entering the Miniature Settings section of the Philadelphia Flower Show and winning Best of Show twice with my miniature recreations of a scene from Harry Potter and another of the set of the movie Rear Window, both with live plants and hand-crafted miniatures (see photos here: https://krazyminiatures.com/portfolio/3-dioramas/). \
+My first use of 3D printing was in the making of a scene from Hitchcock’s The Birds.
 
 More recently I have turned to miniature photography, creating odd scenes with low quality one-inch human figures in unusual settings. With 10,000 or more images already done (https://krazyminiatures.com/portfolio/1-miniature-photography/), I am looking forward to what the future holds for them. I have also started printing some larger low-res 3D figures that may lead to a new photography project.
 
 Since retiring from teaching at the University of Pennsylvania I have art directed, curated, and exhibited in numerous shows at the Belmar Arts Center in Belmar, NJ, including “The Goddess Show” in which the Scan the World goddess figures were a feature. I also teach 3D printing, comic book design, and other courses at the Belmar MakerSpace.
 
-![](/assets/goddess02.jpeg "Louise and her godess exhibit")
-
-![](/assets/goddess83.jpeg "The godesses")
-
-****
+![](/assets/goddess1.jpg "The godesses")
 
 **Why 3D printing? How does it relate to/help with your current practice?**
 
@@ -41,15 +38,11 @@ By the time I decided to do the goddess project, I was completely comfortable wi
 
 _(Note from the STW team: Please do let us know if you do ever feel some information is incorrect or missing, we appreciate it greatly!)_
 
-__
-
 **How do you feel about openly accessible data and its possibilities?**
 
 Now you can see why I gave that detailed description of some of the early projects I worked on. I was committed to sharing data with all the archaeological and artifact projects I worked on as well as my own publications. But there is an issue that anthropologists face: the indigenous communities we work with have to both give permission for this sharing and they need to have a stake in the sharing, which is not always easy to carry out. In the next year we will be continuing negotiations with Belize on the sharing of their collection through 3D printing files and this is 20 years after the original scanning. Sometimes these things move slowly!
 
 For a long time museums would not even share photographs of their collections for free, so the idea that they are starting to share 3D models is very exciting. I wonder how long it will take before all their collections are accessible.
-
-****
 
 **What are your next steps? Any exciting projects, trips or contributions?**
 
@@ -65,17 +58,13 @@ I have quite a few projects planned in the future that will use 3D printing:
 
 \- I’ve also become interested in low-poly scans, I love their abstract nature. I am printing up 100 low-poly female figures for a political (#Resist) garden display.
 
-
-
 **What is your favourite sculpture?**
 
 Easy one: the Venus of Willendorf. When I was an undergrad anthropology major I scraped together the money I needed to buy a replica of her from a local gift shop (I still have it!). This replica is 14 inches tall and the real one is only about 4 inches, so when I found the excellent model on Scan the World I was finally able to print her the correct size. But I also printed her tiny and all sizes in-between.
 
 In the goddess exhibit she is larger than in real life but I wanted her to be a dominant figure. I put her in the center with a bottle of wine nestled on her breast because after 28,000 years she deserves a drink! By the way, I did "The Great Goddess Bar and Grill” diorama not only because I thought it was a great way to show goddesses from different cultures meeting (and to show off the 3D prints), but also because it makes them a part of everyday understanding rather than having them apart from human activities.
 
-![](/assets/goddess68.jpeg "The Venus of Willendorf and her well deserved drink")
-
-****
+![](/assets/goddess68small.jpg "The Venus of Willendorf and her well deserved drink")
 
 **Considering all of the above, what does Scan the World mean to you?**
 
