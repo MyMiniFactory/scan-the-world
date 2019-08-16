@@ -57,7 +57,7 @@ class HomePage extends React.Component {
             <div className="search-wrap">
               <Header isHome={true} onSearch={this.onSearch}/>
               <a href={data.site.siteMetadata.indiaUrl} target='_blank' rel="noopener noreferrer">
-                <img className="stw-icon" src={india} alt='india'/>Scan the world India
+                <img className="stw-icon" src={india} alt='india'/>Scan the World India
               </a>
               <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
@@ -141,7 +141,7 @@ export const query = graphql `
           frontmatter {
             storyImage {
               childImageSharp {
-                fluid(maxWidth: 460) {
+                fluid(maxWidth: 460, duotone: {highlight: "#404040", shadow: "#404040", opacity: 50}) {
                   ...GatsbyImageSharpFluid
                 }
               }
