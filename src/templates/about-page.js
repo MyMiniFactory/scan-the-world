@@ -36,7 +36,7 @@ class AboutPage extends React.Component {
         <Banner childImageSharp={frontmatter.bannerImage.childImageSharp}/>
         <div className="about-container">
           <div className="about-content">
-            <h2>Project Start Date - 28th June 2014</h2>
+            <h3 id="h3-title">Project Start Date - 28th June 2014</h3>
             <div id="about-statistic">
               <h3>Objects: {statistic.objects}</h3>
               <h3>Artists: {statistic.artists}</h3>
