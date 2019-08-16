@@ -1,6 +1,6 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import "./team.scss"
+import React from "react"
+import Img from "gatsby-image"
+import "./scss/team.scss"
 
 function Member(props) {
   return (

@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
-import Objects from '../components/Objects/Objects'
-import Search from '../components/Search/Search'
-import Header from '../components/header'
-import RandomArt from '../components/randomArt'
-import SocialBar from '../components/socialBar/socialBar'
-import Img from 'gatsby-image'
-import scan_the_world from '../images/scan_the_world.svg'
-import earth from '../images/earth.svg'
-import india from '../images/india.svg'
-import './home-page.scss'
+import Objects from "../components/objects"
+import Search from "../components/search"
+import Header from "../components/header"
+import RandomArt from "../components/random-art"
+import SocialBar from "../components/social-bar"
+import scan_the_world from "../images/scan_the_world.svg"
+import earth from "../images/earth.svg"
+import india from "../images/india.svg"
+import "./scss/home-page.scss"
 
 class HomePage extends React.Component {
   constructor(props) {

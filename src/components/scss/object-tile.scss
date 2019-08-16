@@ -47,11 +47,6 @@
     }
   }
 }
-
-.loader svg {
-  width: 230px;
-  margin: 10px;
-}
 @media only screen and (max-width: 900px) {
   .object-tile {
     width: 45%;
@@ -60,10 +55,6 @@
     .object-designer {
       width: 40px;
     }
-  }
-
-  .loader svg {
-    width: 45%;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -74,9 +65,5 @@
     .object-designer {
       width: 30px;
     }
-  }
-
-  .loader svg {
-    width: 40%;
   }
 }

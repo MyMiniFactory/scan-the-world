@@ -1,16 +1,15 @@
 import React from "react"
-import L from 'leaflet'
+import L from "leaflet"
 import { graphql } from "gatsby"
-import { Map, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet'
-import MarkerClusterGroup from 'react-leaflet-markercluster'
-import 'react-leaflet-markercluster/dist/styles.min.css'
-import 'react-leaflet-fullscreen-control'
-import './index.css'
-import config from '../../config'
-import museum_icon from '../../images/museum_icon.svg'
-import sculpture_icon from '../../images/sculpture_icon.svg'
-
-import Layout from '../../components/layout'
+import { Map, TileLayer, Marker, Popup, Tooltip } from "react-leaflet"
+import MarkerClusterGroup from "react-leaflet-markercluster"
+import "react-leaflet-markercluster/dist/styles.min.css"
+import "react-leaflet-fullscreen-control"
+import Layout from "../../components/layout"
+import config from "../../config"
+import museum_icon from "../../images/museum_icon.svg"
+import sculpture_icon from "../../images/sculpture_icon.svg"
+import "./index.css"
 
 const id = 'romainbou.pljg503g'
 const accessToken = 'pk.eyJ1Ijoicm9tYWluYm91IiwiYSI6ImNpbXhta3U5bTAwZG12emx5dmF2aW05dnIifQ.HcDxPxknP7xvs2Wb8rsEpw'
@@ -56,7 +55,7 @@ export default ({ data }) => {
         iconSize: new L.Point(40, 40, true)
       })
     }
-    
+
     return (
       <Layout>
         <div className="stw-map">

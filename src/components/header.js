@@ -1,10 +1,10 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import "./header.scss"
 import logo from "../images/stw_logo.gif"
 import logo_static from "../images/stw_logo_static.gif"
 import logo_in from "../images/stw_logo_in.gif"
 import logo_out from "../images/stw_logo_out.gif"
+import "./scss/header.scss"
 
 const Navbar = ({ className }) => {
   const { site } = useStaticQuery(

@@ -1,14 +1,16 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
-import Banner from '../components/banner'
-import './learn-page.scss'
+import React from "react"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import Banner from "../components/banner"
+import "./scss/learn-page.scss"
 
 export default ({ data }) => {
   const { edges: tutorials } = data.allMarkdownRemark
   return (
     <Layout>
+      <SEO title="Learn" />
       <Banner url={'/'} childImageSharp={data.banner.frontmatter.bannerImage.childImageSharp}/>
       <section className='tutorials-container'>
         <h1>tutorials</h1>
