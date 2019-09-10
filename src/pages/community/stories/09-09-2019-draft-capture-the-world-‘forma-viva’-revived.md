@@ -28,7 +28,7 @@ The original works were photographed and captured with a smartphone with limited
 
 With this in mind, I invite you to the ‘Capture the World’ exhibition in Cirkulacija2, Ljubljana, where you can confirm the above statements about Forma viva, and I hope you enjoy the digital versions as well.
 
-PS:
+
 
 In 2018, a student initiative collected the data and did a lot of restoration work for which I thank them - I would have had to do it myself otherwise. Some of the data, mostly collected through word of mouth, is available in the Modern Gallery archive. 
 
@@ -36,9 +36,7 @@ They published their work here:
 
 http://www.stud-dom-lj.si/sites/www.stud-dom-lj.si/files/studentska_forma_viva_zbornik_2018_0.pdf
 
-Special thanks to Tomaž Kolarič and the Archives of the Modern Gallery for helping with the
-
-search of data, and to Circulacija2, which offered the space for public presentation.
+Special thanks to Tomaž Kolarič and the Archives of the Modern Gallery for helping with the search of data, and to Circulacija2, which offered the space for public presentation.
 
 Find the exhibition here: http://www.cirkulacija2.org/?p=5577
 
