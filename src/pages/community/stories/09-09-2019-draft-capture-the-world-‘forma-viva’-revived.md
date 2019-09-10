@@ -26,7 +26,7 @@ The original works were photographed and captured with a smartphone with limited
 
 ![](/assets/2.png "Meshroom processing")
 
-With this in mind, I invite you to the ‘Capture the World’ exhibition in Cirkulacija2, Ljubljana, where you can confirm the above statements about Forma viva, and I hope you enjoy the digital versions as well.
+With this in mind, I invite you to the ‘Capture the World’ exhibition in Cirkulacija2, Ljubljana, where you can confirm the above statements about Forma viva, and I hope you enjoy the digital versions as well, find them here: https://www.myminifactory.com/users/kinimodcinham
 
 
 
