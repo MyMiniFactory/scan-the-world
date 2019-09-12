@@ -7,7 +7,9 @@ intro: >-
   technologies, producing an extensive ecosystem of content suitable for 3D
   printing. In making culture accessible, communities are encouraged to share
   their scans,  stories, and creations with the goal to bring global heritage to
-  the masses.
+  the masses. 
+
+  Share your stories with us at stw@myminifactory.com!
 featuredImage: /assets/plus-button-1-.jpg
 trends: []
 ---
