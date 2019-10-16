@@ -5,9 +5,7 @@ date: 2019-10-15T14:00:10.612Z
 storyImage: /assets/3.jpg
 featured: true
 ---
-**_Balázs approached us a while ago about modelling scans. Following a short, yet successful run, he has decided that he would like to scan, and soon started sending wonderful scans from Budapest's cultural centres. We asked him a few questions to reveal his motivations and plans for 3D-related work in a cultural setup._** 
-
-
+_**Balázs approached us a while ago about modelling scans. Following a short, yet successful run, he has decided that he would like to scan, and soon started sending wonderful scans from Budapest's cultural centres. We asked him a few questions to reveal his motivations and plans for 3D-related work in a cultural setup.**_ 
 
 **First, please tell us a little something about yourself.**
 
@@ -41,8 +39,6 @@ As for next plans, who knows? I have too many. Since I’ve started scanning, I 
 
 While I wait for them to cross the bridge, I will be talking to museums and occasionally scanning.
 
-
-
 Find Balász’s models here: <https://www.myminifactory.com/users/artsomnia.art>
 
-and his work here: [www.artsomnia.art ](www.artsomnia.art) or here <https://www.facebook.com/artsomnia.art/>
+and his work here: [www.artsomnia.art](https://www.artsomnia.art/)  or here <https://www.facebook.com/artsomnia.art/>
