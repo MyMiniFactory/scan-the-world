@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { FaTwitter, FaInstagram, FaMedium } from "react-icons/fa"
+import { FaTwitter, FaInstagram, FaMedium, FaGithub } from "react-icons/fa"
 import "./scss/social-bar.scss"
 
 const SocialLink = ({ link }) => {
@@ -14,6 +14,9 @@ const SocialLink = ({ link }) => {
     break
   case 'instagram':
     icon = <FaInstagram />
+    break
+  case 'github':
+    icon = <FaGithub />
     break
   default:
     break

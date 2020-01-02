@@ -17,6 +17,10 @@ module.exports = {
       {
         name: "Medium",
         url: "https://medium.com/scantheworld"
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/MyMiniFactory/scan-the-world"
       }
     ],
   },
