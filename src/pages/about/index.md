@@ -7,10 +7,6 @@ team:
     memberImage: /assets/s5fltm9r_400x400.png
     position: Founder and Project Manager
     title: Jon Beck
-  - mail: vickie@myminifactory.com
-    memberImage: /assets/myface.jpg
-    position: Community Manager
-    title: Vickie Licková
 ---
 Scan the World is an ambitious initiative that gives you the possibility to
 enjoy 3D printable representations of cultural artifacts in a remarkably
