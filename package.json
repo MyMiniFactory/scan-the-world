@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "scan-the-world",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Scan The World frontend",
+  "version": "0.2.0",
   "dependencies": {
     "gatsby": "^2.13.51",
     "gatsby-image": "^2.2.8",
@@ -37,6 +36,9 @@
     "react-leaflet": "^2.4.0",
     "react-leaflet-fullscreen-control": "^0.0.4",
     "react-leaflet-markercluster": "^2.0.0-rc3"
+  },
+  "resolutions": {
+    "sharp": "0.24.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
