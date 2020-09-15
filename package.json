@@ -37,9 +37,6 @@
     "react-leaflet-fullscreen-control": "^0.0.4",
     "react-leaflet-markercluster": "^2.0.0-rc3"
   },
-  "resolutions": {
-    "sharp": "0.24.0"
-  },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
