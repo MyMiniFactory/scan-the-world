@@ -23,7 +23,7 @@ yarn
 ### Start developing server
 
 ```
-gastby develop
+gatsby develop
 ```
 
 Then browse [http://localhost:8000](http://localhost:8000)
@@ -31,7 +31,7 @@ Then browse [http://localhost:8000](http://localhost:8000)
 ### Prepare a production build
 
 ```
-gastby build
+gatsby build
 ```
 The static files will be generated in the `public` folder.
 
