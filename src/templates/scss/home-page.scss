@@ -3,7 +3,6 @@
   margin: 0 auto;
 
   .intro {
-    max-width: 730px;
     margin-left: 250px;
     padding: 0 10px;
   }
@@ -24,7 +23,7 @@
       margin: 0 30px 0 0;
       padding: 0 10px 10px 10px;
 
-      & > a {
+      &>a {
         display: flex;
         color: black;
         text-decoration: none;
@@ -35,14 +34,14 @@
         margin-right: 5px;
         width: auto;
         max-width: none;
-        height: 21px;
+        width: 21px;
       }
     }
 
     .search-container {
       display: flex;
+      flex: 1;
       flex-flow: column;
-      max-width: 750px;
       justify-content: flex-start;
     }
 
@@ -51,17 +50,17 @@
       margin: 0 30px;
       max-width: 460px;
 
-      & > iframe {
+      &>iframe {
         width: 100%;
         margin-bottom: 50px;
       }
 
-      & > div {
+      &>div {
         position: relative;
         min-width: 215px;
         margin-bottom: 5em;
 
-        & > a > p {
+        &>a>p {
           position: absolute;
           left: 5px;
           bottom: 5px;
@@ -84,7 +83,7 @@
             opacity: 1;
           }
 
-          & > a > p {
+          &>a>p {
             visibility: visible;
             opacity: 1;
           }
@@ -93,6 +92,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .home-container {
     .intro {
@@ -112,15 +112,15 @@
     }
   }
 }
+
 @media only screen and (min-width: 1265px) {
   .search-container {
-    width: 750px;
     flex-shrink: 0;
   }
 }
+
 @media only screen and (min-width: 900px) and (max-width: 1265px) {
   .home-container .intro {
-    max-width: 500px;
     margin-left: 250px;
     padding: 0 10px;
   }
@@ -130,9 +130,9 @@
     flex-shrink: 0;
   }
 }
+
 @media only screen and (max-width: 1016px) {
   .home-container {
-    max-width: 750px;
 
     .home-content {
       .masonry {
@@ -142,10 +142,10 @@
 
     .intro {
       margin-left: 0;
-      max-width: 750px;
     }
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .off-canvas-wrap {
     overflow: visible;

@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-width: 1000px;
 
   .loader {
     display: flex;
@@ -14,6 +15,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 900px) {
   .tiles {
     .loader svg {
@@ -21,6 +23,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 425px) {
   .tiles {
     .loader svg {
