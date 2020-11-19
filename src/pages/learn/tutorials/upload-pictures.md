@@ -6,7 +6,17 @@ intro: >-
   models out of pictures from a smartphone or a digital camera 
 tutorialImage: /assets/photogrammetry-tutorial.jpg
 ---
-**Photogrammetry** is the method we use to archive and recreate 3D objects, sculptures, and monuments, and we have compiled a tutorial below to help you get involved. You’ll need a camera, either a **smartphone** or a **DSLR**, and some software if you want to get recreating sculptures and objects at home. 
+**Photogrammetry** is the method we use to archive and recreate 3D objects, sculptures, and monuments. All you'll need is a camera, either a **smartphone** or a **DSLR**.
+
+<div style="display:flex; justify-content: center; width:100%; margin: 40px 0;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/J75QDKxtIVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+Please send your photos to [stw@myminifactory.com](mailto:stw@myminifactory.com?subject=Scan Photos&) through [wetransfer](https://wetransfer.com/) or your favorite file transfer service.
+
+It'll take us two weeks to process the picture to create the model and we will send you a 3D printed version of it to say thanks.
+
+Check out a more in-depth photogrammetry tutorial below!
 
 ![](/assets/asset-1-2x.png)
 

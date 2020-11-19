@@ -1,6 +1,6 @@
 .tutorial-container {
   max-width: 900px;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
   padding: 15px;
 
   p {
@@ -10,5 +10,11 @@
   a {
     color: rgb(48, 48, 48);
     text-decoration: none;
+  }
+
+  .tutorialHTML{
+      a{
+        text-decoration: underline;
+      }
   }
 }
