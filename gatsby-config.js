@@ -41,7 +41,6 @@ module.exports = {
         url: "https://www.myminifactory.com/stw/objects/map",
       },
     },
-    `gatsby-plugin-react-leaflet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

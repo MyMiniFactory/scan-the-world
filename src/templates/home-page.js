@@ -62,7 +62,6 @@ class HomePage extends React.Component {
               <a href={data.site.siteMetadata.chinaUrl} target='_blank' rel="noopener noreferrer">
                 <img className="stw-icon" src={china} alt='india' />Scan the World China
               </a>
-              <Link to='/map'><img className="stw-icon" src={earth} alt='earth' />Map view</Link>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
