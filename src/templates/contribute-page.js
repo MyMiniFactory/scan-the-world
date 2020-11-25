@@ -7,24 +7,24 @@ import Img from "gatsby-image"
 import "./scss/contribute-page.scss"
 
 const ContributePage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { nodes } = data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Contribute" />
-      <Banner url={'/'} childImageSharp={frontmatter.bannerImage.childImageSharp}/>
+      <Banner url={'/'} childImageSharp={nodes[0].frontmatter.bannerImage.childImageSharp}/>
       <div className="contribute-container">
         <div className="contribute-content">
-          <p>{frontmatter.intro}</p>
+          <p>{nodes[0].frontmatter.intro}</p>
         </div>
         <div className="contributions">
-          { frontmatter.contributions.map((ctb, index) => {
+          { nodes.map((ctb, index) => {
             return (
               <div key={index} className="contribution-item">
-                <a href={ctb.href} target='_blank' rel="noopener noreferrer">
-                  <Img className="contribute-image" fluid={ctb.contributionImage.childImageSharp.fluid} alt={ctb.alt}/>
+                <a href={ctb.frontmatter.contributions[0].href} target='_blank' rel="noopener noreferrer">
+                  <Img className="contribute-image" fluid={ctb.frontmatter.contributions[0].contributionImage.childImageSharp.fluid} alt={ctb.alt}/>
                 </a>
-                <h2>{ctb.title}</h2>
-                <p>{ctb.intro}</p>
+                <h2>{ctb.frontmatter.contributions[0].title}</h2>
+                <div dangerouslySetInnerHTML={{__html: ctb.html}}/>
               </div>
             )
           })}
@@ -36,7 +36,17 @@ const ContributePage = ({ data }) => {
 
 export const query = graphql `
   query ContributeQuery {
-    markdownRemark(frontmatter: {templateKey: {eq: "contribute-page"}}) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {templateKey: {eq: "contribute-page"}}
+      }
+      sort: {
+        fields: [frontmatter___order]
+        order: ASC
+      }
+    ){
+      nodes {
+        html
         frontmatter {
           bannerImage {
             childImageSharp {
@@ -45,7 +55,6 @@ export const query = graphql `
               }
             }
           }
-          intro
           contributions {
             alt
             href
@@ -61,6 +70,7 @@ export const query = graphql `
           }
         }
       }
+    }
   }
 `
 
