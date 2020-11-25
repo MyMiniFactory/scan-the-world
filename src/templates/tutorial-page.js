@@ -11,13 +11,13 @@ const StoryPage = ({ data }) => {
     <Layout>
       <SEO title="Tutorial" />
       <div className="tutorial-container">
-        <Link to={'/learn'}>
+        {/* <Link to={'/learn'}>
           <p><FaArrowLeft /> back to tutorials.</p>
-        </Link>
-        <div dangerouslySetInnerHTML={{__html: html}} />
-        <Link to={'/learn'}>
+        </Link> */}
+        <div className="tutorialHTML" dangerouslySetInnerHTML={{__html: html}} />
+        {/* <Link to={'/learn'}>
           <FaArrowLeft /> back to tutorials.
-        </Link>
+        </Link> */}
       </div>
     </Layout>
   )
