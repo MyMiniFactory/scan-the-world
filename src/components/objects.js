@@ -28,7 +28,7 @@ const skeleton = () => {
 
 const PlusButton = ({childImageSharp}) => (
   <div className="object-tile">
-    <a href={config.contributionUrl} target='_blank' rel="noopener noreferrer">
+    <a href="/upload-a-scan" target='_blank' rel="noopener noreferrer">
       <Img className="tile-image" fluid={childImageSharp.fluid} />
       <p>Upload a scan!</p>
     </a>
