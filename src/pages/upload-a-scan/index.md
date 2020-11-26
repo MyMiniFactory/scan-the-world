@@ -1,6 +1,6 @@
 ---
-templateKey: contribute-page
-title: contribute
+templateKey: upload-a-scan-page
+title: Upload a scan
 order: 0
 intro: >-
 
