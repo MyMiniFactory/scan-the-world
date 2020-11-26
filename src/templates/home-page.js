@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Objects from "../components/objects"
+import NewsletterSubscribe from "../components/newsletter-subscribe"
 import Search from "../components/search"
 import Header from "../components/header"
 import RandomArt from "../components/random-art"
@@ -62,7 +63,8 @@ class HomePage extends React.Component {
               <a href={data.site.siteMetadata.chinaUrl} target='_blank' rel="noopener noreferrer">
                 <img className="stw-icon" src={china} alt='india' />Scan the World China
               </a>
-              <Link to='/map'><img className="stw-icon" src={earth} alt='earth' />Map view</Link>
+              <Link to='/map'><img className="stw-icon" src={earth} alt='earth'/>Map view</Link>
+              <NewsletterSubscribe/>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
