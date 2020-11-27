@@ -67,7 +67,7 @@ class Objects extends React.Component {
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      const perPage = fetchedPage === 1 ? 11 : 12
+      const perPage = fetchedPage === 1 ? 14 : 15
       fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}&per_page=${perPage}`)
           .then(res => res.json())
           .then(
