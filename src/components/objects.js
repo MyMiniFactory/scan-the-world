@@ -102,7 +102,7 @@ class Objects extends React.Component {
 
         const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
-            return [<PlusButton key={0} childImageSharp={this.props.childImageSharp} />, <ObjectTile key={object.id} object={object} />]
+            return [<PlusButton key={'_contribute_now'} childImageSharp={this.props.childImageSharp} />, <ObjectTile key={object.id} object={object} />]
           }
           return (
             <ObjectTile key={object.id} object={object} />
