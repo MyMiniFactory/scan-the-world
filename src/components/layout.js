@@ -1,6 +1,6 @@
 import React from "react"
-import SocialBar from "./social-bar"
 import Header from "./header"
+import SocialBar from "./social-bar"
 import "./scss/layout.scss"
 
 
