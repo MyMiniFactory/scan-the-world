@@ -10,7 +10,7 @@ const ContributePage = ({ data }) => {
   const { nodes } = data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO title="Contribute" />
+      <SEO title="Upload a scan" />
       <Banner url={'/'} childImageSharp={nodes[0].frontmatter.bannerImage.childImageSharp}/>
       <div className="contribute-container">
         <div className="contribute-content">
@@ -38,7 +38,7 @@ export const query = graphql `
   query ContributeQuery {
     allMarkdownRemark(
       filter: {
-        frontmatter: {templateKey: {eq: "contribute-page"}}
+        frontmatter: {templateKey: {eq: "upload-a-scan-page"}}
       }
       sort: {
         fields: [frontmatter___order]

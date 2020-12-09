@@ -30,7 +30,7 @@ const PlusButton = ({childImageSharp}) => (
   <div className="object-tile">
     <a href={config.contributionUrl} target='_blank' rel="noopener noreferrer">
       <Img className="tile-image" fluid={childImageSharp.fluid} />
-      <p>Contribute Now!</p>
+      <p>Upload a scan!</p>
     </a>
   </div>
 )
@@ -67,7 +67,7 @@ class Objects extends React.Component {
 
     getObjects() {
       const fetchedPage = this.state.currentPage + 1
-      const perPage = fetchedPage === 1 ? 11 : 12
+      const perPage = fetchedPage === 1 ? 14 : 15
       fetch(`${config.objects_url}?${this.state.query}&page=${fetchedPage}&sort=${this.state.sortBy}&per_page=${perPage}`)
           .then(res => res.json())
           .then(
@@ -102,7 +102,7 @@ class Objects extends React.Component {
 
         const tiles = this.state.objects.map((object, i) => {
           if (i === 1) {
-            return [<PlusButton key={0} childImageSharp={this.props.childImageSharp} />, <ObjectTile key={object.id} object={object} />]
+            return [<PlusButton key={'_contribute_now'} childImageSharp={this.props.childImageSharp} />, <ObjectTile key={object.id} object={object} />]
           }
           return (
             <ObjectTile key={object.id} object={object} />

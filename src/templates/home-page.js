@@ -1,14 +1,13 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Objects from "../components/objects"
+import NewsletterSubscribe from "../components/newsletter-subscribe"
 import Search from "../components/search"
 import Header from "../components/header"
 import RandomArt from "../components/random-art"
 import SocialBar from "../components/social-bar"
 import scan_the_world from "../images/scan_the_world.svg"
-import earth from "../images/earth.svg"
 import india from "../images/india.svg"
 import china from "../images/china.svg"
 import "./scss/home-page.scss"
@@ -62,6 +61,7 @@ class HomePage extends React.Component {
               <a href={data.site.siteMetadata.chinaUrl} target='_blank' rel="noopener noreferrer">
                 <img className="stw-icon" src={china} alt='india' />Scan the World China
               </a>
+              <NewsletterSubscribe/>
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
