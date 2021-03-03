@@ -48,10 +48,6 @@ class HomePage extends React.Component {
       <>
         <main className="home-container">
           <SEO title="Home" />
-          <div className="intro">
-            <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `20px` }} />
-            <p>{frontmatter.intro}</p>
-          </div>
           <div className="home-content">
             <div className="search-wrap">
               <Header isHome={true} onSearch={this.onSearch} />
@@ -65,6 +61,10 @@ class HomePage extends React.Component {
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
+              <div className="intro">
+                <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `20px` }} />
+                <p>{frontmatter.intro}</p>
+              </div>
               {content}
             </div>
           </div>
