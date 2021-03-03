@@ -61,11 +61,13 @@ class HomePage extends React.Component {
               <Search sortBy={this.state.sortBy} onSearch={this.onSearch} />
             </div>
             <div className="search-container">
-              <div className="intro">
-                <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `20px` }} />
-                <p>{frontmatter.intro}</p>
+              <div className="intro-and-object-container">
+                <div className="intro">
+                  <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `20px` }} />
+                  <p>{frontmatter.intro}</p>
+                </div>
+                {content}
               </div>
-              {content}
             </div>
           </div>
         </main>

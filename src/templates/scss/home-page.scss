@@ -7,6 +7,12 @@
     flex-flow: row;
     justify-content: flex-start;
 
+    .intro {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+
     .search-wrap {
       align-self: flex-start;
       flex-shrink: 0;
@@ -93,31 +99,29 @@
 
 // 4 objects small
 @media only screen and (max-width: 1550px) {
-  .home-container .intro {
-    width: 980px;
+  .home-container .intro-and-object-container {
+    width: 1000px;
   }
 }
 
 // 3 objects small
 @media only screen and (max-width: 1300px) {
-  .home-container .intro {
-    width: 730px;
+  .home-container .intro-and-object-container {
+    width: 750px;
   }
 }
 
 // 2 objects small
 @media only screen and (max-width: 1050px) {
-  .home-container .intro {
-    width: 480px;
+  .home-container .intro-and-object-container {
+    width: 500px;
   }
 }
 
 // 2 objects large
 @media only screen and (max-width: 900px) {
-  .home-container .intro {
+  .home-container .intro-and-object-container {
     width: 100%;
-    box-sizing: border-box;
-    padding: 0 20px;
   }
 }
 
