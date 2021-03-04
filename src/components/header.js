@@ -23,7 +23,7 @@ const Navbar = ({ className }) => {
       <Link to='/about'>About</Link>
       <Link to='/upload-a-scan'>Upload a scan</Link>
       <Link to='/learn/tutorials/upload-pictures' >How to scan</Link>
-      <Link to='/community/stories'>Community</Link>
+      <Link to='/community/stories'>Community Stories</Link>
       <a href={site.siteMetadata.museumsUrl} target='_blank' rel="noopener noreferrer">Museums</a>
     </nav>
   )
