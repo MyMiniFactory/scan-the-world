@@ -63,7 +63,8 @@ class HomePage extends React.Component {
             <div className="search-container">
               <div className="intro-and-object-container">
                 <div className="intro">
-                  <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `20px` }} />
+                    <img src={scan_the_world} alt="Scan the world" width="400px" style={{ marginBottom: `10px` }} />
+                    <h2 className="subtitle">the open source museum</h2>
                   <p>{frontmatter.intro}</p>
                 </div>
                 {content}
