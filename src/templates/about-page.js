@@ -45,9 +45,16 @@ class AboutPage extends React.Component {
                 <h3>Places: {statistic.places}</h3>
               </div>
               <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
-              <Link to={'/about/uses'}>
-                Learn more about us <FaArrowRight />
-              </Link>
+              <div class="link-container">
+                <Link to={'/about/uses'}>
+                  Learn more about us <FaArrowRight />
+                </Link>
+              </div>
+              <div class="link-container">
+                <Link to={'/faq'}>
+                  FAQ <FaArrowRight />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="team">
