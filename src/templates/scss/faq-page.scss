@@ -14,26 +14,20 @@
 
     & > div > h2 {
       margin-top: 0;
+      margin-bottom: 5px;
     }
 
     & > div > p {
-        margin-bottom: 5px;
-    }
+        margin: 0px;
 
-    .use-image {
-      flex-shrink: 0;
+        & > a{
+          color: inherit;
+        }
     }
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .use-item.item-even > div {
-    margin-left: 20px;
-  }
-
-  .use-item.item-odd > div {
-    margin-right: 20px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -46,10 +40,6 @@
       & > div > h2 {
         text-align: center;
       }
-    }
-
-    .use-item.item-odd {
-      flex-wrap: wrap-reverse;
     }
   }
 }
