@@ -3,6 +3,7 @@ module.exports = {
     title: `Scan The World`,
     description: ``,
     author: `Jean-Baptiste Paux`,
+    MMFBlogSTW: `https://www.myminifactory.com/blog/categories/scan-the-world`,
     indiaUrl: `https://www.myminifactory.com/users/Scan%20the%20World%20India`,
     chinaUrl: `https://www.myminifactory.com/users/STW-China`,
     museumsUrl: `https://cdn.myminifactory.com/static/STW_For_Galleries_Archives_and_Museum.pdf`,
