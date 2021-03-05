@@ -12,32 +12,18 @@ const FaqPage = ({ data }) => {
     <Layout>
       <SEO title="Faq" />
       {/* <Banner url={'/about'} childImageSharp={frontmatter.bannerImage.childImageSharp}/> */}
-      <div className="uses-container">
+      <div className="faq-container">
         {frontmatter.uses.map((use, index) => {
-          // if (index % 2 === 0) {
-            return (
-              <div className="use-item item-even" key={index}>
-                {/* <Img className="use-image" fixed={use.useImage.childImageSharp.fixed} alt={use.title}/> */}
-                <div>
-                  <h2>{use.title}</h2>
-                  {use.intro.split('\n').map((pg) => (
-                    <p>{pg}</p>
-                  ))}
-                </div>
+          return (
+            <div className="use-item item-even" key={index}>
+              <div>
+                <h2>{use.title}</h2>
+                {use.intro.split('\n').map((pg) => (
+                  <p>{pg}</p>
+                ))}
               </div>
-            )
-          // }
-          // return (
-          //   <div className="use-item item-odd" key={index}>
-          //     <div>
-          //       <h2>{use.title}</h2>
-          //       {use.intro.split('\n').map((pg) => (
-          //         <p>{pg}</p>
-          //       ))}
-          //     </div>
-          //     {/* <Img className="use-image" fixed={use.useImage.childImageSharp.fixed} alt={use.title}/> */}
-          //   </div>
-          // )
+            </div>
+          )
         })}
       </div>
     </Layout>
@@ -57,13 +43,6 @@ export const query = graphql `
         }
         uses {
           intro
-          useImage {
-            childImageSharp {
-              fixed(width: 300, height: 300) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
           title
         }
       }
