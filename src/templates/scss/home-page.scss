@@ -25,7 +25,7 @@
       display: flex;
       flex-flow: column;
       position: sticky;
-      top: 80px;
+      top: 125px;
       width: 220px;
       margin: 0 30px 0 0;
       padding: 0 10px 10px 10px;
@@ -180,5 +180,16 @@
 @media only screen and (min-width: 1024px) {
   .off-canvas-wrap {
     overflow: visible;
+  }
+}
+
+
+@media only screen and (max-width: 959px) {
+  .home-container {
+    .home-content {
+      .search-wrap {
+        top: 80px;
+      }
+    }
   }
 }
