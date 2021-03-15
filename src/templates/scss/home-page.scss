@@ -2,6 +2,11 @@
   max-width: 1520px;
   margin: 0 auto;
 
+  // Full width
+  .intro-and-object-container {
+    width: 1250px;
+  }
+
   .home-content {
     display: flex;
     flex-flow: row;
