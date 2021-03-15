@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 // import Img from "gatsby-image"
 import Layout from "../components/layout"
-// import Banner from "../components/banner"
+import Banner from "../components/banner"
 import "./scss/faq-page.scss"
 
 const FaqPage = ({ data }) => {
@@ -11,7 +11,7 @@ const FaqPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Faq" />
-      {/* <Banner url={'/about'} childImageSharp={frontmatter.bannerImage.childImageSharp}/> */}
+      <Banner url={'/about/faq'} childImageSharp={frontmatter.bannerImage.childImageSharp}/>
       <div className="faq-container">
         <div className="use-item" key={0}>
           <div>

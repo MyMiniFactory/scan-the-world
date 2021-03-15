@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: who we are
-bannerImage: /assets/about-banner.jpg
+bannerImage: /assets/stw-about.png
 team:
   - mail: jon@myminifactory.com
     memberImage: /assets/s5fltm9r_400x400.png

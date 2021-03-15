@@ -1,6 +1,6 @@
 ---
 templateKey: faq-page
-# bannerImage: /assets/about-banner.jpg
+bannerImage: /assets/stw-faq.png
 # uses:
   # - intro: >-
   #     Our community scans are usually realised via photogrammetry. We have a section on our website where you can read more about it and learn how to scan. We have also released a video tutorial that explains how to scan and how the uploading process works.
