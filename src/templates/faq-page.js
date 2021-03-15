@@ -17,11 +17,10 @@ const FaqPage = ({ data }) => {
           <div>
             <h2>How do I scan?</h2>
               <p>
-              Our community scans are usually realised via photogrammetry. We have a section on our website where you can read more about it and learn how to scan. We have also released a video tutorial that explains how to scan and how the uploading process works.
-                <br/><br/>
-                <a href="www.myminifactory.com/scantheworld/learn/tutorials/upload-pictures/">
-                  www.myminifactory.com/scantheworld/learn/tutorials/upload-pictures/
-                </a>
+              Our community scans are usually realised via photogrammetry. We have a section on our website where you can read more about it and learn how to scan. We have also released a video tutorial that explains how to scan and how the uploading process works&nbsp;
+                <Link to='/learn/tutorials/upload-pictures/'>
+                  here
+                </Link>.
               </p>
           </div>
         </div>
