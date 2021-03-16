@@ -1,6 +1,6 @@
 ---
 templateKey: uses-page
-bannerImage: /assets/about-banner.jpg
+bannerImage: /assets/stw-about.png
 uses:
   - intro: >-
       Cultural heritage is important for historical research and education as
