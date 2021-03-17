@@ -1,5 +1,5 @@
 ---
 templateKey: learn-page
-bannerImage: /assets/learn-banner.jpg
+bannerImage: /assets/stw-learn.png
 ---
 

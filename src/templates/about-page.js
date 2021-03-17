@@ -36,7 +36,7 @@ class AboutPage extends React.Component {
         <Banner childImageSharp={frontmatter.bannerImage.childImageSharp}/>
         <div className="about-container">
           <div>
-            <iframe src="https://player.vimeo.com/video/347516450?title=0&byline=0&portrait=0" width="900" height="506" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>             
+            <iframe src="https://player.vimeo.com/video/347516450?title=0&byline=0&portrait=0" width="900" height="506" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>             
              <div className="about-content">
               <h3 id="h3-title">Project Start Date - 28th June 2014</h3>
               <div id="about-statistic">
@@ -45,9 +45,16 @@ class AboutPage extends React.Component {
                 <h3>Places: {statistic.places}</h3>
               </div>
               <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
-              <Link to={'/about/uses'}>
-                Learn more about us <FaArrowRight />
-              </Link>
+              <div className="link-container">
+                <Link to={'/about/uses'}>
+                  Learn more about us <FaArrowRight />
+                </Link>
+              </div>
+              <div className="link-container">
+                <Link to={'/faq'}>
+                  FAQ <FaArrowRight />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="team">

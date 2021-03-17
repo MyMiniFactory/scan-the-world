@@ -1,12 +1,27 @@
 ---
 templateKey: about-page
 title: who we are
-bannerImage: /assets/about-banner.jpg
+bannerImage: /assets/stw-about.png
 team:
   - mail: jon@myminifactory.com
     memberImage: /assets/s5fltm9r_400x400.png
     position: Founder and Project Manager
     title: Jon Beck
+
+  - mail: elisa@myminifactory.com
+    memberImage: /assets/STWTeamElisa.jpg
+    position: Assistant Manager
+    title: Elisa D'Antona
+
+  - mail: stw@myminifactory.com
+    memberImage: /assets/STWTeamRainy.jpg
+    position: Scan The World China
+    title: Rainy Yu GUAN
+
+  - mail: stw@myminifactory.com
+    memberImage: /assets/STWTeamIshita.jpg
+    position: Scan The World India
+    title: Ishita Jain
 ---
 Scan the World is an ambitious initiative that gives you the possibility to
 enjoy 3D printable representations of cultural artifacts in a remarkably

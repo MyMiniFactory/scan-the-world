@@ -2,9 +2,9 @@
   max-width: 1520px;
   margin: 0 auto;
 
-  .intro {
-    margin-left: 250px;
-    padding: 0 20px;
+  // Full width
+  .intro-and-object-container {
+    width: 1250px;
   }
 
   .home-content {
@@ -12,13 +12,25 @@
     flex-flow: row;
     justify-content: flex-start;
 
+    .intro {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px;
+
+      .subtitle{
+        margin-top: 0;
+          font-style: italic;
+      }
+
+    }
+
     .search-wrap {
       align-self: flex-start;
       flex-shrink: 0;
       display: flex;
       flex-flow: column;
       position: sticky;
-      top: 20px;
+      top: 125px;
       width: 220px;
       margin: 0 30px 0 0;
       padding: 0 10px 10px 10px;
@@ -43,6 +55,7 @@
       flex: 1;
       flex-flow: column;
       justify-content: flex-start;
+      align-items: center;
     }
 
     .masonry {
@@ -93,6 +106,37 @@
   }
 }
 
+// Resizing of things to do with the grid object
+
+// 4 objects small
+@media only screen and (max-width: 1550px) {
+  .home-container .intro-and-object-container {
+    width: 1000px;
+  }
+}
+
+// 3 objects small
+@media only screen and (max-width: 1300px) {
+  .home-container .intro-and-object-container {
+    width: 750px;
+  }
+}
+
+// 2 objects small
+@media only screen and (max-width: 1050px) {
+  .home-container .intro-and-object-container {
+    width: 500px;
+  }
+}
+
+// 2 objects large
+@media only screen and (max-width: 900px) {
+  .home-container .intro-and-object-container {
+    width: 100%;
+  }
+}
+
+// Mobile view
 @media only screen and (max-width: 700px) {
   .home-container {
     .intro {
@@ -121,28 +165,19 @@
 }
 
 @media only screen and (min-width: 900px) and (max-width: 1265px) {
-  .home-container .intro {
-    margin-left: 250px;
-    // padding: 0 10px;
-  }
-
   .search-container {
     width: 500px;
     flex-shrink: 0;
   }
 }
 
+
 @media only screen and (max-width: 1016px) {
   .home-container {
-
     .home-content {
       .masonry {
         display: none;
       }
-    }
-
-    .intro {
-      margin-left: 0;
     }
   }
 }
@@ -150,5 +185,16 @@
 @media only screen and (min-width: 1024px) {
   .off-canvas-wrap {
     overflow: visible;
+  }
+}
+
+
+@media only screen and (max-width: 959px) {
+  .home-container {
+    .home-content {
+      .search-wrap {
+        top: 80px;
+      }
+    }
   }
 }

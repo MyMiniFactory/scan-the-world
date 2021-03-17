@@ -1,0 +1,46 @@
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 50px;
+  padding: 15px;
+
+  .use-item {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 60px;
+
+    & > div > h2 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-transform: none !important;
+    }
+
+    & > div > p {
+        margin: 0px;
+
+        & > a{
+          color: inherit;
+        }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .uses-container {
+
+    .use-item {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      & > div > h2 {
+        text-align: center;
+      }
+    }
+  }
+}

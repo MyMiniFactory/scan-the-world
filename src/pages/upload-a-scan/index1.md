@@ -4,7 +4,7 @@ title: upload-a-scan
 order: 1
 intro: >-
 
-bannerImage: /assets/contribute-banner.jpg
+bannerImage: /assets/stw-contribute.png
 contributions:
   - contributionImage: /assets/add_images_icon_soon.jpg
     title: Upload scan photos

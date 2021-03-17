@@ -20,8 +20,8 @@ const UsesPage = ({ data }) => {
                 <Img className="use-image" fixed={use.useImage.childImageSharp.fixed} alt={use.title}/>
                 <div>
                   <h2>{use.title}</h2>
-                  {use.intro.split('\n').map((pg) => (
-                    <p>{pg}</p>
+                  {use.intro.split('\n').map((pg, index) => (
+                    <p key={index}>{pg}</p>
                   ))}
                 </div>
               </div>
@@ -31,8 +31,8 @@ const UsesPage = ({ data }) => {
             <div className="use-item item-odd" key={index}>
               <div>
                 <h2>{use.title}</h2>
-                {use.intro.split('\n').map((pg) => (
-                  <p>{pg}</p>
+                {use.intro.split('\n').map((pg, index) => (
+                  <p key={index}>{pg}</p>
                 ))}
               </div>
               <Img className="use-image" fixed={use.useImage.childImageSharp.fixed} alt={use.title}/>

@@ -4,7 +4,7 @@ title: Upload a scan
 order: 0
 intro: >-
 
-bannerImage: /assets/contribute-banner.jpg
+bannerImage: /assets/stw-contribute.png
 contributions:
   - alt: ''
     contributionImage: /assets/add_3d_icon.jpg
